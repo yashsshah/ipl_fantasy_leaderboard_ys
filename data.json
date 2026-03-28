@@ -1,0 +1,19 @@
+{
+  "players": [
+    {"name": "Sai Sudarshan", "totalPoints": 420, "prizes": ["Highest Bowler"]},
+    {"name": "Noor Ahmad", "totalPoints": 390, "prizes": ["Highest Allrounder"]},
+    {"name": "Sunil Narine", "totalPoints": 370, "prizes": ["Highest Batter"]},
+    {"name": "KL Rahul", "totalPoints": 350, "prizes": ["Highest WK"]}
+  ],
+  "matches": [
+    {"match": 1, "winner": "Sai Sudarshan", "points": 45},
+    {"match": 2, "winner": "Noor Ahmad", "points": 38},
+    {"match": 3, "winner": "KL Rahul", "points": 50}
+  ],
+  "playerPrizes": [
+    {"prize": "Highest Batter", "player": "Sunil Narine", "amount": 40},
+    {"prize": "Highest Bowler", "player": "Sai Sudarshan", "amount": 40},
+    {"prize": "Highest WK", "player": "KL Rahul", "amount": 40},
+    {"prize": "Highest Allrounder", "player": "Noor Ahmad", "amount": 40}
+  ]
+}
