@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-03-29T00:58:50.999554+00:00",
+    "lastSyncedAt": "2026-03-29T15:12:37.273603+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -51,7 +51,7 @@
     },
     {
       "name": "Rajesh",
-      "teamName": null,
+      "teamName": "LazyBoys",
       "color": "#94a3b8"
     },
     {
@@ -831,9 +831,9 @@
     {
       "leagueMemberNum": 10,
       "leagueMemberName": "Rajesh",
-      "leagueTeamName": null,
+      "leagueTeamName": "LazyBoys",
       "joinedStatus": "Y",
-      "paymentStatus": null,
+      "paymentStatus": "Y",
       "buyInAmount": 50,
       "email": null
     },
