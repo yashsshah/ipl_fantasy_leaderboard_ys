@@ -1,0 +1,14 @@
+PrizeName,PrizeAmount,PrizeCount,PrizeTotalAmount,TotalPotAmount,DifferenceAmount
+Highest team score for each match,5,70,350,750,0
+First Highest overall aggregate total (after 70 league stage matches),70,1,70,750,
+Second highest overall aggregate total (after 70 league stage matches),40,1,40,,
+Third highest overall aggregate total (after 70 league stage matches),20,1,20,,
+Highest WK,40,1,40,,
+Highest batter,40,1,40,,
+Highest allrounder,40,1,40,,
+Highest bowler,40,1,40,,
+Lowest team score to win the $5 prize [Lucky Prize],10,1,10,,
+Highest team score to win the $5 prize [Dominator Prize],10,1,10,,
+Table Prediction 1,50,1,50,,
+Table Prediction 2,30,1,30,,
+Table Anti Prediction,10,1,10,,

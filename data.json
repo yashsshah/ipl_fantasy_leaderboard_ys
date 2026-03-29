@@ -1,19 +1,3986 @@
 {
+  "meta": {
+    "lastSyncedAt": "2026-03-29T00:58:50.999554+00:00",
+    "source": "csv-sync"
+  },
+  "leagueMembers": [
+    {
+      "name": "Abhishek",
+      "teamName": "Kinkartvyavimudh",
+      "color": "#ff6b6b"
+    },
+    {
+      "name": "Akshay",
+      "teamName": "aksesa11",
+      "color": "#ffd166"
+    },
+    {
+      "name": "Ashray",
+      "teamName": "Ashray Team",
+      "color": "#06d6a0"
+    },
+    {
+      "name": "Atharva",
+      "teamName": "T20 Warriors XI",
+      "color": "#4cc9f0"
+    },
+    {
+      "name": "Ben",
+      "teamName": "Bens XI",
+      "color": "#4895ef"
+    },
+    {
+      "name": "Bijil",
+      "teamName": "SanjuPaglu",
+      "color": "#4361ee"
+    },
+    {
+      "name": "Harpreet",
+      "teamName": "Sunny super kings",
+      "color": "#3a0ca3"
+    },
+    {
+      "name": "Kunj",
+      "teamName": "Scarlet Challengers",
+      "color": "#f72585"
+    },
+    {
+      "name": "Nikhil",
+      "teamName": "NSKNemesis",
+      "color": "#b5179e"
+    },
+    {
+      "name": "Rajesh",
+      "teamName": null,
+      "color": "#94a3b8"
+    },
+    {
+      "name": "Ravtaj",
+      "teamName": "Ravs XI",
+      "color": "#f97316"
+    },
+    {
+      "name": "Rohit",
+      "teamName": "RKDEleven",
+      "color": "#22c55e"
+    },
+    {
+      "name": "Sidhu",
+      "teamName": "Sidhsdevilseye",
+      "color": "#14b8a6"
+    },
+    {
+      "name": "Saurabh",
+      "teamName": "Team Joshi",
+      "color": "#eab308"
+    },
+    {
+      "name": "Yash",
+      "teamName": "BlAcKKaTs",
+      "color": "#8b5cf6"
+    }
+  ],
   "players": [
-    {"name": "Sai Sudarshan", "totalPoints": 420, "prizes": ["Highest Bowler"]},
-    {"name": "Noor Ahmad", "totalPoints": 390, "prizes": ["Highest Allrounder"]},
-    {"name": "Sunil Narine", "totalPoints": 370, "prizes": ["Highest Batter"]},
-    {"name": "KL Rahul", "totalPoints": 350, "prizes": ["Highest WK"]}
+    {
+      "name": "Abhishek",
+      "totalPoints": 1464
+    },
+    {
+      "name": "Nikhil",
+      "totalPoints": 1014
+    },
+    {
+      "name": "Rohit",
+      "totalPoints": 571.5
+    },
+    {
+      "name": "Sidhu",
+      "totalPoints": 566
+    },
+    {
+      "name": "Kunj",
+      "totalPoints": 504
+    },
+    {
+      "name": "Saurabh",
+      "totalPoints": 471
+    },
+    {
+      "name": "Harpreet",
+      "totalPoints": 447.5
+    },
+    {
+      "name": "Bijil",
+      "totalPoints": 442.5
+    },
+    {
+      "name": "Ravtaj",
+      "totalPoints": 414.5
+    },
+    {
+      "name": "Ashray",
+      "totalPoints": 324.5
+    },
+    {
+      "name": "Akshay",
+      "totalPoints": 230
+    },
+    {
+      "name": "Ben",
+      "totalPoints": 221.5
+    },
+    {
+      "name": "Yash",
+      "totalPoints": 220.5
+    },
+    {
+      "name": "Atharva",
+      "totalPoints": 151
+    },
+    {
+      "name": "Rajesh",
+      "totalPoints": null
+    }
   ],
   "matches": [
-    {"match": 1, "winner": "Sai Sudarshan", "points": 45},
-    {"match": 2, "winner": "Noor Ahmad", "points": 38},
-    {"match": 3, "winner": "KL Rahul", "points": 50}
+    {
+      "match": 1,
+      "matchDetails": "SRH vs RCB",
+      "winner": "Abhishek",
+      "winnerTeamName": "Kinkartvyavimudh",
+      "points": 1464,
+      "amount": 5
+    },
+    {
+      "match": 2,
+      "matchDetails": "KKR vs MI",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 3,
+      "matchDetails": "CSK vs RR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 4,
+      "matchDetails": "GT vs PBKS",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 5,
+      "matchDetails": "DC vs LSG",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 6,
+      "matchDetails": "SRH vs KKR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 7,
+      "matchDetails": "PBKS vs CSK",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 8,
+      "matchDetails": "MI vs DC",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 9,
+      "matchDetails": "RR vs GT",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 10,
+      "matchDetails": "LSG vs SRH",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 11,
+      "matchDetails": "CSK vs RCB",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 12,
+      "matchDetails": "PBKS vs KKR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 13,
+      "matchDetails": "MI vs RR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 14,
+      "matchDetails": "GT vs DC",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 15,
+      "matchDetails": "LSG vs KKR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 16,
+      "matchDetails": "RCB vs RR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 17,
+      "matchDetails": "SRH vs PBKS",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 18,
+      "matchDetails": "DC vs CSK",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 19,
+      "matchDetails": "GT vs LSG",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 20,
+      "matchDetails": "RCB vs MI",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 21,
+      "matchDetails": "RR vs SRH",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 22,
+      "matchDetails": "KKR vs CSK",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 23,
+      "matchDetails": "LSG vs RCB",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 24,
+      "matchDetails": "PBKS vs MI",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 25,
+      "matchDetails": "KKR vs GT",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 26,
+      "matchDetails": "DC vs RCB",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 27,
+      "matchDetails": "CSK vs SRH",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 28,
+      "matchDetails": "RR vs KKR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 29,
+      "matchDetails": "LSG vs PBKS",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 30,
+      "matchDetails": "MI vs GT",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 31,
+      "matchDetails": "DC vs SRH",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 32,
+      "matchDetails": "RR vs LSG",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 33,
+      "matchDetails": "CSK vs MI",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 34,
+      "matchDetails": "GT vs RCB",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 35,
+      "matchDetails": "PBKS vs DC",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 36,
+      "matchDetails": "SRH vs RR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 37,
+      "matchDetails": "CSK vs GT",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 38,
+      "matchDetails": "KKR vs LSG",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 39,
+      "matchDetails": "RCB vs DC",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 40,
+      "matchDetails": "RR vs PBKS",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 41,
+      "matchDetails": "SRH vs MI",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 42,
+      "matchDetails": "RCB vs GT",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 43,
+      "matchDetails": "DC vs RR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 44,
+      "matchDetails": "MI vs CSK",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 45,
+      "matchDetails": "KKR vs SRH",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 46,
+      "matchDetails": "PBKS vs GT",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 47,
+      "matchDetails": "LSG vs MI",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 48,
+      "matchDetails": "CSK vs DC",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 49,
+      "matchDetails": "PBKS vs SRH",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 50,
+      "matchDetails": "RCB vs LSG",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 51,
+      "matchDetails": "KKR vs DC",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 52,
+      "matchDetails": "GT vs RR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 53,
+      "matchDetails": "LSG vs CSK",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 54,
+      "matchDetails": "MI vs RCB",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 55,
+      "matchDetails": "DC vs PBKS",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 56,
+      "matchDetails": "SRH vs GT",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 57,
+      "matchDetails": "KKR vs RCB",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 58,
+      "matchDetails": "MI vs PBKS",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 59,
+      "matchDetails": "CSK vs LSG",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 60,
+      "matchDetails": "GT vs KKR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 61,
+      "matchDetails": "RCB vs PBKS",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 62,
+      "matchDetails": "RR vs DC",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 63,
+      "matchDetails": "SRH vs CSK",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 64,
+      "matchDetails": "LSG vs RR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 65,
+      "matchDetails": "MI vs KKR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 66,
+      "matchDetails": "GT vs CSK",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 67,
+      "matchDetails": "RCB vs SRH",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 68,
+      "matchDetails": "PBKS vs LSG",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 69,
+      "matchDetails": "RR vs MI",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    },
+    {
+      "match": 70,
+      "matchDetails": "DC vs KKR",
+      "winner": "",
+      "winnerTeamName": null,
+      "points": null,
+      "amount": null
+    }
   ],
   "playerPrizes": [
-    {"prize": "Highest Batter", "player": "Sunil Narine", "amount": 40},
-    {"prize": "Highest Bowler", "player": "Sai Sudarshan", "amount": 40},
-    {"prize": "Highest WK", "player": "KL Rahul", "amount": 40},
-    {"prize": "Highest Allrounder", "player": "Noor Ahmad", "amount": 40}
+    {
+      "prize": "Highest Batter",
+      "player": "Virat Kohli",
+      "points": 330,
+      "match": null,
+      "matchDetails": null,
+      "captainOrViceCaptain": null,
+      "booster": null,
+      "amount": 40
+    },
+    {
+      "prize": "Highest Bowler",
+      "player": "Jacob Duffy",
+      "points": 174,
+      "match": null,
+      "matchDetails": null,
+      "captainOrViceCaptain": null,
+      "booster": null,
+      "amount": 40
+    },
+    {
+      "prize": "Highest WK",
+      "player": "Ishan Kishan",
+      "points": 464,
+      "match": null,
+      "matchDetails": null,
+      "captainOrViceCaptain": null,
+      "booster": null,
+      "amount": 40
+    },
+    {
+      "prize": "Highest Allrounder",
+      "player": "Aniket Verma",
+      "points": 136,
+      "match": null,
+      "matchDetails": null,
+      "captainOrViceCaptain": null,
+      "booster": null,
+      "amount": 40
+    }
+  ],
+  "participants": [
+    {
+      "leagueMemberNum": 1,
+      "leagueMemberName": "Abhishek",
+      "leagueTeamName": "Kinkartvyavimudh",
+      "joinedStatus": "Y",
+      "paymentStatus": null,
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 2,
+      "leagueMemberName": "Akshay",
+      "leagueTeamName": "aksesa11",
+      "joinedStatus": "Y",
+      "paymentStatus": "Y",
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 3,
+      "leagueMemberName": "Ashray",
+      "leagueTeamName": "Ashray Team",
+      "joinedStatus": "Y",
+      "paymentStatus": "S",
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 4,
+      "leagueMemberName": "Atharva",
+      "leagueTeamName": "T20 Warriors XI",
+      "joinedStatus": "Y",
+      "paymentStatus": "Y",
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 5,
+      "leagueMemberName": "Ben",
+      "leagueTeamName": "Bens XI",
+      "joinedStatus": "Y",
+      "paymentStatus": "Y",
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 6,
+      "leagueMemberName": "Bijil",
+      "leagueTeamName": "SanjuPaglu",
+      "joinedStatus": "Y",
+      "paymentStatus": null,
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 7,
+      "leagueMemberName": "Harpreet",
+      "leagueTeamName": "Sunny super kings",
+      "joinedStatus": "Y",
+      "paymentStatus": null,
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 8,
+      "leagueMemberName": "Kunj",
+      "leagueTeamName": "Scarlet Challengers",
+      "joinedStatus": "Y",
+      "paymentStatus": "Y",
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 9,
+      "leagueMemberName": "Nikhil",
+      "leagueTeamName": "NSKNemesis",
+      "joinedStatus": "Y",
+      "paymentStatus": null,
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 10,
+      "leagueMemberName": "Rajesh",
+      "leagueTeamName": null,
+      "joinedStatus": "Y",
+      "paymentStatus": null,
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 11,
+      "leagueMemberName": "Ravtaj",
+      "leagueTeamName": "Ravs XI",
+      "joinedStatus": "Y",
+      "paymentStatus": "S",
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 12,
+      "leagueMemberName": "Rohit",
+      "leagueTeamName": "RKDEleven",
+      "joinedStatus": "Y",
+      "paymentStatus": "S",
+      "buyInAmount": 50,
+      "email": "ravtaj@gmail.com"
+    },
+    {
+      "leagueMemberNum": 13,
+      "leagueMemberName": "Sidhu",
+      "leagueTeamName": "Sidhsdevilseye",
+      "joinedStatus": "Y",
+      "paymentStatus": "Y",
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 14,
+      "leagueMemberName": "Saurabh",
+      "leagueTeamName": "Team Joshi",
+      "joinedStatus": "Y",
+      "paymentStatus": null,
+      "buyInAmount": 50,
+      "email": null
+    },
+    {
+      "leagueMemberNum": 15,
+      "leagueMemberName": "Yash",
+      "leagueTeamName": "BlAcKKaTs",
+      "joinedStatus": "Y",
+      "paymentStatus": "S",
+      "buyInAmount": 50,
+      "email": "s_yash@hotmail.com"
+    }
+  ],
+  "prizesList": [
+    {
+      "prizeName": "Highest team score for each match",
+      "prizeAmount": 5,
+      "prizeCount": 70,
+      "prizeTotalAmount": 350,
+      "totalPotAmount": 750,
+      "differenceAmount": 0
+    },
+    {
+      "prizeName": "First Highest overall aggregate total (after 70 league stage matches)",
+      "prizeAmount": 70,
+      "prizeCount": 1,
+      "prizeTotalAmount": 70,
+      "totalPotAmount": 750,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Second highest overall aggregate total (after 70 league stage matches)",
+      "prizeAmount": 40,
+      "prizeCount": 1,
+      "prizeTotalAmount": 40,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Third highest overall aggregate total (after 70 league stage matches)",
+      "prizeAmount": 20,
+      "prizeCount": 1,
+      "prizeTotalAmount": 20,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Highest WK",
+      "prizeAmount": 40,
+      "prizeCount": 1,
+      "prizeTotalAmount": 40,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Highest batter",
+      "prizeAmount": 40,
+      "prizeCount": 1,
+      "prizeTotalAmount": 40,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Highest allrounder",
+      "prizeAmount": 40,
+      "prizeCount": 1,
+      "prizeTotalAmount": 40,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Highest bowler",
+      "prizeAmount": 40,
+      "prizeCount": 1,
+      "prizeTotalAmount": 40,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Lowest team score to win the $5 prize [Lucky Prize]",
+      "prizeAmount": 10,
+      "prizeCount": 1,
+      "prizeTotalAmount": 10,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Highest team score to win the $5 prize [Dominator Prize]",
+      "prizeAmount": 10,
+      "prizeCount": 1,
+      "prizeTotalAmount": 10,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Table Prediction 1",
+      "prizeAmount": 50,
+      "prizeCount": 1,
+      "prizeTotalAmount": 50,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Table Prediction 2",
+      "prizeAmount": 30,
+      "prizeCount": 1,
+      "prizeTotalAmount": 30,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    },
+    {
+      "prizeName": "Table Anti Prediction",
+      "prizeAmount": 10,
+      "prizeCount": 1,
+      "prizeTotalAmount": 10,
+      "totalPotAmount": null,
+      "differenceAmount": null
+    }
+  ],
+  "matchSchedule": [
+    {
+      "matchNum": 1,
+      "matchDate": "March 28",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Sunrisers Hyderabad",
+      "awayTeamName": "Royal Challengers Bengaluru",
+      "venue": "Bengaluru"
+    },
+    {
+      "matchNum": 2,
+      "matchDate": "March 29",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Kolkata Knight Riders",
+      "awayTeamName": "Mumbai Indians",
+      "venue": "Mumbai"
+    },
+    {
+      "matchNum": 3,
+      "matchDate": "March 30",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Chennai Super Kings",
+      "awayTeamName": "Rajasthan Royals",
+      "venue": "Guwahati"
+    },
+    {
+      "matchNum": 4,
+      "matchDate": "March 31",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Gujarat Titans",
+      "awayTeamName": "Punjab Kings",
+      "venue": "New Chandigarh"
+    },
+    {
+      "matchNum": 5,
+      "matchDate": "April 1",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Delhi Capitals",
+      "awayTeamName": "Lucknow Super Giants",
+      "venue": "Lucknow"
+    },
+    {
+      "matchNum": 6,
+      "matchDate": "April 2",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Sunrisers Hyderabad",
+      "awayTeamName": "Kolkata Knight Riders",
+      "venue": "Kolkata"
+    },
+    {
+      "matchNum": 7,
+      "matchDate": "April 3",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Punjab Kings",
+      "awayTeamName": "Chennai Super Kings",
+      "venue": "Chennai"
+    },
+    {
+      "matchNum": 8,
+      "matchDate": "April 4",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Mumbai Indians",
+      "awayTeamName": "Delhi Capitals",
+      "venue": "Delhi"
+    },
+    {
+      "matchNum": 9,
+      "matchDate": "April 4",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Rajasthan Royals",
+      "awayTeamName": "Gujarat Titans",
+      "venue": "Ahmedabad"
+    },
+    {
+      "matchNum": 10,
+      "matchDate": "April 5",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Lucknow Super Giants",
+      "awayTeamName": "Sunrisers Hyderabad",
+      "venue": "Hyderabad"
+    },
+    {
+      "matchNum": 11,
+      "matchDate": "April 5",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Chennai Super Kings",
+      "awayTeamName": "Royal Challengers Bengaluru",
+      "venue": "Bengaluru"
+    },
+    {
+      "matchNum": 12,
+      "matchDate": "April 6",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Punjab Kings",
+      "awayTeamName": "Kolkata Knight Riders",
+      "venue": "Kolkata"
+    },
+    {
+      "matchNum": 13,
+      "matchDate": "April 7",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Mumbai Indians",
+      "awayTeamName": "Rajasthan Royals",
+      "venue": "Guwahati"
+    },
+    {
+      "matchNum": 14,
+      "matchDate": "April 8",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Gujarat Titans",
+      "awayTeamName": "Delhi Capitals",
+      "venue": "Delhi"
+    },
+    {
+      "matchNum": 15,
+      "matchDate": "April 9",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Lucknow Super Giants",
+      "awayTeamName": "Kolkata Knight Riders",
+      "venue": "Kolkata"
+    },
+    {
+      "matchNum": 16,
+      "matchDate": "April 10",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Royal Challengers Bengaluru",
+      "awayTeamName": "Rajasthan Royals",
+      "venue": "Guwahati"
+    },
+    {
+      "matchNum": 17,
+      "matchDate": "April 11",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Sunrisers Hyderabad",
+      "awayTeamName": "Punjab Kings",
+      "venue": "New Chandigarh"
+    },
+    {
+      "matchNum": 18,
+      "matchDate": "April 11",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Delhi Capitals",
+      "awayTeamName": "Chennai Super Kings",
+      "venue": "Chennai"
+    },
+    {
+      "matchNum": 19,
+      "matchDate": "April 12",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Gujarat Titans",
+      "awayTeamName": "Lucknow Super Giants",
+      "venue": "Lucknow"
+    },
+    {
+      "matchNum": 20,
+      "matchDate": "April 12",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Royal Challengers Bengaluru",
+      "awayTeamName": "Mumbai Indians",
+      "venue": "Mumbai"
+    },
+    {
+      "matchNum": 21,
+      "matchDate": "April 13",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Rajasthan Royals",
+      "awayTeamName": "Sunrisers Hyderabad",
+      "venue": "Hyderabad"
+    },
+    {
+      "matchNum": 22,
+      "matchDate": "April 14",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Kolkata Knight Riders",
+      "awayTeamName": "Chennai Super Kings",
+      "venue": "Chennai"
+    },
+    {
+      "matchNum": 23,
+      "matchDate": "April 15",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Lucknow Super Giants",
+      "awayTeamName": "Royal Challengers Bengaluru",
+      "venue": "Bengaluru"
+    },
+    {
+      "matchNum": 24,
+      "matchDate": "April 16",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Punjab Kings",
+      "awayTeamName": "Mumbai Indians",
+      "venue": "Mumbai"
+    },
+    {
+      "matchNum": 25,
+      "matchDate": "April 17",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Kolkata Knight Riders",
+      "awayTeamName": "Gujarat Titans",
+      "venue": "Ahmedabad"
+    },
+    {
+      "matchNum": 26,
+      "matchDate": "April 18",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Delhi Capitals",
+      "awayTeamName": "Royal Challengers Bengaluru",
+      "venue": "Bengaluru"
+    },
+    {
+      "matchNum": 27,
+      "matchDate": "April 18",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Chennai Super Kings",
+      "awayTeamName": "Sunrisers Hyderabad",
+      "venue": "Hyderabad"
+    },
+    {
+      "matchNum": 28,
+      "matchDate": "April 19",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Rajasthan Royals",
+      "awayTeamName": "Kolkata Knight Riders",
+      "venue": "Kolkata"
+    },
+    {
+      "matchNum": 29,
+      "matchDate": "April 19",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Lucknow Super Giants",
+      "awayTeamName": "Punjab Kings",
+      "venue": "New Chandigarh"
+    },
+    {
+      "matchNum": 30,
+      "matchDate": "April 20",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Mumbai Indians",
+      "awayTeamName": "Gujarat Titans",
+      "venue": "Ahmedabad"
+    },
+    {
+      "matchNum": 31,
+      "matchDate": "April 21",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Delhi Capitals",
+      "awayTeamName": "Sunrisers Hyderabad",
+      "venue": "Hyderabad"
+    },
+    {
+      "matchNum": 32,
+      "matchDate": "April 22",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Rajasthan Royals",
+      "awayTeamName": "Lucknow Super Giants",
+      "venue": "Lucknow"
+    },
+    {
+      "matchNum": 33,
+      "matchDate": "April 23",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Chennai Super Kings",
+      "awayTeamName": "Mumbai Indians",
+      "venue": "Mumbai"
+    },
+    {
+      "matchNum": 34,
+      "matchDate": "April 24",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Gujarat Titans",
+      "awayTeamName": "Royal Challengers Bengaluru",
+      "venue": "Bengaluru"
+    },
+    {
+      "matchNum": 35,
+      "matchDate": "April 25",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Punjab Kings",
+      "awayTeamName": "Delhi Capitals",
+      "venue": "Delhi"
+    },
+    {
+      "matchNum": 36,
+      "matchDate": "April 25",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Sunrisers Hyderabad",
+      "awayTeamName": "Rajasthan Royals",
+      "venue": "Jaipur"
+    },
+    {
+      "matchNum": 37,
+      "matchDate": "April 26",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Chennai Super Kings",
+      "awayTeamName": "Gujarat Titans",
+      "venue": "Ahmedabad"
+    },
+    {
+      "matchNum": 38,
+      "matchDate": "April 26",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Kolkata Knight Riders",
+      "awayTeamName": "Lucknow Super Giants",
+      "venue": "Lucknow"
+    },
+    {
+      "matchNum": 39,
+      "matchDate": "April 27",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Royal Challengers Bengaluru",
+      "awayTeamName": "Delhi Capitals",
+      "venue": "Delhi"
+    },
+    {
+      "matchNum": 40,
+      "matchDate": "April 28",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Rajasthan Royals",
+      "awayTeamName": "Punjab Kings",
+      "venue": "New Chandigarh"
+    },
+    {
+      "matchNum": 41,
+      "matchDate": "April 29",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Sunrisers Hyderabad",
+      "awayTeamName": "Mumbai Indians",
+      "venue": "Mumbai"
+    },
+    {
+      "matchNum": 42,
+      "matchDate": "April 30",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Royal Challengers Bengaluru",
+      "awayTeamName": "Gujarat Titans",
+      "venue": "Ahmedabad"
+    },
+    {
+      "matchNum": 43,
+      "matchDate": "May 1",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Delhi Capitals",
+      "awayTeamName": "Rajasthan Royals",
+      "venue": "Jaipur"
+    },
+    {
+      "matchNum": 44,
+      "matchDate": "May 2",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Mumbai Indians",
+      "awayTeamName": "Chennai Super Kings",
+      "venue": "Chennai"
+    },
+    {
+      "matchNum": 45,
+      "matchDate": "May 3",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Kolkata Knight Riders",
+      "awayTeamName": "Sunrisers Hyderabad",
+      "venue": "Hyderabad"
+    },
+    {
+      "matchNum": 46,
+      "matchDate": "May 3",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Punjab Kings",
+      "awayTeamName": "Gujarat Titans",
+      "venue": "Ahmedabad"
+    },
+    {
+      "matchNum": 47,
+      "matchDate": "May 4",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Lucknow Super Giants",
+      "awayTeamName": "Mumbai Indians",
+      "venue": "Mumbai"
+    },
+    {
+      "matchNum": 48,
+      "matchDate": "May 5",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Chennai Super Kings",
+      "awayTeamName": "Delhi Capitals",
+      "venue": "Delhi"
+    },
+    {
+      "matchNum": 49,
+      "matchDate": "May 6",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Punjab Kings",
+      "awayTeamName": "Sunrisers Hyderabad",
+      "venue": "Hyderabad"
+    },
+    {
+      "matchNum": 50,
+      "matchDate": "May 7",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Royal Challengers Bengaluru",
+      "awayTeamName": "Lucknow Super Giants",
+      "venue": "Lucknow"
+    },
+    {
+      "matchNum": 51,
+      "matchDate": "May 8",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Kolkata Knight Riders",
+      "awayTeamName": "Delhi Capitals",
+      "venue": "Delhi"
+    },
+    {
+      "matchNum": 52,
+      "matchDate": "May 9",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Gujarat Titans",
+      "awayTeamName": "Rajasthan Royals",
+      "venue": "Jaipur"
+    },
+    {
+      "matchNum": 53,
+      "matchDate": "May 10",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Lucknow Super Giants",
+      "awayTeamName": "Chennai Super Kings",
+      "venue": "Chennai"
+    },
+    {
+      "matchNum": 54,
+      "matchDate": "May 10",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Mumbai Indians",
+      "awayTeamName": "Royal Challengers Bengaluru",
+      "venue": "Raipur"
+    },
+    {
+      "matchNum": 55,
+      "matchDate": "May 11",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Delhi Capitals",
+      "awayTeamName": "Punjab Kings",
+      "venue": "Dharamshala"
+    },
+    {
+      "matchNum": 56,
+      "matchDate": "May 12",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Sunrisers Hyderabad",
+      "awayTeamName": "Gujarat Titans",
+      "venue": "Ahmedabad"
+    },
+    {
+      "matchNum": 57,
+      "matchDate": "May 13",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Kolkata Knight Riders",
+      "awayTeamName": "Royal Challengers Bengaluru",
+      "venue": "Raipur"
+    },
+    {
+      "matchNum": 58,
+      "matchDate": "May 14",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Mumbai Indians",
+      "awayTeamName": "Punjab Kings",
+      "venue": "Dharamshala"
+    },
+    {
+      "matchNum": 59,
+      "matchDate": "May 15",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Chennai Super Kings",
+      "awayTeamName": "Lucknow Super Giants",
+      "venue": "Lucknow"
+    },
+    {
+      "matchNum": 60,
+      "matchDate": "May 16",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Gujarat Titans",
+      "awayTeamName": "Kolkata Knight Riders",
+      "venue": "Kolkata"
+    },
+    {
+      "matchNum": 61,
+      "matchDate": "May 17",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Royal Challengers Bengaluru",
+      "awayTeamName": "Punjab Kings",
+      "venue": "Dharamshala"
+    },
+    {
+      "matchNum": 62,
+      "matchDate": "May 17",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Rajasthan Royals",
+      "awayTeamName": "Delhi Capitals",
+      "venue": "Delhi"
+    },
+    {
+      "matchNum": 63,
+      "matchDate": "May 18",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Sunrisers Hyderabad",
+      "awayTeamName": "Chennai Super Kings",
+      "venue": "Chennai"
+    },
+    {
+      "matchNum": 64,
+      "matchDate": "May 19",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Lucknow Super Giants",
+      "awayTeamName": "Rajasthan Royals",
+      "venue": "Jaipur"
+    },
+    {
+      "matchNum": 65,
+      "matchDate": "May 20",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Mumbai Indians",
+      "awayTeamName": "Kolkata Knight Riders",
+      "venue": "Kolkata"
+    },
+    {
+      "matchNum": 66,
+      "matchDate": "May 21",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Gujarat Titans",
+      "awayTeamName": "Chennai Super Kings",
+      "venue": "Chennai"
+    },
+    {
+      "matchNum": 67,
+      "matchDate": "May 22",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Royal Challengers Bengaluru",
+      "awayTeamName": "Sunrisers Hyderabad",
+      "venue": "Hyderabad"
+    },
+    {
+      "matchNum": 68,
+      "matchDate": "May 23",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Punjab Kings",
+      "awayTeamName": "Lucknow Super Giants",
+      "venue": "Lucknow"
+    },
+    {
+      "matchNum": 69,
+      "matchDate": "May 24",
+      "matchTimeIST": "3:30 PM",
+      "homeTeamName": "Rajasthan Royals",
+      "awayTeamName": "Mumbai Indians",
+      "venue": "Mumbai"
+    },
+    {
+      "matchNum": 70,
+      "matchDate": "May 24",
+      "matchTimeIST": "7:30 PM",
+      "homeTeamName": "Delhi Capitals",
+      "awayTeamName": "Kolkata Knight Riders",
+      "venue": "Kolkata"
+    }
+  ],
+  "tablePredictions": [
+    {
+      "rank": 1,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "rank": 2,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "rank": 3,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "rank": 4,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "rank": 5,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "rank": 6,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "rank": 7,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "rank": 8,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "rank": 9,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "rank": 10,
+      "predictions": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    }
+  ],
+  "tableRankings": [
+    {
+      "rank": 1,
+      "iplTeamName": "Royal Challengers Bengaluru"
+    },
+    {
+      "rank": 2,
+      "iplTeamName": "Sunrisers Hyderabad"
+    },
+    {
+      "rank": 3,
+      "iplTeamName": "Chennai Super Kings"
+    },
+    {
+      "rank": 4,
+      "iplTeamName": "Delhi Capitals"
+    },
+    {
+      "rank": 5,
+      "iplTeamName": "Gujarat Titans"
+    },
+    {
+      "rank": 6,
+      "iplTeamName": "Kolkata Knight Riders"
+    },
+    {
+      "rank": 7,
+      "iplTeamName": "Lucknow Super Giants"
+    },
+    {
+      "rank": 8,
+      "iplTeamName": "Mumbai Indians"
+    },
+    {
+      "rank": 9,
+      "iplTeamName": "Punjab Kings"
+    },
+    {
+      "rank": 10,
+      "iplTeamName": "Rajasthan Royals"
+    }
+  ],
+  "leaderboard": [
+    {
+      "rank": 1,
+      "leagueMemberName": "Abhishek",
+      "leagueTeamName": "Kinkartvyavimudh",
+      "totalPoints": 1464
+    },
+    {
+      "rank": 2,
+      "leagueMemberName": "Nikhil",
+      "leagueTeamName": "NSKNemesis",
+      "totalPoints": 1014
+    },
+    {
+      "rank": 3,
+      "leagueMemberName": "Rohit",
+      "leagueTeamName": "RKDEleven",
+      "totalPoints": 571.5
+    },
+    {
+      "rank": 4,
+      "leagueMemberName": "Sidhu",
+      "leagueTeamName": "Sidhsdevilseye",
+      "totalPoints": 566
+    },
+    {
+      "rank": 5,
+      "leagueMemberName": "Kunj",
+      "leagueTeamName": "Scarlet Challengers",
+      "totalPoints": 504
+    },
+    {
+      "rank": 6,
+      "leagueMemberName": "Saurabh",
+      "leagueTeamName": "Team Joshi",
+      "totalPoints": 471
+    },
+    {
+      "rank": 7,
+      "leagueMemberName": "Harpreet",
+      "leagueTeamName": "Sunny super kings",
+      "totalPoints": 447.5
+    },
+    {
+      "rank": 8,
+      "leagueMemberName": "Bijil",
+      "leagueTeamName": "SanjuPaglu",
+      "totalPoints": 442.5
+    },
+    {
+      "rank": 9,
+      "leagueMemberName": "Ravtaj",
+      "leagueTeamName": "Ravs XI",
+      "totalPoints": 414.5
+    },
+    {
+      "rank": 10,
+      "leagueMemberName": "Ashray",
+      "leagueTeamName": "Ashray Team",
+      "totalPoints": 324.5
+    },
+    {
+      "rank": 11,
+      "leagueMemberName": "Akshay",
+      "leagueTeamName": "aksesa11",
+      "totalPoints": 230
+    },
+    {
+      "rank": 12,
+      "leagueMemberName": "Ben",
+      "leagueTeamName": "Bens XI",
+      "totalPoints": 221.5
+    },
+    {
+      "rank": 13,
+      "leagueMemberName": "Yash",
+      "leagueTeamName": "BlAcKKaTs",
+      "totalPoints": 220.5
+    },
+    {
+      "rank": 14,
+      "leagueMemberName": "Atharva",
+      "leagueTeamName": "T20 Warriors XI",
+      "totalPoints": 151
+    },
+    {
+      "rank": 15,
+      "leagueMemberName": "Rajesh",
+      "leagueTeamName": null,
+      "totalPoints": null
+    }
+  ],
+  "playerBasedPrizes": [
+    {
+      "prizeName": "Highest Batter",
+      "playerName": "Virat Kohli",
+      "pointsScored": 330,
+      "matchNum": null,
+      "matchDetails": null,
+      "captainOrViceCaptain": null,
+      "booster": null,
+      "prizeAmount": 40
+    },
+    {
+      "prizeName": "Highest Bowler",
+      "playerName": "Jacob Duffy",
+      "pointsScored": 174,
+      "matchNum": null,
+      "matchDetails": null,
+      "captainOrViceCaptain": null,
+      "booster": null,
+      "prizeAmount": 40
+    },
+    {
+      "prizeName": "Highest WK",
+      "playerName": "Ishan Kishan",
+      "pointsScored": 464,
+      "matchNum": null,
+      "matchDetails": null,
+      "captainOrViceCaptain": null,
+      "booster": null,
+      "prizeAmount": 40
+    },
+    {
+      "prizeName": "Highest Allrounder",
+      "playerName": "Aniket Verma",
+      "pointsScored": 136,
+      "matchNum": null,
+      "matchDetails": null,
+      "captainOrViceCaptain": null,
+      "booster": null,
+      "prizeAmount": 40
+    }
+  ],
+  "matchDayScores": [
+    {
+      "matchNum": 1,
+      "matchDetails": "SRH vs RCB",
+      "scores": {
+        "Abhishek": 1464,
+        "Akshay": 230,
+        "Ashray": 324.5,
+        "Atharva": 151,
+        "Ben": 221.5,
+        "Bijil": 442.5,
+        "Harpreet": 447.5,
+        "Kunj": 504,
+        "Nikhil": 1014,
+        "Rajesh": null,
+        "Ravtaj": 414.5,
+        "Rohit": 571.5,
+        "Sidhu": 566,
+        "Saurabh": 471,
+        "Yash": 220.5
+      }
+    },
+    {
+      "matchNum": 2,
+      "matchDetails": "KKR vs MI",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 3,
+      "matchDetails": "CSK vs RR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 4,
+      "matchDetails": "GT vs PBKS",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 5,
+      "matchDetails": "DC vs LSG",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 6,
+      "matchDetails": "SRH vs KKR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 7,
+      "matchDetails": "PBKS vs CSK",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 8,
+      "matchDetails": "MI vs DC",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 9,
+      "matchDetails": "RR vs GT",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 10,
+      "matchDetails": "LSG vs SRH",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 11,
+      "matchDetails": "CSK vs RCB",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 12,
+      "matchDetails": "PBKS vs KKR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 13,
+      "matchDetails": "MI vs RR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 14,
+      "matchDetails": "GT vs DC",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 15,
+      "matchDetails": "LSG vs KKR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 16,
+      "matchDetails": "RCB vs RR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 17,
+      "matchDetails": "SRH vs PBKS",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 18,
+      "matchDetails": "DC vs CSK",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 19,
+      "matchDetails": "GT vs LSG",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 20,
+      "matchDetails": "RCB vs MI",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 21,
+      "matchDetails": "RR vs SRH",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 22,
+      "matchDetails": "KKR vs CSK",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 23,
+      "matchDetails": "LSG vs RCB",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 24,
+      "matchDetails": "PBKS vs MI",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 25,
+      "matchDetails": "KKR vs GT",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 26,
+      "matchDetails": "DC vs RCB",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 27,
+      "matchDetails": "CSK vs SRH",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 28,
+      "matchDetails": "RR vs KKR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 29,
+      "matchDetails": "LSG vs PBKS",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 30,
+      "matchDetails": "MI vs GT",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 31,
+      "matchDetails": "DC vs SRH",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 32,
+      "matchDetails": "RR vs LSG",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 33,
+      "matchDetails": "CSK vs MI",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 34,
+      "matchDetails": "GT vs RCB",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 35,
+      "matchDetails": "PBKS vs DC",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 36,
+      "matchDetails": "SRH vs RR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 37,
+      "matchDetails": "CSK vs GT",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 38,
+      "matchDetails": "KKR vs LSG",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 39,
+      "matchDetails": "RCB vs DC",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 40,
+      "matchDetails": "RR vs PBKS",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 41,
+      "matchDetails": "SRH vs MI",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 42,
+      "matchDetails": "RCB vs GT",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 43,
+      "matchDetails": "DC vs RR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 44,
+      "matchDetails": "MI vs CSK",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 45,
+      "matchDetails": "KKR vs SRH",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 46,
+      "matchDetails": "PBKS vs GT",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 47,
+      "matchDetails": "LSG vs MI",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 48,
+      "matchDetails": "CSK vs DC",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 49,
+      "matchDetails": "PBKS vs SRH",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 50,
+      "matchDetails": "RCB vs LSG",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 51,
+      "matchDetails": "KKR vs DC",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 52,
+      "matchDetails": "GT vs RR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 53,
+      "matchDetails": "LSG vs CSK",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 54,
+      "matchDetails": "MI vs RCB",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 55,
+      "matchDetails": "DC vs PBKS",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 56,
+      "matchDetails": "SRH vs GT",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 57,
+      "matchDetails": "KKR vs RCB",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 58,
+      "matchDetails": "MI vs PBKS",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 59,
+      "matchDetails": "CSK vs LSG",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 60,
+      "matchDetails": "GT vs KKR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 61,
+      "matchDetails": "RCB vs PBKS",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 62,
+      "matchDetails": "RR vs DC",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 63,
+      "matchDetails": "SRH vs CSK",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 64,
+      "matchDetails": "LSG vs RR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 65,
+      "matchDetails": "MI vs KKR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 66,
+      "matchDetails": "GT vs CSK",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 67,
+      "matchDetails": "RCB vs SRH",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 68,
+      "matchDetails": "PBKS vs LSG",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 69,
+      "matchDetails": "RR vs MI",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    },
+    {
+      "matchNum": 70,
+      "matchDetails": "DC vs KKR",
+      "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      }
+    }
+  ],
+  "matchDayWinners": [
+    {
+      "matchNum": 1,
+      "matchDetails": "SRH vs RCB",
+      "leagueMemberName": "Abhishek",
+      "leagueTeamName": "Kinkartvyavimudh",
+      "score": 1464,
+      "prizeAmount": 5
+    },
+    {
+      "matchNum": 2,
+      "matchDetails": "KKR vs MI",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 3,
+      "matchDetails": "CSK vs RR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 4,
+      "matchDetails": "GT vs PBKS",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 5,
+      "matchDetails": "DC vs LSG",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 6,
+      "matchDetails": "SRH vs KKR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 7,
+      "matchDetails": "PBKS vs CSK",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 8,
+      "matchDetails": "MI vs DC",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 9,
+      "matchDetails": "RR vs GT",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 10,
+      "matchDetails": "LSG vs SRH",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 11,
+      "matchDetails": "CSK vs RCB",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 12,
+      "matchDetails": "PBKS vs KKR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 13,
+      "matchDetails": "MI vs RR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 14,
+      "matchDetails": "GT vs DC",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 15,
+      "matchDetails": "LSG vs KKR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 16,
+      "matchDetails": "RCB vs RR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 17,
+      "matchDetails": "SRH vs PBKS",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 18,
+      "matchDetails": "DC vs CSK",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 19,
+      "matchDetails": "GT vs LSG",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 20,
+      "matchDetails": "RCB vs MI",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 21,
+      "matchDetails": "RR vs SRH",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 22,
+      "matchDetails": "KKR vs CSK",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 23,
+      "matchDetails": "LSG vs RCB",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 24,
+      "matchDetails": "PBKS vs MI",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 25,
+      "matchDetails": "KKR vs GT",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 26,
+      "matchDetails": "DC vs RCB",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 27,
+      "matchDetails": "CSK vs SRH",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 28,
+      "matchDetails": "RR vs KKR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 29,
+      "matchDetails": "LSG vs PBKS",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 30,
+      "matchDetails": "MI vs GT",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 31,
+      "matchDetails": "DC vs SRH",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 32,
+      "matchDetails": "RR vs LSG",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 33,
+      "matchDetails": "CSK vs MI",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 34,
+      "matchDetails": "GT vs RCB",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 35,
+      "matchDetails": "PBKS vs DC",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 36,
+      "matchDetails": "SRH vs RR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 37,
+      "matchDetails": "CSK vs GT",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 38,
+      "matchDetails": "KKR vs LSG",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 39,
+      "matchDetails": "RCB vs DC",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 40,
+      "matchDetails": "RR vs PBKS",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 41,
+      "matchDetails": "SRH vs MI",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 42,
+      "matchDetails": "RCB vs GT",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 43,
+      "matchDetails": "DC vs RR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 44,
+      "matchDetails": "MI vs CSK",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 45,
+      "matchDetails": "KKR vs SRH",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 46,
+      "matchDetails": "PBKS vs GT",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 47,
+      "matchDetails": "LSG vs MI",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 48,
+      "matchDetails": "CSK vs DC",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 49,
+      "matchDetails": "PBKS vs SRH",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 50,
+      "matchDetails": "RCB vs LSG",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 51,
+      "matchDetails": "KKR vs DC",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 52,
+      "matchDetails": "GT vs RR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 53,
+      "matchDetails": "LSG vs CSK",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 54,
+      "matchDetails": "MI vs RCB",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 55,
+      "matchDetails": "DC vs PBKS",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 56,
+      "matchDetails": "SRH vs GT",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 57,
+      "matchDetails": "KKR vs RCB",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 58,
+      "matchDetails": "MI vs PBKS",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 59,
+      "matchDetails": "CSK vs LSG",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 60,
+      "matchDetails": "GT vs KKR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 61,
+      "matchDetails": "RCB vs PBKS",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 62,
+      "matchDetails": "RR vs DC",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 63,
+      "matchDetails": "SRH vs CSK",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 64,
+      "matchDetails": "LSG vs RR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 65,
+      "matchDetails": "MI vs KKR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 66,
+      "matchDetails": "GT vs CSK",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 67,
+      "matchDetails": "RCB vs SRH",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 68,
+      "matchDetails": "PBKS vs LSG",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 69,
+      "matchDetails": "RR vs MI",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    },
+    {
+      "matchNum": 70,
+      "matchDetails": "DC vs KKR",
+      "leagueMemberName": null,
+      "leagueTeamName": null,
+      "score": null,
+      "prizeAmount": null
+    }
+  ],
+  "bonusPrizes": [
+    {
+      "prizeName": "Lucky Prize",
+      "matchNum": 1,
+      "matchDetails": "SRH vs RCB",
+      "leagueMemberName": "Abhishek",
+      "leagueTeamName": "Kinkartvyavimudh",
+      "score": 1464,
+      "prizeAmount": 10
+    },
+    {
+      "prizeName": "Dominator Prize",
+      "matchNum": 1,
+      "matchDetails": "SRH vs RCB",
+      "leagueMemberName": "Abhishek",
+      "leagueTeamName": "Kinkartvyavimudh",
+      "score": 1464,
+      "prizeAmount": 10
+    }
   ]
 }
