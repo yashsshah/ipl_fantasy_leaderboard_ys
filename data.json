@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-03-29T15:12:37.273603+00:00",
+    "lastSyncedAt": "2026-03-29T19:48:17.158263+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -83,63 +83,63 @@
   "players": [
     {
       "name": "Abhishek",
-      "totalPoints": 1464
+      "totalPoints": 1676
     },
     {
       "name": "Nikhil",
-      "totalPoints": 1014
+      "totalPoints": 1522
+    },
+    {
+      "name": "Rajesh",
+      "totalPoints": 1120
+    },
+    {
+      "name": "Harpreet",
+      "totalPoints": 1027
+    },
+    {
+      "name": "Ravtaj",
+      "totalPoints": 973
+    },
+    {
+      "name": "Saurabh",
+      "totalPoints": 965
+    },
+    {
+      "name": "Sidhu",
+      "totalPoints": 905
+    },
+    {
+      "name": "Bijil",
+      "totalPoints": 784
+    },
+    {
+      "name": "Kunj",
+      "totalPoints": 757.5
+    },
+    {
+      "name": "Akshay",
+      "totalPoints": 669
+    },
+    {
+      "name": "Yash",
+      "totalPoints": 661.5
+    },
+    {
+      "name": "Atharva",
+      "totalPoints": 575
     },
     {
       "name": "Rohit",
       "totalPoints": 571.5
     },
     {
-      "name": "Sidhu",
-      "totalPoints": 566
-    },
-    {
-      "name": "Kunj",
-      "totalPoints": 504
-    },
-    {
-      "name": "Saurabh",
-      "totalPoints": 471
-    },
-    {
-      "name": "Harpreet",
-      "totalPoints": 447.5
-    },
-    {
-      "name": "Bijil",
-      "totalPoints": 442.5
-    },
-    {
-      "name": "Ravtaj",
-      "totalPoints": 414.5
-    },
-    {
       "name": "Ashray",
-      "totalPoints": 324.5
-    },
-    {
-      "name": "Akshay",
-      "totalPoints": 230
+      "totalPoints": 378.5
     },
     {
       "name": "Ben",
-      "totalPoints": 221.5
-    },
-    {
-      "name": "Yash",
-      "totalPoints": 220.5
-    },
-    {
-      "name": "Atharva",
-      "totalPoints": 151
-    },
-    {
-      "name": "Rajesh",
-      "totalPoints": null
+      "totalPoints": 367
     }
   ],
   "matches": [
@@ -154,10 +154,10 @@
     {
       "match": 2,
       "matchDetails": "KKR vs MI",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Rajesh",
+      "winnerTeamName": "LazyBoys",
+      "points": 1120,
+      "amount": 5
     },
     {
       "match": 3,
@@ -707,21 +707,21 @@
   "playerPrizes": [
     {
       "prize": "Highest Batter",
-      "player": "Virat Kohli",
-      "points": 330,
-      "match": null,
-      "matchDetails": null,
-      "captainOrViceCaptain": null,
-      "booster": null,
+      "player": "Rohit Sharma",
+      "points": 456,
+      "match": 2,
+      "matchDetails": "KKR vs MI",
+      "captainOrViceCaptain": "C",
+      "booster": "2X",
       "amount": 40
     },
     {
       "prize": "Highest Bowler",
       "player": "Jacob Duffy",
       "points": 174,
-      "match": null,
-      "matchDetails": null,
-      "captainOrViceCaptain": null,
+      "match": 1,
+      "matchDetails": "SRH vs RCB",
+      "captainOrViceCaptain": "C",
       "booster": null,
       "amount": 40
     },
@@ -729,20 +729,20 @@
       "prize": "Highest WK",
       "player": "Ishan Kishan",
       "points": 464,
-      "match": null,
-      "matchDetails": null,
-      "captainOrViceCaptain": null,
-      "booster": null,
+      "match": 1,
+      "matchDetails": "SRH vs RCB",
+      "captainOrViceCaptain": "C",
+      "booster": "2X",
       "amount": 40
     },
     {
       "prize": "Highest Allrounder",
-      "player": "Aniket Verma",
-      "points": 136,
-      "match": null,
-      "matchDetails": null,
+      "player": "Shardul Thakur",
+      "points": 166,
+      "match": 2,
+      "matchDetails": "KKR vs MI",
       "captainOrViceCaptain": null,
-      "booster": null,
+      "booster": "2X",
       "amount": 40
     }
   ],
@@ -1800,111 +1800,111 @@
       "rank": 1,
       "leagueMemberName": "Abhishek",
       "leagueTeamName": "Kinkartvyavimudh",
-      "totalPoints": 1464
+      "totalPoints": 1676
     },
     {
       "rank": 2,
       "leagueMemberName": "Nikhil",
       "leagueTeamName": "NSKNemesis",
-      "totalPoints": 1014
+      "totalPoints": 1522
     },
     {
       "rank": 3,
-      "leagueMemberName": "Rohit",
-      "leagueTeamName": "RKDEleven",
-      "totalPoints": 571.5
+      "leagueMemberName": "Rajesh",
+      "leagueTeamName": "LazyBoys",
+      "totalPoints": 1120
     },
     {
       "rank": 4,
-      "leagueMemberName": "Sidhu",
-      "leagueTeamName": "Sidhsdevilseye",
-      "totalPoints": 566
+      "leagueMemberName": "Harpreet",
+      "leagueTeamName": "Sunny super kings",
+      "totalPoints": 1027
     },
     {
       "rank": 5,
-      "leagueMemberName": "Kunj",
-      "leagueTeamName": "Scarlet Challengers",
-      "totalPoints": 504
+      "leagueMemberName": "Ravtaj",
+      "leagueTeamName": "Ravs XI",
+      "totalPoints": 973
     },
     {
       "rank": 6,
       "leagueMemberName": "Saurabh",
       "leagueTeamName": "Team Joshi",
-      "totalPoints": 471
+      "totalPoints": 965
     },
     {
       "rank": 7,
-      "leagueMemberName": "Harpreet",
-      "leagueTeamName": "Sunny super kings",
-      "totalPoints": 447.5
+      "leagueMemberName": "Sidhu",
+      "leagueTeamName": "Sidhsdevilseye",
+      "totalPoints": 905
     },
     {
       "rank": 8,
       "leagueMemberName": "Bijil",
       "leagueTeamName": "SanjuPaglu",
-      "totalPoints": 442.5
+      "totalPoints": 784
     },
     {
       "rank": 9,
-      "leagueMemberName": "Ravtaj",
-      "leagueTeamName": "Ravs XI",
-      "totalPoints": 414.5
+      "leagueMemberName": "Kunj",
+      "leagueTeamName": "Scarlet Challengers",
+      "totalPoints": 757.5
     },
     {
       "rank": 10,
-      "leagueMemberName": "Ashray",
-      "leagueTeamName": "Ashray Team",
-      "totalPoints": 324.5
+      "leagueMemberName": "Akshay",
+      "leagueTeamName": "aksesa11",
+      "totalPoints": 669
     },
     {
       "rank": 11,
-      "leagueMemberName": "Akshay",
-      "leagueTeamName": "aksesa11",
-      "totalPoints": 230
+      "leagueMemberName": "Yash",
+      "leagueTeamName": "BlAcKKaTs",
+      "totalPoints": 661.5
     },
     {
       "rank": 12,
-      "leagueMemberName": "Ben",
-      "leagueTeamName": "Bens XI",
-      "totalPoints": 221.5
+      "leagueMemberName": "Atharva",
+      "leagueTeamName": "T20 Warriors XI",
+      "totalPoints": 575
     },
     {
       "rank": 13,
-      "leagueMemberName": "Yash",
-      "leagueTeamName": "BlAcKKaTs",
-      "totalPoints": 220.5
+      "leagueMemberName": "Rohit",
+      "leagueTeamName": "RKDEleven",
+      "totalPoints": 571.5
     },
     {
       "rank": 14,
-      "leagueMemberName": "Atharva",
-      "leagueTeamName": "T20 Warriors XI",
-      "totalPoints": 151
+      "leagueMemberName": "Ashray",
+      "leagueTeamName": "Ashray Team",
+      "totalPoints": 378.5
     },
     {
       "rank": 15,
-      "leagueMemberName": "Rajesh",
-      "leagueTeamName": null,
-      "totalPoints": null
+      "leagueMemberName": "Ben",
+      "leagueTeamName": "Bens XI",
+      "totalPoints": 367
     }
   ],
   "playerBasedPrizes": [
     {
       "prizeName": "Highest Batter",
-      "playerName": "Virat Kohli",
-      "pointsScored": 330,
-      "matchNum": null,
-      "matchDetails": null,
-      "captainOrViceCaptain": null,
-      "booster": null,
+      "playerName": "Rohit Sharma",
+      "pointsScored": 456,
+      "matchNum": 2,
+      "matchDetails": "KKR vs MI",
+      "captainOrViceCaptain": "C",
+      "booster": "2X",
       "prizeAmount": 40
     },
     {
       "prizeName": "Highest Bowler",
       "playerName": "Jacob Duffy",
       "pointsScored": 174,
-      "matchNum": null,
-      "matchDetails": null,
-      "captainOrViceCaptain": null,
+      "matchNum": 1,
+      "matchDetails": "SRH vs RCB",
+      "captainOrViceCaptain": "C",
       "booster": null,
       "prizeAmount": 40
     },
@@ -1912,20 +1912,20 @@
       "prizeName": "Highest WK",
       "playerName": "Ishan Kishan",
       "pointsScored": 464,
-      "matchNum": null,
-      "matchDetails": null,
-      "captainOrViceCaptain": null,
-      "booster": null,
+      "matchNum": 1,
+      "matchDetails": "SRH vs RCB",
+      "captainOrViceCaptain": "C",
+      "booster": "2X",
       "prizeAmount": 40
     },
     {
       "prizeName": "Highest Allrounder",
-      "playerName": "Aniket Verma",
-      "pointsScored": 136,
-      "matchNum": null,
-      "matchDetails": null,
+      "playerName": "Shardul Thakur",
+      "pointsScored": 166,
+      "matchNum": 2,
+      "matchDetails": "KKR vs MI",
       "captainOrViceCaptain": null,
-      "booster": null,
+      "booster": "2X",
       "prizeAmount": 40
     }
   ],
@@ -1955,21 +1955,21 @@
       "matchNum": 2,
       "matchDetails": "KKR vs MI",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 212,
+        "Akshay": 439,
+        "Ashray": 54,
+        "Atharva": 424,
+        "Ben": 145.5,
+        "Bijil": 341.5,
+        "Harpreet": 579.5,
+        "Kunj": 253.5,
+        "Nikhil": 508,
+        "Rajesh": 1120,
+        "Ravtaj": 558.5,
+        "Rohit": 0,
+        "Sidhu": 339,
+        "Saurabh": 494,
+        "Yash": 441
       }
     },
     {
@@ -3413,10 +3413,10 @@
     {
       "matchNum": 2,
       "matchDetails": "KKR vs MI",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Rajesh",
+      "leagueTeamName": "LazyBoys",
+      "score": 1120,
+      "prizeAmount": 5
     },
     {
       "matchNum": 3,
@@ -3966,11 +3966,11 @@
   "bonusPrizes": [
     {
       "prizeName": "Lucky Prize",
-      "matchNum": 1,
-      "matchDetails": "SRH vs RCB",
-      "leagueMemberName": "Abhishek",
-      "leagueTeamName": "Kinkartvyavimudh",
-      "score": 1464,
+      "matchNum": 2,
+      "matchDetails": "KKR vs MI",
+      "leagueMemberName": "Rajesh",
+      "leagueTeamName": "LazyBoys",
+      "score": 1120,
       "prizeAmount": 10
     },
     {
