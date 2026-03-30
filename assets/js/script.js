@@ -12,11 +12,6 @@ const matchList = document.getElementById('match-list');
 const prizeList = document.getElementById('player-prizes-list');
 const bonusPrizeList = document.getElementById('bonus-prizes-list');
 const lastSyncedValue = document.getElementById('last-synced-value');
-const latestResultTitle = document.getElementById('latest-result-title');
-const latestResultSummary = document.getElementById('latest-result-summary');
-const latestResultWinner = document.getElementById('latest-result-winner');
-const latestResultScore = document.getElementById('latest-result-score');
-const latestResultPrize = document.getElementById('latest-result-prize');
 const membersGrid = document.getElementById('members-grid');
 const memberStats = document.getElementById('member-stats');
 const participantsBody = document.getElementById('participants-body');
@@ -222,9 +217,6 @@ function renderMatchWinners(data, memberLookup) {
         .slice()
         .sort((left, right) => Number(right.matchNum || 0) - Number(left.matchNum || 0));
 
-    const latestMatch = completedMatches[0] || null;
-    renderLatestResult(latestMatch, memberLookup);
-
     completedMatches.slice(0, 12).forEach(match => {
         const item = document.createElement('li');
         item.className = 'result-item';
@@ -235,13 +227,13 @@ function renderMatchWinners(data, memberLookup) {
                     <div class="result-eyebrow">Match ${escapeHtml(match.matchNum)}</div>
                     <div class="result-title-row">
                         <div class="result-title">${formatText(match.matchDetails, 'Awaiting fixture')}</div>
-                        ${lockMarkup}
                     </div>
                     <div class="result-subtitle">${renderMultiplePeople(match.leagueMemberName, memberLookup)}</div>
                 </div>
                 <div class="result-metrics">
                     <span class="stat-pill">${formatPoints(match.score)}</span>
                     <span class="stat-pill stat-pill-money">${formatCurrency(match.prizeAmount)}</span>
+                    ${lockMarkup}
                 </div>
             </div>
         `;
@@ -253,23 +245,6 @@ function renderMatchWinners(data, memberLookup) {
         item.innerHTML = '<i class="fas fa-hourglass-half"></i> <strong>No completed matches yet.</strong> Results will appear here as scores are added.';
         matchList.appendChild(item);
     }
-}
-
-function renderLatestResult(match, memberLookup) {
-    if (!match) {
-        latestResultTitle.innerHTML = '<i class="fas fa-bolt"></i> Awaiting first completed result';
-        latestResultSummary.textContent = 'Match winners will appear here as soon as scores are available.';
-        latestResultWinner.textContent = 'TBD';
-        latestResultScore.textContent = '-';
-        latestResultPrize.textContent = '-';
-        return;
-    }
-
-    latestResultTitle.innerHTML = `<i class="fas fa-bolt"></i> Match ${escapeHtml(match.matchNum)} • ${escapeHtml(match.matchDetails || 'Result')}`;
-    latestResultSummary.textContent = 'Most recent completed fixture and prize split.';
-    latestResultWinner.innerHTML = renderMultiplePeople(match.leagueMemberName, memberLookup);
-    latestResultScore.textContent = formatCompactPoints(match.score);
-    latestResultPrize.textContent = formatCurrency(match.prizeAmount);
 }
 
 function renderPlayerPrizes(data, memberLookup) {
@@ -347,7 +322,6 @@ function renderMembers(data, memberLookup) {
             <div class="member-avatar">${escapeHtml(member.name.charAt(0).toUpperCase())}</div>
             <div class="member-info">
                 <div class="member-name">${escapeHtml(member.name)}</div>
-                <div class="member-team"><i class="fas fa-shield-halved"></i> ${escapeHtml(teamName)}</div>
                 <div class="member-team-accent">
                     <span class="team-swatch"></span>
                     <span class="team-label">${escapeHtml(teamName)}</span>
@@ -366,7 +340,6 @@ function renderMembers(data, memberLookup) {
             <td>${renderStatusChip(participant.joinedStatus)}</td>
             <td>${renderStatusChip(participant.paymentStatus)}</td>
             <td>${formatCurrency(participant.buyInAmount)}</td>
-            <td>${formatText(participant.email)}</td>
         `;
         participantsBody.appendChild(row);
     });
@@ -435,7 +408,8 @@ function renderScoreMatrix(data) {
 function renderTableTracker(data) {
     (data.tableRankings || []).forEach(rowData => {
         const row = document.createElement('tr');
-        row.innerHTML = `<td>${formatText(rowData.rank)}</td><td>${formatText(rowData.iplTeamName)}</td>`;
+        const isPlayoffRank = Number(rowData.rank) <= 4;
+        row.innerHTML = `<td class="${isPlayoffRank ? 'playoff-rank-cell' : ''}">${formatText(rowData.rank)}</td><td>${formatText(rowData.iplTeamName)}</td>`;
         tableRankingsBody.appendChild(row);
     });
 
@@ -445,9 +419,26 @@ function renderTableTracker(data) {
     (data.tablePredictions || []).forEach(prediction => {
         const row = document.createElement('tr');
         const cells = memberNames.map(name => `<td>${formatText(prediction.predictions?.[name])}</td>`).join('');
-        row.innerHTML = `<td>${formatText(prediction.rank)}</td>${cells}`;
+        const isPlayoffRank = Number(prediction.rank) <= 4;
+        row.innerHTML = `<td class="${isPlayoffRank ? 'playoff-rank-cell' : ''}">${formatText(prediction.rank)}</td>${cells}`;
         predictionsBody.appendChild(row);
+
+        if (Number(prediction.rank) === 4) {
+            const cutoffRow = document.createElement('tr');
+            cutoffRow.className = 'prediction-cutoff-row';
+            cutoffRow.innerHTML = `
+                <td class="prediction-cutoff-label">Playoff contention</td>
+                <td class="prediction-cutoff-line" colspan="${memberNames.length}"><span></span></td>
+            `;
+            predictionsBody.appendChild(cutoffRow);
+        }
     });
+
+    const scoreCells = memberNames.map(name => `<td>${formatText(data.tablePredictionScores?.[name], '0')}</td>`).join('');
+    const totalRow = document.createElement('tr');
+    totalRow.className = 'prediction-total-row';
+    totalRow.innerHTML = `<td>Total Points</td>${scoreCells}`;
+    predictionsBody.appendChild(totalRow);
 }
 
 function renderPrizePool(data) {
