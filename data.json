@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-03-29T19:48:17.158263+00:00",
+    "lastSyncedAt": "2026-03-30T01:56:05.992363+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -761,7 +761,7 @@
       "leagueMemberName": "Akshay",
       "leagueTeamName": "aksesa11",
       "joinedStatus": "Y",
-      "paymentStatus": "Y",
+      "paymentStatus": "V",
       "buyInAmount": 50,
       "email": null
     },
@@ -779,7 +779,7 @@
       "leagueMemberName": "Atharva",
       "leagueTeamName": "T20 Warriors XI",
       "joinedStatus": "Y",
-      "paymentStatus": "Y",
+      "paymentStatus": "Z",
       "buyInAmount": 50,
       "email": null
     },
@@ -788,7 +788,7 @@
       "leagueMemberName": "Ben",
       "leagueTeamName": "Bens XI",
       "joinedStatus": "Y",
-      "paymentStatus": "Y",
+      "paymentStatus": "V",
       "buyInAmount": 50,
       "email": null
     },
@@ -815,7 +815,7 @@
       "leagueMemberName": "Kunj",
       "leagueTeamName": "Scarlet Challengers",
       "joinedStatus": "Y",
-      "paymentStatus": "Y",
+      "paymentStatus": "Z",
       "buyInAmount": 50,
       "email": null
     },
@@ -833,7 +833,7 @@
       "leagueMemberName": "Rajesh",
       "leagueTeamName": "LazyBoys",
       "joinedStatus": "Y",
-      "paymentStatus": "Y",
+      "paymentStatus": "Z",
       "buyInAmount": 50,
       "email": null
     },
@@ -860,7 +860,7 @@
       "leagueMemberName": "Sidhu",
       "leagueTeamName": "Sidhsdevilseye",
       "joinedStatus": "Y",
-      "paymentStatus": "Y",
+      "paymentStatus": "V",
       "buyInAmount": 50,
       "email": null
     },
@@ -869,7 +869,7 @@
       "leagueMemberName": "Saurabh",
       "leagueTeamName": "Team Joshi",
       "joinedStatus": "Y",
-      "paymentStatus": null,
+      "paymentStatus": "V",
       "buyInAmount": 50,
       "email": null
     },
@@ -1753,6 +1753,23 @@
       }
     }
   ],
+  "tablePredictionScores": {
+    "Abhishek": 0,
+    "Akshay": 0,
+    "Ashray": 0,
+    "Atharva": 0,
+    "Ben": 0,
+    "Bijil": 0,
+    "Harpreet": 0,
+    "Kunj": 0,
+    "Nikhil": 0,
+    "Rajesh": 0,
+    "Ravtaj": 0,
+    "Rohit": 0,
+    "Sidhu": 0,
+    "Saurabh": 0,
+    "Yash": 0
+  },
   "tableRankings": [
     {
       "rank": 1,

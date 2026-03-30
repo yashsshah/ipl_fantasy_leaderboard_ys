@@ -75,12 +75,40 @@ def parse_number_or_text(value: str | None) -> int | float | str | None:
         return None
     if "/" in normalized:
         return normalized
-    return parse_number(normalized)
+    try:
+        return parse_number(normalized)
+    except ValueError:
+        return normalized
 
 
 def read_csv(root: Path, name: str) -> list[dict[str, str]]:
     with (root / name).open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def score_table_prediction(actual_order: list[str], predicted_order: list[str | None]) -> int:
+    actual_top_four = set(actual_order[:4])
+    exact_points = sum(
+        1
+        for actual_team, predicted_team in zip(actual_order, predicted_order)
+        if predicted_team and actual_team == predicted_team
+    )
+    playoff_points = sum(1 for team in predicted_order[:4] if team in actual_top_four)
+    return exact_points + playoff_points
+
+
+def build_table_prediction_scores(
+    table_predictions_rows: list[dict[str, str]],
+    member_columns: list[str],
+    table_rankings_rows: list[dict[str, str]],
+) -> dict[str, int]:
+    prediction_rows = [row for row in table_predictions_rows if clean(row.get("Rank")) != "Total Points"]
+    actual_order = [clean(row.get("IPLTeamName")) for row in table_rankings_rows if clean(row.get("IPLTeamName"))]
+
+    return {
+        member: score_table_prediction(actual_order, [clean(row.get(member)) for row in prediction_rows])
+        for member in member_columns
+    }
 
 
 def load_existing_colors(data_path: Path) -> dict[str, str | None]:
@@ -115,6 +143,7 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
     match_day_winner_rows = read_csv(root, "MatchDayWinners.csv")
     match_day_score_rows = read_csv(root, "MatchDayScores.csv")
     table_predictions_rows = read_csv(root, "TablePredictions.csv")
+    table_rankings_rows = read_csv(root, "TableRankings.csv")
 
     score_member_columns = [
         key for key in (match_day_score_rows[0].keys() if match_day_score_rows else [])
@@ -124,6 +153,7 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
         key for key in (table_predictions_rows[0].keys() if table_predictions_rows else [])
         if key != "Rank"
     ]
+    prediction_input_rows = [row for row in table_predictions_rows if clean(row.get("Rank")) != "Total Points"]
 
     return {
         "meta": {
@@ -210,14 +240,19 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
                     member: clean(row.get(member)) for member in prediction_member_columns
                 },
             }
-            for row in table_predictions_rows
+            for row in prediction_input_rows
         ],
+        "tablePredictionScores": build_table_prediction_scores(
+            prediction_input_rows,
+            prediction_member_columns,
+            table_rankings_rows,
+        ),
         "tableRankings": [
             {
                 "rank": parse_number(row.get("Rank")),
                 "iplTeamName": clean(row.get("IPLTeamName")),
             }
-            for row in read_csv(root, "TableRankings.csv")
+            for row in table_rankings_rows
         ],
         "leaderboard": [
             {
