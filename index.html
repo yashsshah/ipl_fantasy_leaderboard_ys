@@ -20,50 +20,61 @@
         <p class="sync-status"><i class="fas fa-rotate"></i> Last synced <span id="last-synced-value">Loading...</span></p>
     </header>
 
-    <nav class="tabs">
-        <button class="tab-btn active" data-tab="overview-tab">
-            <i class="fas fa-chart-line"></i> Leaderboard
-        </button>
-        <button class="tab-btn" data-tab="members-tab">
-            <i class="fas fa-users"></i> League Members
-        </button>
-        <button class="tab-btn" data-tab="schedule-tab">
-            <i class="fas fa-calendar-days"></i> Schedule
-        </button>
-        <button class="tab-btn" data-tab="scores-tab">
-            <i class="fas fa-table"></i> Match Scores
-        </button>
-        <button class="tab-btn" data-tab="table-tab">
-            <i class="fas fa-ranking-star"></i> Table Tracker
-        </button>
-        <button class="tab-btn" data-tab="prizes-tab">
-            <i class="fas fa-sack-dollar"></i> Prize Pool
-        </button>
+    <nav class="tab-layout">
+        <div class="tab-group tab-group-left">
+            <p class="tab-group-label">Competitive Views</p>
+            <div class="tab-stack">
+                <button class="tab-btn active" data-tab="overview-tab">
+                    <i class="fas fa-chart-line"></i> Leaderboard
+                </button>
+                <button class="tab-btn" data-tab="scores-tab">
+                    <i class="fas fa-table"></i> Match Scores
+                </button>
+                <button class="tab-btn" data-tab="table-tab">
+                    <i class="fas fa-ranking-star"></i> Prediction Tracker
+                </button>
+            </div>
+        </div>
+        <div class="tab-group tab-group-right">
+            <p class="tab-group-label">League Facts</p>
+            <div class="tab-stack">
+                <button class="tab-btn" data-tab="members-tab">
+                    <i class="fas fa-users"></i> League Members
+                </button>
+                <button class="tab-btn" data-tab="prizes-tab">
+                    <i class="fas fa-sack-dollar"></i> Prize Pool
+                </button>
+                <button class="tab-btn" data-tab="schedule-tab">
+                    <i class="fas fa-calendar-days"></i> Schedule
+                </button>
+            </div>
+        </div>
     </nav>
 
     <main class="container">
         <div id="overview-tab" class="tab-content active">
-            <section class="card latest-result-card" id="latest-result-card">
-                <div class="latest-result-copy">
-                    <p class="section-kicker">Latest Completed Result</p>
-                    <h2 id="latest-result-title"><i class="fas fa-bolt"></i> Awaiting first completed result</h2>
-                    <p class="latest-result-summary" id="latest-result-summary">Match winners will appear here as soon as scores are available.</p>
-                </div>
-                <div class="latest-result-metrics">
-                    <div class="latest-metric">
-                        <span class="latest-metric-label">Winner</span>
-                        <span class="latest-metric-value" id="latest-result-winner">TBD</span>
-                    </div>
-                    <div class="latest-metric">
-                        <span class="latest-metric-label">Score</span>
-                        <span class="latest-metric-value" id="latest-result-score">-</span>
-                    </div>
-                    <div class="latest-metric">
-                        <span class="latest-metric-label">Prize</span>
-                        <span class="latest-metric-value" id="latest-result-prize">-</span>
-                    </div>
-                </div>
-            </section>
+            <div class="overview-strip">
+                <section id="match-scores" class="card">
+                    <h2><i class="fas fa-money-bill-wave"></i> Completed Match Winners</h2>
+                    <ul id="match-list" class="prize-list">
+                        <!-- Dynamically filled -->
+                    </ul>
+                </section>
+
+                <section id="bonus-prizes" class="card">
+                    <h2><i class="fas fa-bolt"></i> Bonus Prizes</h2>
+                    <ul id="bonus-prizes-list" class="prize-list">
+                        <!-- Dynamically filled -->
+                    </ul>
+                </section>
+
+                <section id="player-prizes" class="card">
+                    <h2><i class="fas fa-bullseye"></i> Player-based Prizes</h2>
+                    <ul id="player-prizes-list" class="prize-list">
+                        <!-- Dynamically filled -->
+                    </ul>
+                </section>
+            </div>
 
             <section id="leaderboard" class="card">
                 <h2><i class="fas fa-fire"></i> Overall Leaderboard</h2>
@@ -83,29 +94,6 @@
                     </table>
                 </div>
             </section>
-
-            <div class="cards-row overview-cards">
-                <section id="match-scores" class="card">
-                    <h2><i class="fas fa-money-bill-wave"></i> Completed Match Winners <span class="badge">Auto-refreshed</span></h2>
-                    <ul id="match-list" class="prize-list">
-                        <!-- Dynamically filled -->
-                    </ul>
-                </section>
-
-                <section id="player-prizes" class="card">
-                    <h2><i class="fas fa-bullseye"></i> Player-based Prizes</h2>
-                    <ul id="player-prizes-list" class="prize-list">
-                        <!-- Dynamically filled -->
-                    </ul>
-                </section>
-
-                <section id="bonus-prizes" class="card">
-                    <h2><i class="fas fa-bolt"></i> Bonus Prizes</h2>
-                    <ul id="bonus-prizes-list" class="prize-list">
-                        <!-- Dynamically filled -->
-                    </ul>
-                </section>
-            </div>
         </div>
 
         <div id="members-tab" class="tab-content">
@@ -132,7 +120,6 @@
                                 <th>Joined</th>
                                 <th>Payment</th>
                                 <th>Buy-in</th>
-                                <th>Email</th>
                             </tr>
                         </thead>
                         <tbody id="participants-body"></tbody>
@@ -195,7 +182,7 @@
                 <section class="card">
                     <h2><i class="fas fa-crosshairs"></i> Prediction Grid</h2>
                     <div class="table-wrapper">
-                        <table class="matrix-table">
+                        <table class="matrix-table prediction-grid-table">
                             <thead id="predictions-head"></thead>
                             <tbody id="predictions-body"></tbody>
                         </table>
