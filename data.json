@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-03-30T01:56:05.992363+00:00",
+    "lastSyncedAt": "2026-03-30T04:03:13.291947+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -883,6 +883,228 @@
       "email": "s_yash@hotmail.com"
     }
   ],
+  "participantPrizeSummary": [
+    {
+      "leagueMemberName": "Abhishek",
+      "leagueTeamName": "Kinkartvyavimudh",
+      "lockedPrizeAmount": 5,
+      "potentialPrizeAmount": 80,
+      "lockedDailyWinnerAmount": 5,
+      "potentialOverallPrizeAmount": 70,
+      "potentialBonusPrizeAmount": 10,
+      "lockedBreakdown": [
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 1 winner",
+          "matchNum": 1,
+          "matchDetails": "SRH vs RCB",
+          "amount": 5,
+          "status": "locked"
+        }
+      ],
+      "potentialBreakdown": [
+        {
+          "prizeType": "overall-leaderboard",
+          "label": "Current 1st place",
+          "amount": 70,
+          "status": "potential"
+        },
+        {
+          "prizeType": "bonus",
+          "label": "Dominator Prize",
+          "matchNum": 1,
+          "matchDetails": "SRH vs RCB",
+          "amount": 10,
+          "status": "potential"
+        }
+      ]
+    },
+    {
+      "leagueMemberName": "Akshay",
+      "leagueTeamName": "aksesa11",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Ashray",
+      "leagueTeamName": "Ashray Team",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Atharva",
+      "leagueTeamName": "T20 Warriors XI",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Ben",
+      "leagueTeamName": "Bens XI",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Bijil",
+      "leagueTeamName": "SanjuPaglu",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Harpreet",
+      "leagueTeamName": "Sunny super kings",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Kunj",
+      "leagueTeamName": "Scarlet Challengers",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Nikhil",
+      "leagueTeamName": "NSKNemesis",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 40,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 40,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": [
+        {
+          "prizeType": "overall-leaderboard",
+          "label": "Current 2nd place",
+          "amount": 40,
+          "status": "potential"
+        }
+      ]
+    },
+    {
+      "leagueMemberName": "Rajesh",
+      "leagueTeamName": "LazyBoys",
+      "lockedPrizeAmount": 5,
+      "potentialPrizeAmount": 30,
+      "lockedDailyWinnerAmount": 5,
+      "potentialOverallPrizeAmount": 20,
+      "potentialBonusPrizeAmount": 10,
+      "lockedBreakdown": [
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 2 winner",
+          "matchNum": 2,
+          "matchDetails": "KKR vs MI",
+          "amount": 5,
+          "status": "locked"
+        }
+      ],
+      "potentialBreakdown": [
+        {
+          "prizeType": "overall-leaderboard",
+          "label": "Current 3rd place",
+          "amount": 20,
+          "status": "potential"
+        },
+        {
+          "prizeType": "bonus",
+          "label": "Lucky Prize",
+          "matchNum": 2,
+          "matchDetails": "KKR vs MI",
+          "amount": 10,
+          "status": "potential"
+        }
+      ]
+    },
+    {
+      "leagueMemberName": "Ravtaj",
+      "leagueTeamName": "Ravs XI",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Rohit",
+      "leagueTeamName": "RKDEleven",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Sidhu",
+      "leagueTeamName": "Sidhsdevilseye",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Saurabh",
+      "leagueTeamName": "Team Joshi",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    },
+    {
+      "leagueMemberName": "Yash",
+      "leagueTeamName": "BlAcKKaTs",
+      "lockedPrizeAmount": 0,
+      "potentialPrizeAmount": 0,
+      "lockedDailyWinnerAmount": 0,
+      "potentialOverallPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 0,
+      "lockedBreakdown": [],
+      "potentialBreakdown": []
+    }
+  ],
   "prizesList": [
     {
       "prizeName": "Highest team score for each match",
@@ -890,7 +1112,10 @@
       "prizeCount": 70,
       "prizeTotalAmount": 350,
       "totalPotAmount": 750,
-      "differenceAmount": 0
+      "differenceAmount": 0,
+      "prizeCategory": "daily-winner",
+      "prizeStatusRule": "locked",
+      "prizePosition": null
     },
     {
       "prizeName": "First Highest overall aggregate total (after 70 league stage matches)",
@@ -898,7 +1123,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 70,
       "totalPotAmount": 750,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "overall-leaderboard",
+      "prizeStatusRule": "potential",
+      "prizePosition": 1
     },
     {
       "prizeName": "Second highest overall aggregate total (after 70 league stage matches)",
@@ -906,7 +1134,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 40,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "overall-leaderboard",
+      "prizeStatusRule": "potential",
+      "prizePosition": 2
     },
     {
       "prizeName": "Third highest overall aggregate total (after 70 league stage matches)",
@@ -914,7 +1145,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 20,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "overall-leaderboard",
+      "prizeStatusRule": "potential",
+      "prizePosition": 3
     },
     {
       "prizeName": "Highest WK",
@@ -922,7 +1156,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 40,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "player-based",
+      "prizeStatusRule": "potential",
+      "prizePosition": null
     },
     {
       "prizeName": "Highest batter",
@@ -930,7 +1167,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 40,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "player-based",
+      "prizeStatusRule": "potential",
+      "prizePosition": null
     },
     {
       "prizeName": "Highest allrounder",
@@ -938,7 +1178,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 40,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "player-based",
+      "prizeStatusRule": "potential",
+      "prizePosition": null
     },
     {
       "prizeName": "Highest bowler",
@@ -946,7 +1189,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 40,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "player-based",
+      "prizeStatusRule": "potential",
+      "prizePosition": null
     },
     {
       "prizeName": "Lowest team score to win the $5 prize [Lucky Prize]",
@@ -954,7 +1200,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 10,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "bonus",
+      "prizeStatusRule": "potential",
+      "prizePosition": null
     },
     {
       "prizeName": "Highest team score to win the $5 prize [Dominator Prize]",
@@ -962,7 +1211,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 10,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "bonus",
+      "prizeStatusRule": "potential",
+      "prizePosition": null
     },
     {
       "prizeName": "Table Prediction 1",
@@ -970,7 +1222,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 50,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "prediction",
+      "prizeStatusRule": "final-only",
+      "prizePosition": 1
     },
     {
       "prizeName": "Table Prediction 2",
@@ -978,7 +1233,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 30,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "prediction",
+      "prizeStatusRule": "final-only",
+      "prizePosition": 2
     },
     {
       "prizeName": "Table Anti Prediction",
@@ -986,7 +1244,10 @@
       "prizeCount": 1,
       "prizeTotalAmount": 10,
       "totalPotAmount": null,
-      "differenceAmount": null
+      "differenceAmount": null,
+      "prizeCategory": "prediction",
+      "prizeStatusRule": "final-only",
+      "prizePosition": 3
     }
   ],
   "matchSchedule": [

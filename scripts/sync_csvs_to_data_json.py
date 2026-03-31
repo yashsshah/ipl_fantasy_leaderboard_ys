@@ -86,6 +86,18 @@ def read_csv(root: Path, name: str) -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
+def split_combined_names(value: str | None) -> list[str]:
+    normalized = clean(value)
+    if normalized is None:
+        return []
+    return [item.strip() for item in normalized.split(" / ") if item.strip()]
+
+
+def normalize_amount(value: float) -> int | float:
+    rounded = round(value, 2)
+    return int(rounded) if float(rounded).is_integer() else rounded
+
+
 def score_table_prediction(actual_order: list[str], predicted_order: list[str | None]) -> int:
     actual_top_four = set(actual_order[:4])
     exact_points = sum(
@@ -109,6 +121,164 @@ def build_table_prediction_scores(
         member: score_table_prediction(actual_order, [clean(row.get(member)) for row in prediction_rows])
         for member in member_columns
     }
+
+
+def format_position_label(position: int) -> str:
+    if 10 <= position % 100 <= 20:
+        suffix = "th"
+    else:
+        suffix = {1: "st", 2: "nd", 3: "rd"}.get(position % 10, "th")
+    return f"{position}{suffix}"
+
+
+def build_participant_prize_summary(
+    participants_rows: list[dict[str, str]],
+    leaderboard_rows: list[dict[str, str]],
+    match_day_winner_rows: list[dict[str, str]],
+    bonus_rows: list[dict[str, str]],
+    prizes_rows: list[dict[str, str]],
+) -> list[dict[str, object]]:
+    summary_lookup: dict[str, dict[str, object]] = {}
+
+    def ensure_entry(name: str, team_name: str | None = None) -> dict[str, object]:
+        entry = summary_lookup.get(name)
+        if entry is None:
+            entry = {
+                "leagueMemberName": name,
+                "leagueTeamName": team_name,
+                "lockedPrizeAmount": 0,
+                "potentialPrizeAmount": 0,
+                "lockedDailyWinnerAmount": 0,
+                "potentialOverallPrizeAmount": 0,
+                "potentialBonusPrizeAmount": 0,
+                "lockedBreakdown": [],
+                "potentialBreakdown": [],
+            }
+            summary_lookup[name] = entry
+        elif team_name and not entry.get("leagueTeamName"):
+            entry["leagueTeamName"] = team_name
+        return entry
+
+    for participant in participants_rows:
+        name = clean(participant.get("LeagueMemberName"))
+        if name is None:
+            continue
+        ensure_entry(name, clean(participant.get("LeagueTeamName")))
+
+    for winner_row in match_day_winner_rows:
+        prize_amount = parse_number(winner_row.get("PrizeAmount"))
+        if prize_amount is None:
+            continue
+        member_names = split_combined_names(winner_row.get("LeagueMemberName"))
+        team_name = clean(winner_row.get("LeagueTeamName"))
+        for member_name in member_names:
+            entry = ensure_entry(member_name, team_name)
+            entry["lockedPrizeAmount"] = normalize_amount(entry["lockedPrizeAmount"] + prize_amount)
+            entry["lockedDailyWinnerAmount"] = normalize_amount(entry["lockedDailyWinnerAmount"] + prize_amount)
+            entry["lockedBreakdown"].append(
+                {
+                    "prizeType": "daily-winner",
+                    "label": f"Match {winner_row.get('MatchNum')} winner",
+                    "matchNum": parse_number(winner_row.get("MatchNum")),
+                    "matchDetails": clean(winner_row.get("MatchDetails")),
+                    "amount": prize_amount,
+                    "status": "locked",
+                }
+            )
+
+    overall_prizes_by_position: dict[int, int | float] = {}
+    for prize_row in prizes_rows:
+        if clean(prize_row.get("PrizeCategory")) != "overall-leaderboard":
+            continue
+        if clean(prize_row.get("PrizeStatusRule")) != "potential":
+            continue
+        position = parse_number(prize_row.get("PrizePosition"))
+        amount = parse_number(prize_row.get("PrizeAmount"))
+        if position is None or amount is None:
+            continue
+        overall_prizes_by_position[int(position)] = amount
+
+    ranked_rows = [
+        {
+            "leagueMemberName": clean(row.get("LeagueMemberName")),
+            "leagueTeamName": clean(row.get("LeagueTeamName")),
+            "totalPoints": parse_number(row.get("TotalPoints")),
+        }
+        for row in leaderboard_rows
+        if clean(row.get("LeagueMemberName")) and parse_number(row.get("TotalPoints")) is not None
+    ]
+    ranked_rows.sort(key=lambda row: float(row["totalPoints"]), reverse=True)
+
+    leaderboard_index = 0
+    leaderboard_position = 1
+    while leaderboard_index < len(ranked_rows):
+        current_points = ranked_rows[leaderboard_index]["totalPoints"]
+        tied_group = [ranked_rows[leaderboard_index]]
+        leaderboard_index += 1
+        while leaderboard_index < len(ranked_rows) and ranked_rows[leaderboard_index]["totalPoints"] == current_points:
+            tied_group.append(ranked_rows[leaderboard_index])
+            leaderboard_index += 1
+
+        start_position = leaderboard_position
+        end_position = leaderboard_position + len(tied_group) - 1
+        prize_pool = sum(overall_prizes_by_position.get(position, 0) for position in range(start_position, end_position + 1))
+
+        if prize_pool:
+            split_amount = normalize_amount(prize_pool / len(tied_group))
+            if start_position == end_position:
+                label = f"Current {format_position_label(start_position)} place"
+            else:
+                label = f"Current tie for {format_position_label(start_position)} to {format_position_label(end_position)}"
+
+            for ranked_row in tied_group:
+                member_name = ranked_row["leagueMemberName"]
+                if member_name is None:
+                    continue
+                entry = ensure_entry(member_name, ranked_row["leagueTeamName"])
+                entry["potentialPrizeAmount"] = normalize_amount(entry["potentialPrizeAmount"] + split_amount)
+                entry["potentialOverallPrizeAmount"] = normalize_amount(entry["potentialOverallPrizeAmount"] + split_amount)
+                entry["potentialBreakdown"].append(
+                    {
+                        "prizeType": "overall-leaderboard",
+                        "label": label,
+                        "amount": split_amount,
+                        "status": "potential",
+                    }
+                )
+
+        leaderboard_position += len(tied_group)
+
+    for bonus_row in bonus_rows:
+        prize_amount = parse_number(bonus_row.get("PrizeAmount"))
+        member_names = split_combined_names(bonus_row.get("LeagueMemberName"))
+        if prize_amount is None or not member_names:
+            continue
+
+        split_amount = normalize_amount(prize_amount / len(member_names))
+        for member_name in member_names:
+            entry = ensure_entry(member_name, clean(bonus_row.get("LeagueTeamName")))
+            entry["potentialPrizeAmount"] = normalize_amount(entry["potentialPrizeAmount"] + split_amount)
+            entry["potentialBonusPrizeAmount"] = normalize_amount(entry["potentialBonusPrizeAmount"] + split_amount)
+            entry["potentialBreakdown"].append(
+                {
+                    "prizeType": "bonus",
+                    "label": clean(bonus_row.get("PrizeName")) or "Bonus Prize",
+                    "matchNum": parse_number_or_text(bonus_row.get("MatchNum")),
+                    "matchDetails": clean(bonus_row.get("MatchDetails")),
+                    "amount": split_amount,
+                    "status": "potential",
+                }
+            )
+
+    ordered_names = [clean(row.get("LeagueMemberName")) for row in participants_rows if clean(row.get("LeagueMemberName"))]
+    ordered_entries = [summary_lookup[name] for name in ordered_names if name in summary_lookup]
+
+    extra_entries = [
+        entry for name, entry in summary_lookup.items() if name not in ordered_names
+    ]
+    extra_entries.sort(key=lambda entry: entry["leagueMemberName"])
+
+    return ordered_entries + extra_entries
 
 
 def load_existing_colors(data_path: Path) -> dict[str, str | None]:
@@ -144,6 +314,8 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
     match_day_score_rows = read_csv(root, "MatchDayScores.csv")
     table_predictions_rows = read_csv(root, "TablePredictions.csv")
     table_rankings_rows = read_csv(root, "TableRankings.csv")
+    bonus_rows = read_csv(root, "BonusPrizes.csv")
+    prizes_rows = read_csv(root, "PrizesList.csv")
 
     score_member_columns = [
         key for key in (match_day_score_rows[0].keys() if match_day_score_rows else [])
@@ -211,6 +383,13 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
             }
             for row in participants_rows
         ],
+        "participantPrizeSummary": build_participant_prize_summary(
+            participants_rows,
+            leaderboard_rows,
+            match_day_winner_rows,
+            bonus_rows,
+            prizes_rows,
+        ),
         "prizesList": [
             {
                 "prizeName": clean(row.get("PrizeName")),
@@ -219,8 +398,11 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
                 "prizeTotalAmount": parse_number(row.get("PrizeTotalAmount")),
                 "totalPotAmount": parse_number(row.get("TotalPotAmount")),
                 "differenceAmount": parse_number(row.get("DifferenceAmount")),
+                "prizeCategory": clean(row.get("PrizeCategory")),
+                "prizeStatusRule": clean(row.get("PrizeStatusRule")),
+                "prizePosition": parse_number(row.get("PrizePosition")),
             }
-            for row in read_csv(root, "PrizesList.csv")
+            for row in prizes_rows
         ],
         "matchSchedule": [
             {
@@ -307,7 +489,7 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
                 "score": parse_number(row.get("Score")),
                 "prizeAmount": parse_number(row.get("PrizeAmount")),
             }
-            for row in read_csv(root, "BonusPrizes.csv")
+            for row in bonus_rows
         ],
     }
 
