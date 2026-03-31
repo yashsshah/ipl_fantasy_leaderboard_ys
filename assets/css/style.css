@@ -240,6 +240,22 @@ header h1 {
     font-size: 1.3rem;
 }
 
+.page-legend {
+    margin: 1.5rem 0 0;
+    color: rgba(255,255,255,0.78);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.page-legend p + p {
+    margin-top: 0.2rem;
+}
+
+.page-legend .fa-lock,
+.page-legend .fa-hourglass-half {
+    color: #ffc107;
+}
+
 .badge {
     background: linear-gradient(135deg, #00c853, #69f0ae);
     color: #1a1a2e;
@@ -622,6 +638,22 @@ tbody tr:nth-child(3) td:first-child {
     color: #69f0ae;
 }
 
+.stat-pill-potential {
+    background: rgba(255, 193, 7, 0.14);
+    color: #ffd166;
+}
+
+.leaderboard-prize-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.leaderboard-prize-icon {
+    color: #ffc107;
+    font-size: 0.92rem;
+}
+
 .leaderboard-pill {
     margin-left: 0;
     justify-content: center;
@@ -742,11 +774,17 @@ tbody tr:nth-child(3) td:first-child {
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
 }
 
 .member-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(var(--team-color-rgb), 0.3);
+    border-color: var(--team-color);
+}
+
+.member-card.is-selected {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.2), 0 14px 32px rgba(var(--team-color-rgb), 0.3);
     border-color: var(--team-color);
 }
 
@@ -798,6 +836,167 @@ tbody tr:nth-child(3) td:first-child {
     color: var(--team-color);
     font-size: 0.78rem;
     font-weight: 600;
+}
+
+.member-prize-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 0.85rem;
+}
+
+.member-prize-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.38rem;
+}
+
+.member-prize-pill {
+    margin-left: 0;
+}
+
+.member-prize-icon {
+    color: #ffc107;
+    font-size: 0.88rem;
+}
+
+.prize-breakdown-card.is-hidden {
+    display: none;
+}
+
+.prize-breakdown-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.prize-breakdown-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.prize-breakdown-subtitle {
+    margin-top: 0.3rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+}
+
+.prize-breakdown-total {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    flex-shrink: 0;
+}
+
+.breakdown-total-pill,
+.breakdown-amount-pill {
+    margin-left: 0;
+}
+
+.breakdown-total-icon,
+.breakdown-amount-icon {
+    color: #ffc107;
+}
+
+.prize-breakdown-body {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.breakdown-section {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.breakdown-section + .breakdown-section {
+    margin-top: 0.35rem;
+}
+
+.breakdown-section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.breakdown-section-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.breakdown-section-copy {
+    margin-top: 0.3rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+}
+
+.breakdown-section-items {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.breakdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.breakdown-copy {
+    min-width: 0;
+}
+
+.breakdown-title-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.breakdown-title-row h3 {
+    font-size: 1rem;
+}
+
+.breakdown-type-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.24rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(255, 193, 7, 0.12);
+    color: #ffc107;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.breakdown-meta {
+    margin-top: 0.35rem;
+    color: rgba(255,255,255,0.68);
+    line-height: 1.5;
+}
+
+.breakdown-amount-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.breakdown-empty {
+    padding: 1rem 1.1rem;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px dashed rgba(255,255,255,0.16);
+    color: rgba(255,255,255,0.72);
+}
 }
 
 .team-swatch {
@@ -875,6 +1074,19 @@ footer i {
     
     .members-grid {
         grid-template-columns: 1fr;
+    }
+
+    .prize-breakdown-header,
+    .breakdown-section-header,
+    .breakdown-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .prize-breakdown-total,
+    .breakdown-amount-wrap {
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .stats-grid {

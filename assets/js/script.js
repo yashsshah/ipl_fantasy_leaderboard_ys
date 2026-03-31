@@ -14,6 +14,11 @@ const bonusPrizeList = document.getElementById('bonus-prizes-list');
 const lastSyncedValue = document.getElementById('last-synced-value');
 const membersGrid = document.getElementById('members-grid');
 const memberStats = document.getElementById('member-stats');
+const memberPrizeBreakdown = document.getElementById('member-prize-breakdown');
+const prizeBreakdownName = document.getElementById('prize-breakdown-name');
+const prizeBreakdownSubtitle = document.getElementById('prize-breakdown-subtitle');
+const prizeBreakdownTotal = document.getElementById('prize-breakdown-total');
+const prizeBreakdownBody = document.getElementById('prize-breakdown-body');
 const participantsBody = document.getElementById('participants-body');
 const scheduleBody = document.getElementById('schedule-body');
 const scoresHead = document.getElementById('scores-head');
@@ -22,7 +27,7 @@ const tableRankingsBody = document.getElementById('table-rankings-body');
 const predictionsHead = document.getElementById('predictions-head');
 const predictionsBody = document.getElementById('predictions-body');
 const prizesBody = document.getElementById('prizes-body');
-const overallLeaderboardPrizes = [70, 40, 20];
+let currentPrizeSummaryLookup = new Map();
 
 function normalizeName(value) {
     return (value || '').trim().toLowerCase();
@@ -83,9 +88,23 @@ function formatText(value, fallback = '-') {
     return value === null || value === undefined || value === '' ? fallback : escapeHtml(value);
 }
 
+function titleCasePrizeType(value) {
+    return String(value || '')
+        .split('-')
+        .filter(Boolean)
+        .map(token => token.charAt(0).toUpperCase() + token.slice(1))
+        .join(' ');
+}
+
 function buildMemberLookup(members) {
     return new Map((members || []).map(member => [normalizeName(member.name), member]));
 }
+
+function buildPrizeSummaryLookup(summaryRows) {
+    return new Map((summaryRows || []).map(row => [normalizeName(row.leagueMemberName), row]));
+}
+
+const overallLeaderboardPrizes = [70, 40, 20];
 
 function getMemberMeta(name, memberLookup) {
     return memberLookup.get(normalizeName(name)) || null;
@@ -179,6 +198,11 @@ function clearRenderedData() {
     bonusPrizeList.innerHTML = '';
     membersGrid.innerHTML = '';
     memberStats.innerHTML = '';
+    memberPrizeBreakdown.classList.add('is-hidden');
+    prizeBreakdownName.textContent = 'Select a member';
+    prizeBreakdownSubtitle.textContent = 'Click a member card above to inspect the full breakdown.';
+    prizeBreakdownTotal.textContent = '-';
+    prizeBreakdownBody.innerHTML = '';
     participantsBody.innerHTML = '';
     scheduleBody.innerHTML = '';
     scoresHead.innerHTML = '';
@@ -189,24 +213,96 @@ function clearRenderedData() {
     prizesBody.innerHTML = '';
 }
 
+function renderPrizeBreakdownSection(title, breakdownItems, totalAmount, isLocked) {
+    const emptyMessage = `No ${title.toLowerCase()} prize entries for this member yet.`;
+    const itemsMarkup = breakdownItems.length
+        ? breakdownItems.map(item => {
+            const meta = [];
+            if (item.matchNum !== null && item.matchNum !== undefined && item.matchNum !== '') {
+                meta.push(`Match ${escapeHtml(item.matchNum)}`);
+            }
+            if (item.matchDetails) {
+                meta.push(escapeHtml(item.matchDetails));
+            }
+
+            return `
+                <article class="breakdown-item">
+                    <div class="breakdown-copy">
+                        <div class="breakdown-title-row">
+                            <h3>${escapeHtml(item.label || 'Prize entry')}</h3>
+                            <span class="breakdown-type-chip">${escapeHtml(titleCasePrizeType(item.prizeType) || 'Prize')}</span>
+                        </div>
+                        <p class="breakdown-meta">${meta.length ? meta.join(' • ') : 'No additional details'}</p>
+                    </div>
+                    <div class="breakdown-amount-wrap">
+                        <span class="stat-pill ${isLocked ? 'stat-pill-money' : 'stat-pill-potential'} breakdown-amount-pill">${formatCurrency(item.amount)}</span>
+                        <i class="fas ${isLocked ? 'fa-lock' : 'fa-hourglass-half'} breakdown-amount-icon"></i>
+                    </div>
+                </article>
+            `;
+        }).join('')
+        : `<div class="breakdown-empty">${emptyMessage}</div>`;
+
+    return `
+        <section class="breakdown-section">
+            <div class="breakdown-section-header">
+                <div class="breakdown-section-title-wrap">
+                    <h3 class="breakdown-section-title">${title}</h3>
+                    <p class="breakdown-section-copy">${isLocked ? 'Locked prizes are secured and already earned.' : 'Potential prizes reflect current leaderboard and bonus positions, so they can still change.'}</p>
+                </div>
+                <div class="breakdown-amount-wrap">
+                    <span class="stat-pill ${isLocked ? 'stat-pill-money' : 'stat-pill-potential'} breakdown-amount-pill">${title} ${formatCurrency(totalAmount)}</span>
+                    <i class="fas ${isLocked ? 'fa-lock' : 'fa-hourglass-half'} breakdown-amount-icon"></i>
+                </div>
+            </div>
+            <div class="breakdown-section-items">${itemsMarkup}</div>
+        </section>
+    `;
+}
+
+function renderPrizeBreakdown(summary) {
+    const lockedBreakdown = summary.lockedBreakdown || [];
+    const potentialBreakdown = summary.potentialBreakdown || [];
+    memberPrizeBreakdown.classList.remove('is-hidden');
+    prizeBreakdownName.textContent = summary.leagueMemberName || 'Unknown member';
+    prizeBreakdownSubtitle.textContent = 'Locked prizes are listed first, followed by potential prizes.';
+    prizeBreakdownTotal.innerHTML = `
+        <span class="stat-pill stat-pill-money breakdown-total-pill">Locked ${formatCurrency(summary.lockedPrizeAmount ?? 0)}</span>
+        <i class="fas fa-lock breakdown-total-icon"></i>
+        <span class="stat-pill stat-pill-potential breakdown-total-pill">Potential ${formatCurrency(summary.potentialPrizeAmount ?? 0)}</span>
+        <i class="fas fa-hourglass-half breakdown-total-icon"></i>
+    `;
+
+    prizeBreakdownBody.innerHTML = [
+        renderPrizeBreakdownSection('Locked', lockedBreakdown, summary.lockedPrizeAmount ?? 0, true),
+        renderPrizeBreakdownSection('Potential', potentialBreakdown, summary.potentialPrizeAmount ?? 0, false),
+    ].join('');
+
+    memberPrizeBreakdown.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function renderSyncStatus(data) {
     lastSyncedValue.textContent = formatTimestamp(data.meta?.lastSyncedAt);
 }
 
-function renderLeaderboard(data, memberLookup) {
+function renderLeaderboard(data, memberLookup, prizeSummaryLookup) {
     getLeaderboardRows(data).forEach((player, index) => {
         const row = document.createElement('tr');
         const rankIcons = ['🥇', '🥈', '🥉'];
         const rankDisplay = index < 3 ? rankIcons[index] : player.rank || index + 1;
-        const overallPrize = overallLeaderboardPrizes[index] ?? null;
         const pointsLabel = player.totalPoints === null || player.totalPoints === undefined || player.totalPoints === ''
             ? 'TBD'
             : `${player.totalPoints} pts`;
+        const prizeSummary = prizeSummaryLookup.get(normalizeName(player.leagueMemberName)) || null;
+        const potentialPrizeAmount = prizeSummary?.potentialOverallPrizeAmount ?? 0;
+        const prizeCellMarkup = index < 3 && potentialPrizeAmount
+            ? `<span class="leaderboard-prize-wrap"><span class="stat-pill stat-pill-money leaderboard-pill">${formatCurrency(overallLeaderboardPrizes[index])}</span><i class="fas fa-hourglass-half leaderboard-prize-icon"></i></span>`
+            : '';
         row.innerHTML = `
             <td class="rank-col">${rankDisplay}</td>
             <td>${renderLeaderboardPerson(player.leagueMemberName, player.leagueTeamName, memberLookup)}</td>
             <td><span class="stat-pill leaderboard-pill"><strong>${pointsLabel}</strong></span></td>
-            <td><span class="stat-pill stat-pill-money leaderboard-pill">${overallPrize ? formatCurrency(overallPrize) : '-'}</span></td>
+            <td>${prizeCellMarkup}</td>
         `;
         leaderboardBody.appendChild(row);
     });
@@ -309,12 +405,16 @@ function renderMemberStats(data) {
     });
 }
 
-function renderMembers(data, memberLookup) {
+function renderMembers(data, memberLookup, prizeSummaryLookup) {
     (data.leagueMembers || []).forEach((member, index) => {
         const card = document.createElement('div');
         const teamColor = member.color || '#94a3b8';
         const teamName = member.teamName || 'No team set';
+        const prizeSummary = prizeSummaryLookup.get(normalizeName(member.name)) || null;
+        const lockedPrizeAmount = prizeSummary?.lockedPrizeAmount ?? 0;
+        const potentialPrizeAmount = prizeSummary?.potentialPrizeAmount ?? 0;
         card.className = 'member-card';
+        card.dataset.memberName = member.name;
         card.style.setProperty('--team-color', teamColor);
         card.style.setProperty('--team-color-rgb', hexToRgb(teamColor));
         card.innerHTML = `
@@ -325,6 +425,16 @@ function renderMembers(data, memberLookup) {
                 <div class="member-team-accent">
                     <span class="team-swatch"></span>
                     <span class="team-label">${escapeHtml(teamName)}</span>
+                </div>
+                <div class="member-prize-summary">
+                    <span class="member-prize-trigger" aria-hidden="true">
+                        <span class="stat-pill stat-pill-money member-prize-pill">Locked ${formatCurrency(lockedPrizeAmount)}</span>
+                        <i class="fas fa-lock member-prize-icon"></i>
+                    </span>
+                    <span class="member-prize-trigger" aria-hidden="true">
+                        <span class="stat-pill stat-pill-potential member-prize-pill">Potential ${formatCurrency(potentialPrizeAmount)}</span>
+                        <i class="fas fa-hourglass-half member-prize-icon"></i>
+                    </span>
                 </div>
             </div>
         `;
@@ -344,6 +454,25 @@ function renderMembers(data, memberLookup) {
         participantsBody.appendChild(row);
     });
 }
+
+membersGrid.addEventListener('click', event => {
+    const card = event.target.closest('.member-card');
+    if (!card) {
+        return;
+    }
+
+    const memberName = card.dataset.memberName || '';
+    const summary = currentPrizeSummaryLookup.get(normalizeName(memberName));
+    if (!summary) {
+        return;
+    }
+
+    document.querySelectorAll('.member-card').forEach(memberCard => {
+        memberCard.classList.toggle('is-selected', memberCard.dataset.memberName === memberName);
+    });
+
+    renderPrizeBreakdown(summary);
+});
 
 function renderStatusChip(value) {
     const label = value || 'Pending';
@@ -457,13 +586,15 @@ function renderPrizePool(data) {
 function renderData(data) {
     clearRenderedData();
     const memberLookup = buildMemberLookup(data.leagueMembers || []);
+    const prizeSummaryLookup = buildPrizeSummaryLookup(data.participantPrizeSummary || []);
+    currentPrizeSummaryLookup = prizeSummaryLookup;
     renderSyncStatus(data);
-    renderLeaderboard(data, memberLookup);
+    renderLeaderboard(data, memberLookup, prizeSummaryLookup);
     renderMatchWinners(data, memberLookup);
     renderPlayerPrizes(data, memberLookup);
     renderBonusPrizes(data, memberLookup);
     renderMemberStats(data);
-    renderMembers(data, memberLookup);
+    renderMembers(data, memberLookup, prizeSummaryLookup);
     renderSchedule(data, memberLookup);
     renderScoreMatrix(data);
     renderTableTracker(data);
