@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-03-31T07:28:21.641264+00:00",
+    "lastSyncedAt": "2026-03-31T20:27:31.457955+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -83,63 +83,63 @@
   "players": [
     {
       "name": "Harpreet",
-      "totalPoints": 1728
-    },
-    {
-      "name": "Abhishek",
-      "totalPoints": 1676
+      "totalPoints": 2446
     },
     {
       "name": "Nikhil",
-      "totalPoints": 1643.5
+      "totalPoints": 1876.5
+    },
+    {
+      "name": "Abhishek",
+      "totalPoints": 1751
+    },
+    {
+      "name": "Saurabh",
+      "totalPoints": 1367
+    },
+    {
+      "name": "Bijil",
+      "totalPoints": 1204.5
     },
     {
       "name": "Rajesh",
       "totalPoints": 1120
     },
     {
-      "name": "Saurabh",
-      "totalPoints": 1037
+      "name": "Kunj",
+      "totalPoints": 1035
     },
     {
       "name": "Ravtaj",
       "totalPoints": 1002
     },
     {
+      "name": "Akshay",
+      "totalPoints": 974.5
+    },
+    {
       "name": "Sidhu",
       "totalPoints": 955.5
     },
     {
-      "name": "Bijil",
-      "totalPoints": 910
-    },
-    {
-      "name": "Akshay",
-      "totalPoints": 826
-    },
-    {
-      "name": "Kunj",
-      "totalPoints": 825.5
+      "name": "Atharva",
+      "totalPoints": 840.5
     },
     {
       "name": "Yash",
       "totalPoints": 808.5
     },
     {
-      "name": "Atharva",
-      "totalPoints": 799.5
-    },
-    {
       "name": "Rohit",
       "totalPoints": 571.5
     },
     {
-      "name": "Ben",
-      "totalPoints": 477.5
+      "name": "Ashray",
+      "totalPoints": 547
     },
     {
-      "name": "Ashray",
-      "totalPoints": 378.5
+      "name": "Ben",
+      "totalPoints": 530.5
     }
   ],
   "matches": [
@@ -170,10 +170,10 @@
     {
       "match": 4,
       "matchDetails": "GT vs PBKS",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Harpreet",
+      "winnerTeamName": "Sunny super kings",
+      "points": 718,
+      "amount": 5
     },
     {
       "match": 5,
@@ -888,9 +888,9 @@
       "leagueMemberName": "Abhishek",
       "leagueTeamName": "Kinkartvyavimudh",
       "lockedPrizeAmount": 5,
-      "potentialPrizeAmount": 50,
+      "potentialPrizeAmount": 30,
       "lockedDailyWinnerAmount": 5,
-      "potentialOverallPrizeAmount": 40,
+      "potentialOverallPrizeAmount": 20,
       "potentialBonusPrizeAmount": 10,
       "lockedBreakdown": [
         {
@@ -905,8 +905,8 @@
       "potentialBreakdown": [
         {
           "prizeType": "overall-leaderboard",
-          "label": "Current 2nd place",
-          "amount": 40,
+          "label": "Current 3rd place",
+          "amount": 20,
           "status": "potential"
         },
         {
@@ -977,9 +977,9 @@
     {
       "leagueMemberName": "Harpreet",
       "leagueTeamName": "Sunny super kings",
-      "lockedPrizeAmount": 5,
+      "lockedPrizeAmount": 10,
       "potentialPrizeAmount": 80,
-      "lockedDailyWinnerAmount": 5,
+      "lockedDailyWinnerAmount": 10,
       "potentialOverallPrizeAmount": 70,
       "potentialBonusPrizeAmount": 10,
       "lockedBreakdown": [
@@ -988,6 +988,14 @@
           "label": "Match 3 winner",
           "matchNum": 3,
           "matchDetails": "CSK vs RR",
+          "amount": 5,
+          "status": "locked"
+        },
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 4 winner",
+          "matchNum": 4,
+          "matchDetails": "GT vs PBKS",
           "amount": 5,
           "status": "locked"
         }
@@ -1024,16 +1032,16 @@
       "leagueMemberName": "Nikhil",
       "leagueTeamName": "NSKNemesis",
       "lockedPrizeAmount": 0,
-      "potentialPrizeAmount": 20,
+      "potentialPrizeAmount": 40,
       "lockedDailyWinnerAmount": 0,
-      "potentialOverallPrizeAmount": 20,
+      "potentialOverallPrizeAmount": 40,
       "potentialBonusPrizeAmount": 0,
       "lockedBreakdown": [],
       "potentialBreakdown": [
         {
           "prizeType": "overall-leaderboard",
-          "label": "Current 3rd place",
-          "amount": 20,
+          "label": "Current 2nd place",
+          "amount": 40,
           "status": "potential"
         }
       ]
@@ -2087,73 +2095,73 @@
       "rank": 1,
       "leagueMemberName": "Harpreet",
       "leagueTeamName": "Sunny super kings",
-      "totalPoints": 1728
+      "totalPoints": 2446
     },
     {
       "rank": 2,
-      "leagueMemberName": "Abhishek",
-      "leagueTeamName": "Kinkartvyavimudh",
-      "totalPoints": 1676
+      "leagueMemberName": "Nikhil",
+      "leagueTeamName": "NSKNemesis",
+      "totalPoints": 1876.5
     },
     {
       "rank": 3,
-      "leagueMemberName": "Nikhil",
-      "leagueTeamName": "NSKNemesis",
-      "totalPoints": 1643.5
+      "leagueMemberName": "Abhishek",
+      "leagueTeamName": "Kinkartvyavimudh",
+      "totalPoints": 1751
     },
     {
       "rank": 4,
+      "leagueMemberName": "Saurabh",
+      "leagueTeamName": "Team Joshi",
+      "totalPoints": 1367
+    },
+    {
+      "rank": 5,
+      "leagueMemberName": "Bijil",
+      "leagueTeamName": "SanjuPaglu",
+      "totalPoints": 1204.5
+    },
+    {
+      "rank": 6,
       "leagueMemberName": "Rajesh",
       "leagueTeamName": "LazyBoys",
       "totalPoints": 1120
     },
     {
-      "rank": 5,
-      "leagueMemberName": "Saurabh",
-      "leagueTeamName": "Team Joshi",
-      "totalPoints": 1037
+      "rank": 7,
+      "leagueMemberName": "Kunj",
+      "leagueTeamName": "Scarlet Challengers",
+      "totalPoints": 1035
     },
     {
-      "rank": 6,
+      "rank": 8,
       "leagueMemberName": "Ravtaj",
       "leagueTeamName": "Ravs XI",
       "totalPoints": 1002
     },
     {
-      "rank": 7,
+      "rank": 9,
+      "leagueMemberName": "Akshay",
+      "leagueTeamName": "aksesa11",
+      "totalPoints": 974.5
+    },
+    {
+      "rank": 10,
       "leagueMemberName": "Sidhu",
       "leagueTeamName": "Sidhsdevilseye",
       "totalPoints": 955.5
     },
     {
-      "rank": 8,
-      "leagueMemberName": "Bijil",
-      "leagueTeamName": "SanjuPaglu",
-      "totalPoints": 910
-    },
-    {
-      "rank": 9,
-      "leagueMemberName": "Akshay",
-      "leagueTeamName": "aksesa11",
-      "totalPoints": 826
-    },
-    {
-      "rank": 10,
-      "leagueMemberName": "Kunj",
-      "leagueTeamName": "Scarlet Challengers",
-      "totalPoints": 825.5
-    },
-    {
       "rank": 11,
-      "leagueMemberName": "Yash",
-      "leagueTeamName": "BlAcKKaTs",
-      "totalPoints": 808.5
+      "leagueMemberName": "Atharva",
+      "leagueTeamName": "T20 Warriors XI",
+      "totalPoints": 840.5
     },
     {
       "rank": 12,
-      "leagueMemberName": "Atharva",
-      "leagueTeamName": "T20 Warriors XI",
-      "totalPoints": 799.5
+      "leagueMemberName": "Yash",
+      "leagueTeamName": "BlAcKKaTs",
+      "totalPoints": 808.5
     },
     {
       "rank": 13,
@@ -2163,15 +2171,15 @@
     },
     {
       "rank": 14,
-      "leagueMemberName": "Ben",
-      "leagueTeamName": "Bens XI",
-      "totalPoints": 477.5
+      "leagueMemberName": "Ashray",
+      "leagueTeamName": "Ashray Team",
+      "totalPoints": 547
     },
     {
       "rank": 15,
-      "leagueMemberName": "Ashray",
-      "leagueTeamName": "Ashray Team",
-      "totalPoints": 378.5
+      "leagueMemberName": "Ben",
+      "leagueTeamName": "Bens XI",
+      "totalPoints": 530.5
     }
   ],
   "playerBasedPrizes": [
@@ -2284,21 +2292,21 @@
       "matchNum": 4,
       "matchDetails": "GT vs PBKS",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 75,
+        "Akshay": 148.5,
+        "Ashray": 168.5,
+        "Atharva": 41,
+        "Ben": 53,
+        "Bijil": 294.5,
+        "Harpreet": 718,
+        "Kunj": 209.5,
+        "Nikhil": 233,
+        "Rajesh": 0,
+        "Ravtaj": 0,
+        "Rohit": 0,
+        "Sidhu": 0,
+        "Saurabh": 330,
+        "Yash": 0
       }
     },
     {
@@ -3716,10 +3724,10 @@
     {
       "matchNum": 4,
       "matchDetails": "GT vs PBKS",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Harpreet",
+      "leagueTeamName": "Sunny super kings",
+      "score": 718,
+      "prizeAmount": 5
     },
     {
       "matchNum": 5,
