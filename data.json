@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-04-01T18:52:58.109818+00:00",
+    "lastSyncedAt": "2026-04-02T18:47:55.650591+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -86,60 +86,60 @@
       "totalPoints": 2871
     },
     {
-      "name": "Abhishek",
-      "totalPoints": 2100.5
-    },
-    {
       "name": "Nikhil",
-      "totalPoints": 1998.5
+      "totalPoints": 2338.5
     },
     {
-      "name": "Saurabh",
-      "totalPoints": 1505
-    },
-    {
-      "name": "Ravtaj",
-      "totalPoints": 1347
+      "name": "Abhishek",
+      "totalPoints": 2333.5
     },
     {
       "name": "Bijil",
-      "totalPoints": 1322
+      "totalPoints": 1720
     },
     {
-      "name": "Kunj",
-      "totalPoints": 1246.5
-    },
-    {
-      "name": "Rajesh",
-      "totalPoints": 1120
-    },
-    {
-      "name": "Sidhu",
-      "totalPoints": 1115.5
-    },
-    {
-      "name": "Akshay",
-      "totalPoints": 1083.5
-    },
-    {
-      "name": "Atharva",
-      "totalPoints": 870.5
-    },
-    {
-      "name": "Yash",
-      "totalPoints": 808.5
+      "name": "Saurabh",
+      "totalPoints": 1719.5
     },
     {
       "name": "Ben",
-      "totalPoints": 609
+      "totalPoints": 1508
+    },
+    {
+      "name": "Ravtaj",
+      "totalPoints": 1487
+    },
+    {
+      "name": "Akshay",
+      "totalPoints": 1434.5
+    },
+    {
+      "name": "Kunj",
+      "totalPoints": 1407.5
+    },
+    {
+      "name": "Rajesh",
+      "totalPoints": 1347
+    },
+    {
+      "name": "Sidhu",
+      "totalPoints": 1182.5
+    },
+    {
+      "name": "Atharva",
+      "totalPoints": 1126.5
+    },
+    {
+      "name": "Yash",
+      "totalPoints": 976.5
     },
     {
       "name": "Rohit",
-      "totalPoints": 571.5
+      "totalPoints": 932.5
     },
     {
       "name": "Ashray",
-      "totalPoints": 547
+      "totalPoints": 837
     }
   ],
   "matches": [
@@ -186,10 +186,10 @@
     {
       "match": 6,
       "matchDetails": "SRH vs KKR",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Ben",
+      "winnerTeamName": "Bens XI",
+      "points": 899,
+      "amount": 5
     },
     {
       "match": 7,
@@ -888,9 +888,9 @@
       "leagueMemberName": "Abhishek",
       "leagueTeamName": "Kinkartvyavimudh",
       "lockedPrizeAmount": 5,
-      "potentialPrizeAmount": 50,
+      "potentialPrizeAmount": 30,
       "lockedDailyWinnerAmount": 5,
-      "potentialOverallPrizeAmount": 40,
+      "potentialOverallPrizeAmount": 20,
       "potentialBonusPrizeAmount": 10,
       "lockedBreakdown": [
         {
@@ -905,8 +905,8 @@
       "potentialBreakdown": [
         {
           "prizeType": "overall-leaderboard",
-          "label": "Current 2nd place",
-          "amount": 40,
+          "label": "Current 3rd place",
+          "amount": 20,
           "status": "potential"
         },
         {
@@ -955,12 +955,21 @@
     {
       "leagueMemberName": "Ben",
       "leagueTeamName": "Bens XI",
-      "lockedPrizeAmount": 0,
+      "lockedPrizeAmount": 5,
       "potentialPrizeAmount": 0,
-      "lockedDailyWinnerAmount": 0,
+      "lockedDailyWinnerAmount": 5,
       "potentialOverallPrizeAmount": 0,
       "potentialBonusPrizeAmount": 0,
-      "lockedBreakdown": [],
+      "lockedBreakdown": [
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 6 winner",
+          "matchNum": 6,
+          "matchDetails": "SRH vs KKR",
+          "amount": 5,
+          "status": "locked"
+        }
+      ],
       "potentialBreakdown": []
     },
     {
@@ -1040,16 +1049,16 @@
       "leagueMemberName": "Nikhil",
       "leagueTeamName": "NSKNemesis",
       "lockedPrizeAmount": 0,
-      "potentialPrizeAmount": 20,
+      "potentialPrizeAmount": 40,
       "lockedDailyWinnerAmount": 0,
-      "potentialOverallPrizeAmount": 20,
+      "potentialOverallPrizeAmount": 40,
       "potentialBonusPrizeAmount": 0,
       "lockedBreakdown": [],
       "potentialBreakdown": [
         {
           "prizeType": "overall-leaderboard",
-          "label": "Current 3rd place",
-          "amount": 20,
+          "label": "Current 2nd place",
+          "amount": 40,
           "status": "potential"
         }
       ]
@@ -2107,87 +2116,87 @@
     },
     {
       "rank": 2,
-      "leagueMemberName": "Abhishek",
-      "leagueTeamName": "Kinkartvyavimudh",
-      "totalPoints": 2100.5
+      "leagueMemberName": "Nikhil",
+      "leagueTeamName": "NSKNemesis",
+      "totalPoints": 2338.5
     },
     {
       "rank": 3,
-      "leagueMemberName": "Nikhil",
-      "leagueTeamName": "NSKNemesis",
-      "totalPoints": 1998.5
+      "leagueMemberName": "Abhishek",
+      "leagueTeamName": "Kinkartvyavimudh",
+      "totalPoints": 2333.5
     },
     {
       "rank": 4,
-      "leagueMemberName": "Saurabh",
-      "leagueTeamName": "Team Joshi",
-      "totalPoints": 1505
+      "leagueMemberName": "Bijil",
+      "leagueTeamName": "SanjuPaglu",
+      "totalPoints": 1720
     },
     {
       "rank": 5,
-      "leagueMemberName": "Ravtaj",
-      "leagueTeamName": "Ravs XI",
-      "totalPoints": 1347
+      "leagueMemberName": "Saurabh",
+      "leagueTeamName": "Team Joshi",
+      "totalPoints": 1719.5
     },
     {
       "rank": 6,
-      "leagueMemberName": "Bijil",
-      "leagueTeamName": "SanjuPaglu",
-      "totalPoints": 1322
+      "leagueMemberName": "Ben",
+      "leagueTeamName": "Bens XI",
+      "totalPoints": 1508
     },
     {
       "rank": 7,
-      "leagueMemberName": "Kunj",
-      "leagueTeamName": "Scarlet Challengers",
-      "totalPoints": 1246.5
+      "leagueMemberName": "Ravtaj",
+      "leagueTeamName": "Ravs XI",
+      "totalPoints": 1487
     },
     {
       "rank": 8,
-      "leagueMemberName": "Rajesh",
-      "leagueTeamName": "LazyBoys",
-      "totalPoints": 1120
+      "leagueMemberName": "Akshay",
+      "leagueTeamName": "aksesa11",
+      "totalPoints": 1434.5
     },
     {
       "rank": 9,
-      "leagueMemberName": "Sidhu",
-      "leagueTeamName": "Sidhsdevilseye",
-      "totalPoints": 1115.5
+      "leagueMemberName": "Kunj",
+      "leagueTeamName": "Scarlet Challengers",
+      "totalPoints": 1407.5
     },
     {
       "rank": 10,
-      "leagueMemberName": "Akshay",
-      "leagueTeamName": "aksesa11",
-      "totalPoints": 1083.5
+      "leagueMemberName": "Rajesh",
+      "leagueTeamName": "LazyBoys",
+      "totalPoints": 1347
     },
     {
       "rank": 11,
-      "leagueMemberName": "Atharva",
-      "leagueTeamName": "T20 Warriors XI",
-      "totalPoints": 870.5
+      "leagueMemberName": "Sidhu",
+      "leagueTeamName": "Sidhsdevilseye",
+      "totalPoints": 1182.5
     },
     {
       "rank": 12,
-      "leagueMemberName": "Yash",
-      "leagueTeamName": "BlAcKKaTs",
-      "totalPoints": 808.5
+      "leagueMemberName": "Atharva",
+      "leagueTeamName": "T20 Warriors XI",
+      "totalPoints": 1126.5
     },
     {
       "rank": 13,
-      "leagueMemberName": "Ben",
-      "leagueTeamName": "Bens XI",
-      "totalPoints": 609
+      "leagueMemberName": "Yash",
+      "leagueTeamName": "BlAcKKaTs",
+      "totalPoints": 976.5
     },
     {
       "rank": 14,
       "leagueMemberName": "Rohit",
       "leagueTeamName": "RKDEleven",
-      "totalPoints": 571.5
+      "totalPoints": 932.5
     },
     {
       "rank": 15,
       "leagueMemberName": "Ashray",
       "leagueTeamName": "Ashray Team",
-      "totalPoints": 547
+      "totalPoints": 837
     }
   ],
   "playerBasedPrizes": [
@@ -2342,21 +2351,21 @@
       "matchNum": 6,
       "matchDetails": "SRH vs KKR",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 233,
+        "Akshay": 351,
+        "Ashray": 290,
+        "Atharva": 256,
+        "Ben": 899,
+        "Bijil": 398,
+        "Harpreet": 0,
+        "Kunj": 161,
+        "Nikhil": 340,
+        "Rajesh": 227,
+        "Ravtaj": 140,
+        "Rohit": 361,
+        "Sidhu": 67,
+        "Saurabh": 214.5,
+        "Yash": 168
       }
     },
     {
@@ -3748,10 +3757,10 @@
     {
       "matchNum": 6,
       "matchDetails": "SRH vs KKR",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Ben",
+      "leagueTeamName": "Bens XI",
+      "score": 899,
+      "prizeAmount": 5
     },
     {
       "matchNum": 7,
