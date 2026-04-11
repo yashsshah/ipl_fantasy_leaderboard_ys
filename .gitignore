@@ -1,0 +1,4 @@
+.local/
+screengrabs/
+.DS_Store
+scripts/__pycache__/
