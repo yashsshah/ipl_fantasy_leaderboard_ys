@@ -1,28 +1,26 @@
 # Match Update Pipeline
 
-This document shows the end-to-end pipeline for turning match results into synced site data.
+This document shows the end-to-end pipeline for turning an authenticated IPL fantasy refresh into synced site data.
 
 ```mermaid
 flowchart TD
-    A[Match result screenshot uploaded] --> B[Read existing data sources]
-    B --> B1[data/MatchDayScores.csv]
-    B --> B2[data/Leaderboard.csv]
-    B --> B3[data/Participants.csv]
-    B --> B4[data/MatchSchedule.csv]
+    A[Run scripts/update_league_data.py] --> B[Prompt for IPL fantasy cookie]
+    A --> A1{Valid saved cookie?}
+    A1 -->|Yes| C[Scrape participant gameday history from API]
+    A1 -->|No| B[Open browser login and capture cookie]
+    B --> B1[Save .local/ipl_fantasy_cookie.txt]
+    B1 --> C
+    C --> C1[data/ParticipantGamedayPoints.csv]
+    C --> C2[data/ParticipantGamedayPointsWide.csv]
 
-    B1 --> C[Derive current match scores by subtracting prior cumulative totals]
-    B2 --> C
-    A --> C
+    C2 --> D[Regenerate data/MatchDayScores.csv]
+    C2 --> E[Regenerate data/Leaderboard.csv]
 
-    C --> D[Update data/MatchDayScores.csv for MatchNum N]
-    C --> E[Update data/Leaderboard.csv with post-match cumulative standings]
-
-    D --> F[Run scripts/calculate_prizes.py]
-    E --> F
+    D --> F[Run prize calculation]
     F --> F1[data/MatchDayWinners.csv]
     F --> F2[data/BonusPrizes.csv]
 
-    D --> G[Run scripts/sync_csvs_to_data_json.py]
+    D --> G[Run sync step]
     E --> G
     F1 --> G
     F2 --> G
@@ -36,14 +34,15 @@ flowchart TD
 
     H --> J[Validate generated outputs]
     J --> K[git add -u]
-    K --> L[git commit -m "Update scores and synced site data after MatchNum N"]
+    K --> L[git commit]
     L --> M[git push origin main]
 ```
 
 ## Notes
 
-- `data/MatchDayScores.csv` is the match-by-match source of truth.
-- `data/Leaderboard.csv` stores cumulative standings after the latest completed match.
+- `scripts/update_league_data.py` is the intended operator entry point.
+- The updater can reuse `.local/ipl_fantasy_cookie.txt` or refresh it via a browser-assisted login flow.
+- `scripts/scrape_participant_gameday_points.py` refreshes the long and wide participant gameday CSVs from the IPL fantasy API.
+- `scripts/sync_csvs_to_data_json.py` rebuilds `data/MatchDayScores.csv` and `data/Leaderboard.csv`, then regenerates `data.json`.
 - `scripts/calculate_prizes.py` derives `data/MatchDayWinners.csv` and `data/BonusPrizes.csv`.
-- `scripts/sync_csvs_to_data_json.py` is the final sync step that rebuilds `data.json` for the UI.
 - `data.json` should not be hand-edited; it should always be regenerated from the CSV sources.
