@@ -598,19 +598,6 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
             }
             for row in match_day_winner_rows
         ],
-        "playerPrizes": [
-            {
-                "prize": row["PrizeName"].strip(),
-                "player": clean(row.get("PlayerName")),
-                "points": parse_number(row.get("PointsScored")),
-                "match": parse_number(row.get("MatchNum")),
-                "matchDetails": clean(row.get("MatchDetails")),
-                "captainOrViceCaptain": clean(row.get("CaptainOrViceCaptain")),
-                "booster": clean(row.get("Booster")),
-                "amount": parse_number(row.get("PrizeAmount")),
-            }
-            for row in player_prize_rows
-        ],
         "participants": [
             {
                 "leagueMemberNum": parse_number(row.get("#")),

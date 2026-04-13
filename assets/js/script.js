@@ -179,16 +179,7 @@ function getCompletedMatchWinnerRows(data) {
 }
 
 function getPlayerPrizeRows(data) {
-    if (Array.isArray(data.playerBasedPrizes) && data.playerBasedPrizes.length) {
-        return data.playerBasedPrizes;
-    }
-    return (data.playerPrizes || []).map(prize => ({
-        prizeName: prize.prize,
-        playerName: prize.player,
-        pointsScored: prize.points,
-        matchDetails: prize.matchDetails,
-        prizeAmount: prize.amount,
-    }));
+    return data.playerBasedPrizes || [];
 }
 
 function clearRenderedData() {
