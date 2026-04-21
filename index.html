@@ -54,31 +54,57 @@
     <main class="container">
         <div id="overview-tab" class="tab-content active">
             <div class="overview-strip">
-                <section id="match-scores" class="card">
-                    <h2><i class="fas fa-money-bill-wave"></i> Completed Match Winners</h2>
+                <section id="match-scores" class="card collapsible-section">
+                    <h2>
+                        <button class="section-toggle" type="button" aria-expanded="true" aria-controls="completed-match-winners-content">
+                            <span class="section-toggle-label"><i class="fas fa-money-bill-wave"></i> Completed Match Winners</span>
+                            <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                    </h2>
+                    <div id="completed-match-winners-content" class="collapsible-content">
                     <ul id="match-list" class="prize-list">
                         <!-- Dynamically filled -->
                     </ul>
+                    </div>
                 </section>
 
-                <section id="bonus-prizes" class="card">
-                    <h2><i class="fas fa-bolt"></i> Bonus Prizes</h2>
+                <section id="bonus-prizes" class="card collapsible-section">
+                    <h2>
+                        <button class="section-toggle" type="button" aria-expanded="true" aria-controls="bonus-prizes-content">
+                            <span class="section-toggle-label"><i class="fas fa-bolt"></i> Bonus Prizes</span>
+                            <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                    </h2>
+                    <div id="bonus-prizes-content" class="collapsible-content">
                     <ul id="bonus-prizes-list" class="prize-list">
                         <!-- Dynamically filled -->
                     </ul>
+                    </div>
                 </section>
 
-                <section id="player-prizes" class="card">
-                    <h2><i class="fas fa-bullseye"></i> Player-based Prizes</h2>
+                <section id="player-prizes" class="card collapsible-section">
+                    <h2>
+                        <button class="section-toggle" type="button" aria-expanded="true" aria-controls="player-prizes-content">
+                            <span class="section-toggle-label"><i class="fas fa-bullseye"></i> Player-based Prizes</span>
+                            <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                    </h2>
+                    <div id="player-prizes-content" class="collapsible-content">
                     <ul id="player-prizes-list" class="prize-list">
                         <!-- Dynamically filled -->
                     </ul>
+                    </div>
                 </section>
             </div>
 
-            <section id="leaderboard" class="card">
-                <h2><i class="fas fa-fire"></i> Overall Leaderboard</h2>
-                <div class="table-wrapper">
+            <section id="leaderboard" class="card collapsible-section">
+                <h2>
+                    <button class="section-toggle" type="button" aria-expanded="true" aria-controls="leaderboard-content">
+                        <span class="section-toggle-label"><i class="fas fa-fire"></i> Overall Leaderboard</span>
+                        <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                </h2>
+                <div id="leaderboard-content" class="collapsible-content table-wrapper">
                     <table>
                         <thead>
                             <tr>
@@ -101,28 +127,58 @@
                 <!-- Dynamically filled -->
             </section>
 
-            <section id="league-members" class="card">
-                <h2><i class="fas fa-users"></i> League Members</h2>
-                <div class="members-grid" id="members-grid">
-                    <!-- Dynamically filled -->
+            <section id="league-members" class="card collapsible-section">
+                <h2>
+                    <button class="section-toggle" type="button" aria-expanded="true" aria-controls="league-members-content">
+                        <span class="section-toggle-label"><i class="fas fa-users"></i> League Members</span>
+                        <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                </h2>
+                <div id="league-members-content" class="collapsible-content table-wrapper">
+                    <table class="compact-table league-members-table">
+                        <thead>
+                            <tr>
+                                <th class="rank-col">#</th>
+                                <th>League Member</th>
+                                <th>League Team</th>
+                                <th>Locked Prize</th>
+                                <th>Potential Prize</th>
+                            </tr>
+                        </thead>
+                        <tbody id="members-grid">
+                            <!-- Dynamically filled -->
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
-            <section id="member-prize-breakdown" class="card prize-breakdown-card is-hidden">
-                <h2><i class="fas fa-receipt"></i> Prize Breakdown</h2>
+            <section id="member-prize-breakdown" class="card prize-breakdown-card collapsible-section is-hidden">
+                <h2>
+                    <button class="section-toggle" type="button" aria-expanded="true" aria-controls="member-prize-breakdown-content">
+                        <span class="section-toggle-label"><i class="fas fa-receipt"></i> Prize Breakdown</span>
+                        <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                </h2>
+                <div id="member-prize-breakdown-content" class="collapsible-content">
                 <div class="prize-breakdown-header">
                     <div>
                         <div class="prize-breakdown-name" id="prize-breakdown-name">Select a member</div>
-                        <p class="prize-breakdown-subtitle" id="prize-breakdown-subtitle">Click a member card above to inspect the full breakdown.</p>
+                        <p class="prize-breakdown-subtitle" id="prize-breakdown-subtitle">Click a member row above to inspect the full breakdown.</p>
                     </div>
                     <div class="prize-breakdown-total" id="prize-breakdown-total">-</div>
                 </div>
                 <div class="prize-breakdown-body" id="prize-breakdown-body"></div>
+                </div>
             </section>
 
-            <section class="card">
-                <h2><i class="fas fa-address-book"></i> Participant Details</h2>
-                <div class="table-wrapper">
+            <section class="card collapsible-section">
+                <h2>
+                    <button class="section-toggle" type="button" aria-expanded="true" aria-controls="participant-details-content">
+                        <span class="section-toggle-label"><i class="fas fa-address-book"></i> Participant Details</span>
+                        <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                </h2>
+                <div id="participant-details-content" class="collapsible-content table-wrapper">
                     <table class="compact-table">
                         <thead>
                             <tr>
@@ -141,9 +197,14 @@
         </div>
 
         <div id="schedule-tab" class="tab-content">
-            <section class="card">
-                <h2><i class="fas fa-calendar-days"></i> Match Schedule</h2>
-                <div class="table-wrapper">
+            <section class="card collapsible-section">
+                <h2>
+                    <button class="section-toggle" type="button" aria-expanded="true" aria-controls="match-schedule-content">
+                        <span class="section-toggle-label"><i class="fas fa-calendar-days"></i> Match Schedule</span>
+                        <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                </h2>
+                <div id="match-schedule-content" class="collapsible-content table-wrapper">
                     <table class="compact-table">
                         <thead>
                             <tr>
@@ -163,22 +224,45 @@
         </div>
 
         <div id="scores-tab" class="tab-content">
-            <section class="card">
-                <h2><i class="fas fa-table"></i> Match Day Scores</h2>
-                <div class="table-wrapper">
-                    <table class="matrix-table">
-                        <thead id="scores-head"></thead>
-                        <tbody id="scores-body"></tbody>
-                    </table>
+            <section class="card collapsible-section">
+                <h2>
+                    <button class="section-toggle" type="button" aria-expanded="true" aria-controls="match-day-scores-content">
+                        <span class="section-toggle-label"><i class="fas fa-table"></i> Match Day Scores</span>
+                        <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                </h2>
+                <div id="match-day-scores-content" class="collapsible-content">
+                    <div class="scores-toolbar">
+                        <label class="scores-focus-control" for="scores-member-focus">
+                            <span>Focus member</span>
+                            <select id="scores-member-focus">
+                                <option value="">All members</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="scores-top-scrollbar" id="scores-top-scrollbar" aria-hidden="true">
+                        <div class="scores-top-scrollbar-spacer" id="scores-top-scrollbar-spacer"></div>
+                    </div>
+                    <div class="table-wrapper scores-table-wrapper" id="scores-table-wrapper">
+                        <table class="matrix-table scores-matrix-table" id="scores-table">
+                            <thead id="scores-head"></thead>
+                            <tbody id="scores-body"></tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
         </div>
 
         <div id="table-tab" class="tab-content">
-            <div class="cards-row">
-                <section class="card">
-                    <h2><i class="fas fa-ranking-star"></i> Current IPL Table</h2>
-                    <div class="table-wrapper">
+            <div class="cards-row table-tracker-layout">
+                <section class="card collapsible-section collapsible-left-section collapsible-horizontal-left current-table-card">
+                    <h2>
+                        <button class="section-toggle" type="button" aria-expanded="true" aria-controls="current-ipl-table-content">
+                            <span class="section-toggle-label"><i class="fas fa-ranking-star"></i> <span class="section-toggle-text">Current IPL Table</span></span>
+                            <span class="section-toggle-indicator"><i class="fas fa-chevron-left"></i></span>
+                        </button>
+                    </h2>
+                    <div id="current-ipl-table-content" class="collapsible-content table-wrapper">
                         <table class="compact-table">
                             <thead>
                                 <tr>
@@ -191,9 +275,14 @@
                     </div>
                 </section>
 
-                <section class="card">
-                    <h2><i class="fas fa-crosshairs"></i> Prediction Grid</h2>
-                    <div class="table-wrapper">
+                <section class="card collapsible-section collapsible-right-section collapsible-horizontal-right prediction-grid-card">
+                    <h2>
+                        <button class="section-toggle" type="button" aria-expanded="true" aria-controls="prediction-grid-content">
+                            <span class="section-toggle-label"><i class="fas fa-crosshairs"></i> <span class="section-toggle-text">Prediction Grid</span></span>
+                            <span class="section-toggle-indicator"><i class="fas fa-chevron-right"></i></span>
+                        </button>
+                    </h2>
+                    <div id="prediction-grid-content" class="collapsible-content table-wrapper">
                         <table class="matrix-table prediction-grid-table">
                             <thead id="predictions-head"></thead>
                             <tbody id="predictions-body"></tbody>
@@ -204,9 +293,14 @@
         </div>
 
         <div id="prizes-tab" class="tab-content">
-            <section class="card">
-                <h2><i class="fas fa-sack-dollar"></i> Prize Pool Breakdown</h2>
-                <div class="table-wrapper">
+            <section class="card collapsible-section">
+                <h2>
+                    <button class="section-toggle" type="button" aria-expanded="true" aria-controls="prize-pool-content">
+                        <span class="section-toggle-label"><i class="fas fa-sack-dollar"></i> Prize Pool Breakdown</span>
+                        <span class="section-toggle-indicator"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                </h2>
+                <div id="prize-pool-content" class="collapsible-content table-wrapper">
                     <table class="compact-table">
                         <thead>
                             <tr>
