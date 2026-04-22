@@ -61,6 +61,9 @@ const scoresMemberFocus = document.getElementById('scores-member-focus');
 const tableRankingsBody = document.getElementById('table-rankings-body');
 const predictionsHead = document.getElementById('predictions-head');
 const predictionsBody = document.getElementById('predictions-body');
+const predictionsTable = document.getElementById('predictions-table');
+const predictionsTableWrapper = document.querySelector('.prediction-grid-wrapper');
+const predictionsMemberFocus = document.getElementById('predictions-member-focus');
 const prizesBody = document.getElementById('prizes-body');
 let currentPrizeSummaryLookup = new Map();
 let syncingScoreScroll = false;
@@ -122,6 +125,57 @@ function populateScoresMemberFocus(memberNames) {
     if (memberNames.includes(currentValue)) {
         scoresMemberFocus.value = currentValue;
     }
+}
+
+function setFocusedPredictionColumn(memberName) {
+    const normalizedTarget = normalizeName(memberName);
+    document.querySelectorAll('[data-prediction-column]').forEach(cell => {
+        const isFocused = normalizedTarget && normalizeName(cell.dataset.predictionColumn) === normalizedTarget;
+        cell.classList.toggle('is-focused-score-column', Boolean(isFocused));
+    });
+
+    if (!normalizedTarget || !predictionsTableWrapper) {
+        return;
+    }
+
+    const targetHeader = predictionsHead.querySelector(`th[data-prediction-column="${memberName}"]`)
+        || Array.from(predictionsHead.querySelectorAll('[data-prediction-column]')).find(cell => normalizeName(cell.dataset.predictionColumn) === normalizedTarget);
+
+    if (!targetHeader) {
+        return;
+    }
+
+    const leftPadding = 24;
+    const targetLeft = targetHeader.offsetLeft - leftPadding;
+    predictionsTableWrapper.scrollTo({ left: Math.max(targetLeft, 0), behavior: 'smooth' });
+}
+
+function populatePredictionsMemberFocus(memberNames) {
+    if (!predictionsMemberFocus) {
+        return;
+    }
+
+    const currentValue = predictionsMemberFocus.value;
+    const options = ['<option value="">All members</option>']
+        .concat(memberNames.map(name => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`));
+    predictionsMemberFocus.innerHTML = options.join('');
+
+    if (memberNames.includes(currentValue)) {
+        predictionsMemberFocus.value = currentValue;
+    }
+}
+
+function updatePredictionColumnWidth(memberNames) {
+    if (!predictionsTable) {
+        return;
+    }
+
+    const longestNameLength = memberNames.reduce(
+        (maxLength, memberName) => Math.max(maxLength, memberName.length),
+        0,
+    );
+    const widthInCh = Math.max(longestNameLength + 2, 8);
+    predictionsTable.style.setProperty('--prediction-member-column-width', `${widthInCh}ch`);
 }
 
 function normalizeName(value) {
@@ -654,11 +708,12 @@ function renderTableTracker(data) {
     });
 
     const memberNames = data.leagueMembers?.map(member => member.name) || [];
-    predictionsHead.innerHTML = `<tr><th>Rank</th>${memberNames.map(name => `<th>${escapeHtml(name)}</th>`).join('')}</tr>`;
+    updatePredictionColumnWidth(memberNames);
+    predictionsHead.innerHTML = `<tr><th>Rank</th>${memberNames.map(name => `<th data-prediction-column="${escapeHtml(name)}">${escapeHtml(name)}</th>`).join('')}</tr>`;
 
     (data.tablePredictions || []).forEach(prediction => {
         const row = document.createElement('tr');
-        const cells = memberNames.map(name => `<td>${formatText(prediction.predictions?.[name])}</td>`).join('');
+        const cells = memberNames.map(name => `<td data-prediction-column="${escapeHtml(name)}">${formatText(prediction.predictions?.[name])}</td>`).join('');
         const isPlayoffRank = Number(prediction.rank) <= 4;
         row.innerHTML = `<td class="${isPlayoffRank ? 'playoff-rank-cell' : ''}">${formatText(prediction.rank)}</td>${cells}`;
         predictionsBody.appendChild(row);
@@ -674,11 +729,14 @@ function renderTableTracker(data) {
         }
     });
 
-    const scoreCells = memberNames.map(name => `<td>${formatText(data.tablePredictionScores?.[name], '0')}</td>`).join('');
+    const scoreCells = memberNames.map(name => `<td data-prediction-column="${escapeHtml(name)}">${formatText(data.tablePredictionScores?.[name], '0')}</td>`).join('');
     const totalRow = document.createElement('tr');
     totalRow.className = 'prediction-total-row';
     totalRow.innerHTML = `<td>Total Points</td>${scoreCells}`;
     predictionsBody.appendChild(totalRow);
+
+    populatePredictionsMemberFocus(memberNames);
+    setFocusedPredictionColumn(predictionsMemberFocus?.value || '');
 }
 
 function renderPrizePool(data) {
@@ -735,5 +793,11 @@ if (scoresTableWrapper && scoresTopScrollbar) {
 if (scoresMemberFocus) {
     scoresMemberFocus.addEventListener('change', event => {
         setFocusedScoreColumn(event.target.value);
+    });
+}
+
+if (predictionsMemberFocus) {
+    predictionsMemberFocus.addEventListener('change', event => {
+        setFocusedPredictionColumn(event.target.value);
     });
 }

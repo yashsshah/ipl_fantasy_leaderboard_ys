@@ -305,6 +305,16 @@ header h1 {
     gap: 2rem;
 }
 
+.tracker-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.tracker-focus-control {
+    margin-left: auto;
+}
+
 .current-table-card {
     flex: 0 0 320px;
     transition: flex-basis 0.28s ease, width 0.28s ease, padding 0.28s ease;
@@ -314,6 +324,10 @@ header h1 {
     flex: 1 1 0;
     min-width: 0;
     transition: flex-basis 0.28s ease, width 0.28s ease, padding 0.28s ease;
+}
+
+.prediction-grid-wrapper {
+    overflow: auto;
 }
 
 .current-table-card.is-collapsed {
@@ -582,6 +596,11 @@ table {
     min-width: 5.5rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+}
+
+.prediction-grid-table [data-prediction-column] {
+    width: var(--prediction-member-column-width, auto);
+    min-width: var(--prediction-member-column-width, auto);
 }
 
 thead {
@@ -975,12 +994,14 @@ tbody tr:nth-child(3) td:first-child {
     font-weight: 700;
 }
 
-.scores-matrix-table [data-score-column].is-focused-score-column {
+.scores-matrix-table [data-score-column].is-focused-score-column,
+.prediction-grid-table [data-prediction-column].is-focused-score-column {
     background: rgba(76, 201, 240, 0.18);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), inset 0 -1px 0 rgba(255,255,255,0.04);
 }
 
-.scores-matrix-table thead [data-score-column].is-focused-score-column {
+.scores-matrix-table thead [data-score-column].is-focused-score-column,
+.prediction-grid-table thead [data-prediction-column].is-focused-score-column {
     background: linear-gradient(135deg, rgba(76, 201, 240, 0.82) 0%, rgba(67, 97, 238, 0.82) 100%);
 }
 
@@ -1260,6 +1281,15 @@ footer i {
 
     .table-tracker-layout {
         flex-direction: column;
+    }
+
+    .tracker-toolbar {
+        justify-content: stretch;
+    }
+
+    .tracker-focus-control {
+        width: 100%;
+        justify-content: space-between;
     }
 
     .current-table-card,
