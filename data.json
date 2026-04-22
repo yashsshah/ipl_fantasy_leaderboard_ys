@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-04-21T21:32:20.782065+00:00",
+    "lastSyncedAt": "2026-04-22T15:07:55.580332+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -2017,261 +2017,261 @@
     {
       "rank": 1,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "RCB",
+        "Akshay": "RR",
+        "Ashray": "RCB",
+        "Atharva": "RR",
+        "Ben": "RCB",
+        "Bijil": "RCB",
+        "Harpreet": "RCB",
+        "Kunj": "RCB",
+        "Nikhil": "MI",
+        "Rajesh": "PBKS",
+        "Ravtaj": "PBKS",
+        "Rohit": "MI",
+        "Sidhu": "KKR",
+        "Saurabh": "CSK",
+        "Yash": "PBKS"
       }
     },
     {
       "rank": 2,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "RR",
+        "Akshay": "RCB",
+        "Ashray": "DC",
+        "Atharva": "RCB",
+        "Ben": "MI",
+        "Bijil": "PBKS",
+        "Harpreet": "RR",
+        "Kunj": "PBKS",
+        "Nikhil": "RCB",
+        "Rajesh": "RR",
+        "Ravtaj": "RCB",
+        "Rohit": "RCB",
+        "Sidhu": "PBKS",
+        "Saurabh": "KKR",
+        "Yash": "RCB"
       }
     },
     {
       "rank": 3,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "PBKS",
+        "Akshay": "MI",
+        "Ashray": "MI",
+        "Atharva": "MI",
+        "Ben": "GT",
+        "Bijil": "RR",
+        "Harpreet": "PBKS",
+        "Kunj": "MI",
+        "Nikhil": "PBKS",
+        "Rajesh": "DC",
+        "Ravtaj": "RR",
+        "Rohit": "PBKS",
+        "Sidhu": "LSG",
+        "Saurabh": "GT",
+        "Yash": "RR"
       }
     },
     {
       "rank": 4,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "DC",
+        "Akshay": "DC",
+        "Ashray": "GT",
+        "Atharva": "DC",
+        "Ben": "KKR",
+        "Bijil": "MI",
+        "Harpreet": "MI",
+        "Kunj": "RR",
+        "Nikhil": "DC",
+        "Rajesh": "MI",
+        "Ravtaj": "SRH",
+        "Rohit": "RR",
+        "Sidhu": "RR",
+        "Saurabh": "LSG",
+        "Yash": "DC"
       }
     },
     {
       "rank": 5,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "GT",
+        "Akshay": "LSG",
+        "Ashray": "KKR",
+        "Atharva": "GT",
+        "Ben": "CSK",
+        "Bijil": "DC",
+        "Harpreet": "LSG",
+        "Kunj": "DC",
+        "Nikhil": "KKR",
+        "Rajesh": "RCB",
+        "Ravtaj": "GT",
+        "Rohit": "SRH",
+        "Sidhu": "GT",
+        "Saurabh": "PBKS",
+        "Yash": "SRH"
       }
     },
     {
       "rank": 6,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "LSG",
+        "Akshay": "PBKS",
+        "Ashray": "LSG",
+        "Atharva": "SRH",
+        "Ben": "RR",
+        "Bijil": "SRH",
+        "Harpreet": "DC",
+        "Kunj": "GT",
+        "Nikhil": "RR",
+        "Rajesh": "CSK",
+        "Ravtaj": "DC",
+        "Rohit": "DC",
+        "Sidhu": "RCB",
+        "Saurabh": "MI",
+        "Yash": "MI"
       }
     },
     {
       "rank": 7,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "MI",
+        "Akshay": "GT",
+        "Ashray": "PBKS",
+        "Atharva": "PBKS",
+        "Ben": "DC",
+        "Bijil": "LSG",
+        "Harpreet": "SRH",
+        "Kunj": "SRH",
+        "Nikhil": "SRH",
+        "Rajesh": "SRH",
+        "Ravtaj": "MI",
+        "Rohit": "KKR",
+        "Sidhu": "MI",
+        "Saurabh": "RCB",
+        "Yash": "GT"
       }
     },
     {
       "rank": 8,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "CSK",
+        "Akshay": "SRH",
+        "Ashray": "RR",
+        "Atharva": "LSG",
+        "Ben": "SRH",
+        "Bijil": "GT",
+        "Harpreet": "CSK",
+        "Kunj": "LSG",
+        "Nikhil": "GT",
+        "Rajesh": "LSG",
+        "Ravtaj": "CSK",
+        "Rohit": "GT",
+        "Sidhu": "CSK",
+        "Saurabh": "RR",
+        "Yash": "LSG"
       }
     },
     {
       "rank": 9,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "SRH",
+        "Akshay": "CSK",
+        "Ashray": "SRH",
+        "Atharva": "KKR",
+        "Ben": "PBKS",
+        "Bijil": "KKR",
+        "Harpreet": "GT",
+        "Kunj": "KKR",
+        "Nikhil": "CSK",
+        "Rajesh": "GT",
+        "Ravtaj": "LSG",
+        "Rohit": "CSK",
+        "Sidhu": "DC",
+        "Saurabh": "SRH",
+        "Yash": "CSK"
       }
     },
     {
       "rank": 10,
       "predictions": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": "KKR",
+        "Akshay": "KKR",
+        "Ashray": "CSK",
+        "Atharva": "CSK",
+        "Ben": "LSG",
+        "Bijil": "CSK",
+        "Harpreet": "KKR",
+        "Kunj": "CSK",
+        "Nikhil": "LSG",
+        "Rajesh": "KKR",
+        "Ravtaj": "KKR",
+        "Rohit": "LSG",
+        "Sidhu": "SRH",
+        "Saurabh": "DC",
+        "Yash": "KKR"
       }
     }
   ],
   "tablePredictionScores": {
-    "Abhishek": 0,
-    "Akshay": 0,
-    "Ashray": 0,
-    "Atharva": 0,
-    "Ben": 0,
-    "Bijil": 0,
-    "Harpreet": 0,
-    "Kunj": 0,
-    "Nikhil": 0,
-    "Rajesh": 0,
-    "Ravtaj": 0,
-    "Rohit": 0,
-    "Sidhu": 0,
+    "Abhishek": 6,
+    "Akshay": 4,
+    "Ashray": 1,
+    "Atharva": 3,
+    "Ben": 1,
+    "Bijil": 4,
+    "Harpreet": 5,
+    "Kunj": 6,
+    "Nikhil": 3,
+    "Rajesh": 4,
+    "Ravtaj": 10,
+    "Rohit": 5,
+    "Sidhu": 5,
     "Saurabh": 0,
-    "Yash": 0
+    "Yash": 6
   },
   "tableRankings": [
     {
       "rank": 1,
-      "iplTeamName": "Royal Challengers Bengaluru"
+      "iplTeamName": "PBKS"
     },
     {
       "rank": 2,
-      "iplTeamName": "Sunrisers Hyderabad"
+      "iplTeamName": "RCB"
     },
     {
       "rank": 3,
-      "iplTeamName": "Chennai Super Kings"
+      "iplTeamName": "SRH"
     },
     {
       "rank": 4,
-      "iplTeamName": "Delhi Capitals"
+      "iplTeamName": "RR"
     },
     {
       "rank": 5,
-      "iplTeamName": "Gujarat Titans"
+      "iplTeamName": "DC"
     },
     {
       "rank": 6,
-      "iplTeamName": "Kolkata Knight Riders"
+      "iplTeamName": "GT"
     },
     {
       "rank": 7,
-      "iplTeamName": "Lucknow Super Giants"
+      "iplTeamName": "MI"
     },
     {
       "rank": 8,
-      "iplTeamName": "Mumbai Indians"
+      "iplTeamName": "CSK"
     },
     {
       "rank": 9,
-      "iplTeamName": "Punjab Kings"
+      "iplTeamName": "LSG"
     },
     {
       "rank": 10,
-      "iplTeamName": "Rajasthan Royals"
+      "iplTeamName": "KKR"
     }
   ],
   "leaderboard": [

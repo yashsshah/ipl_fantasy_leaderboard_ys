@@ -12,6 +12,7 @@ from calculate_prizes import calculate_outputs
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
+DEFAULT_STANDINGS_URL = "https://www.espncricinfo.com/series/ipl-2026-1510719/points-table-standings"
 
 
 CSV_FILES = [
@@ -39,6 +40,11 @@ TEAM_ABBREVIATIONS = {
     "Gujarat Titans": "GT",
 }
 
+STANDINGS_DISPLAY_TO_ABBREVIATION = {
+    team_name.upper(): abbreviation
+    for team_name, abbreviation in TEAM_ABBREVIATIONS.items()
+}
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -64,6 +70,16 @@ def parse_args() -> argparse.Namespace:
         type=float,
         default=2.0,
         help="Polling interval in seconds when using --watch.",
+    )
+    parser.add_argument(
+        "--refresh-standings",
+        action="store_true",
+        help="Fetch the latest IPL standings from ESPNcricinfo and rewrite TableRankings.csv before syncing.",
+    )
+    parser.add_argument(
+        "--standings-url",
+        default=DEFAULT_STANDINGS_URL,
+        help="Standings page URL used when --refresh-standings is enabled.",
     )
     return parser.parse_args()
 
@@ -98,6 +114,74 @@ def parse_number_or_text(value: str | None) -> int | float | str | None:
 def read_csv(root: Path, name: str) -> list[dict[str, str]]:
     with (root / name).open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def fetch_current_standings_from_espncricinfo(standings_url: str) -> list[dict[str, str]]:
+    try:
+        from playwright.sync_api import Error as PlaywrightError
+        from playwright.sync_api import sync_playwright
+    except ImportError as exc:
+        raise RuntimeError(
+            "Playwright is required to refresh standings. Install it with 'pip install playwright' "
+            "and install Chromium with 'python -m playwright install chromium'."
+        ) from exc
+
+    try:
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=False)
+            page = browser.new_page()
+            page.goto(standings_url, wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(3000)
+            page_text = page.locator("body").inner_text()
+            browser.close()
+    except PlaywrightError as exc:
+        raise RuntimeError(
+            f"Could not load standings page: {standings_url}."
+        ) from exc
+
+    lines = [line.strip() for line in page_text.splitlines() if line.strip()]
+    try:
+        teams_index = lines.index("Teams")
+    except ValueError as exc:
+        raise RuntimeError(
+            "Could not find the standings table on the ESPNcricinfo page."
+        ) from exc
+
+    standings_rows: list[dict[str, str]] = []
+    for index in range(teams_index + 1, len(lines) - 1):
+        rank_text = lines[index]
+        team_display_name = lines[index + 1]
+        if not rank_text.isdigit():
+            continue
+
+        team_abbreviation = STANDINGS_DISPLAY_TO_ABBREVIATION.get(team_display_name)
+        if team_abbreviation is None:
+            continue
+
+        standings_rows.append(
+            {
+                "Rank": rank_text,
+                "IPLTeamName": team_abbreviation,
+            }
+        )
+        if len(standings_rows) == len(STANDINGS_DISPLAY_TO_ABBREVIATION):
+            break
+
+    if len(standings_rows) != len(STANDINGS_DISPLAY_TO_ABBREVIATION):
+        raise RuntimeError(
+            "Parsed an incomplete standings table from ESPNcricinfo. "
+            f"Expected {len(STANDINGS_DISPLAY_TO_ABBREVIATION)} teams, found {len(standings_rows)}."
+        )
+
+    return standings_rows
+
+
+def write_table_rankings_csv(root: Path, standings_rows: list[dict[str, str]]) -> None:
+    output_path = root / "TableRankings.csv"
+    with output_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["Rank", "IPLTeamName"])
+        writer.writeheader()
+        writer.writerows(standings_rows)
 
 
 def normalize_lookup_key(value: str | None) -> str | None:
@@ -725,7 +809,10 @@ def write_data(output_path: Path, data: dict[str, object]) -> None:
     output_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
 
-def sync_once(root: Path, output_path: Path) -> None:
+def sync_once(root: Path, output_path: Path, refresh_standings: bool = False, standings_url: str = DEFAULT_STANDINGS_URL) -> None:
+    if refresh_standings:
+        standings_rows = fetch_current_standings_from_espncricinfo(standings_url)
+        write_table_rankings_csv(root, standings_rows)
     write_match_day_scores_csv(root)
     write_leaderboard_csv(root)
     write_prize_csvs(root)
@@ -735,20 +822,22 @@ def sync_once(root: Path, output_path: Path) -> None:
 def run_sync_pipeline(
     root: Path = DATA_DIR,
     output_path: Path = PROJECT_ROOT / "data.json",
+    refresh_standings: bool = False,
+    standings_url: str = DEFAULT_STANDINGS_URL,
 ) -> None:
-    sync_once(root, output_path)
+    sync_once(root, output_path, refresh_standings=refresh_standings, standings_url=standings_url)
 
 
 def get_mtimes(root: Path) -> tuple[int, ...]:
     return tuple((root / name).stat().st_mtime_ns for name in CSV_FILES)
 
 
-def watch(root: Path, output_path: Path, interval: float) -> None:
+def watch(root: Path, output_path: Path, interval: float, refresh_standings: bool = False, standings_url: str = DEFAULT_STANDINGS_URL) -> None:
     last_state: tuple[int, ...] | None = None
     while True:
         current_state = get_mtimes(root)
         if current_state != last_state:
-            sync_once(root, output_path)
+            sync_once(root, output_path, refresh_standings=refresh_standings, standings_url=standings_url)
             print(f"Synced CSV data into {output_path.name}")
             last_state = current_state
         time.sleep(interval)
@@ -760,10 +849,21 @@ def main() -> None:
     output_path = Path(args.output).resolve()
 
     if args.watch:
-        watch(root, output_path, args.interval)
+        watch(
+            root,
+            output_path,
+            args.interval,
+            refresh_standings=args.refresh_standings,
+            standings_url=args.standings_url,
+        )
         return
 
-    run_sync_pipeline(root, output_path)
+    run_sync_pipeline(
+        root,
+        output_path,
+        refresh_standings=args.refresh_standings,
+        standings_url=args.standings_url,
+    )
     print(f"Synced CSV data into {output_path.name}")
 
 

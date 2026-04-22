@@ -254,11 +254,19 @@
         </div>
 
         <div id="table-tab" class="tab-content">
+            <div class="tracker-toolbar">
+                <label class="scores-focus-control tracker-focus-control" for="predictions-member-focus">
+                    <span>Focus member</span>
+                    <select id="predictions-member-focus">
+                        <option value="">All members</option>
+                    </select>
+                </label>
+            </div>
             <div class="cards-row table-tracker-layout">
                 <section class="card collapsible-section collapsible-left-section collapsible-horizontal-left current-table-card">
                     <h2>
                         <button class="section-toggle" type="button" aria-expanded="true" aria-controls="current-ipl-table-content">
-                            <span class="section-toggle-label"><i class="fas fa-ranking-star"></i> <span class="section-toggle-text">Current IPL Table</span></span>
+                            <span class="section-toggle-label"><i class="fas fa-ranking-star"></i> <span class="section-toggle-text">Standings</span></span>
                             <span class="section-toggle-indicator"><i class="fas fa-chevron-left"></i></span>
                         </button>
                     </h2>
@@ -282,8 +290,8 @@
                             <span class="section-toggle-indicator"><i class="fas fa-chevron-right"></i></span>
                         </button>
                     </h2>
-                    <div id="prediction-grid-content" class="collapsible-content table-wrapper">
-                        <table class="matrix-table prediction-grid-table">
+                    <div id="prediction-grid-content" class="collapsible-content table-wrapper prediction-grid-wrapper">
+                        <table class="matrix-table prediction-grid-table" id="predictions-table">
                             <thead id="predictions-head"></thead>
                             <tbody id="predictions-body"></tbody>
                         </table>

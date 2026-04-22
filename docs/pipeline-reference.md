@@ -16,6 +16,16 @@ The script now tries cookies in this order:
 
 After it has a valid cookie, it scrapes the latest participant gameday data and then regenerates all derived CSV and JSON outputs.
 
+## Standings Refresh Command
+
+To refresh `data/TableRankings.csv` from the live ESPNcricinfo IPL standings page and then regenerate `data.json`:
+
+```bash
+/Users/yshah/Code_Yash/ipl_fantasy_leaderboard_ys/.venv/bin/python scripts/sync_csvs_to_data_json.py --refresh-standings
+```
+
+This uses Playwright to open the standings page in Chromium, extracts the current table order, rewrites `data/TableRankings.csv` using the repo's team abbreviations, and then runs the normal sync pipeline.
+
 ## One-Time Browser Setup
 
 Install Playwright in the repo environment and install Chromium once:
@@ -35,6 +45,8 @@ On the first run without a valid saved cookie, the updater opens a browser windo
 - `data/MatchDayWinners.csv`
 - `data/BonusPrizes.csv`
 - `data.json`
+
+When using `scripts/sync_csvs_to_data_json.py --refresh-standings`, the sync step also rewrites `data/TableRankings.csv`.
 
 ## Underlying Flow
 
