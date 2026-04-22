@@ -228,7 +228,7 @@ header h1 {
 
 .card h2 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -238,6 +238,145 @@ header h1 {
 .card h2 i {
     color: #ffc107;
     font-size: 1.3rem;
+}
+
+.collapsible-content {
+    margin-top: 1.5rem;
+}
+
+.collapsible-section.is-collapsed .collapsible-content {
+    display: none;
+}
+
+.section-toggle {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+}
+
+.section-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-toggle-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.8);
+    transition: transform 0.24s ease, background 0.24s ease;
+    flex-shrink: 0;
+}
+
+.section-toggle:hover .section-toggle-indicator {
+    background: rgba(255,255,255,0.14);
+}
+
+.collapsible-section.is-collapsed .section-toggle-indicator {
+    transform: rotate(-90deg);
+}
+
+.collapsible-horizontal-left.is-collapsed .section-toggle-indicator,
+.collapsible-horizontal-right.is-collapsed .section-toggle-indicator {
+    transform: rotate(180deg);
+}
+
+.collapsible-left-section {
+    align-self: start;
+}
+
+.table-tracker-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.current-table-card {
+    flex: 0 0 320px;
+    transition: flex-basis 0.28s ease, width 0.28s ease, padding 0.28s ease;
+}
+
+.prediction-grid-card {
+    flex: 1 1 0;
+    min-width: 0;
+    transition: flex-basis 0.28s ease, width 0.28s ease, padding 0.28s ease;
+}
+
+.current-table-card.is-collapsed {
+    flex-basis: 96px;
+}
+
+.prediction-grid-card.is-collapsed {
+    flex: 0 0 96px;
+}
+
+.table-tracker-layout.has-collapsed-right-rail .current-table-card {
+    flex: 1 1 0;
+}
+
+.current-table-card.is-collapsed .section-toggle {
+    min-height: 18rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-table-card.is-collapsed .section-toggle-label {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9rem;
+}
+
+.current-table-card.is-collapsed .section-toggle-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+}
+
+.current-table-card.is-collapsed .section-toggle-indicator {
+    transform: rotate(0deg);
+}
+
+.prediction-grid-card.is-collapsed .section-toggle {
+    min-height: 18rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prediction-grid-card.is-collapsed .section-toggle-label {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9rem;
+}
+
+.prediction-grid-card.is-collapsed .section-toggle-text {
+    writing-mode: vertical-lr;
+    white-space: nowrap;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+}
+
+.prediction-grid-card.is-collapsed .section-toggle-indicator {
+    transform: rotate(0deg);
 }
 
 .page-legend {
@@ -266,7 +405,7 @@ header h1 {
     margin-left: auto;
 }
 
-.cards-row {
+.cards-row:not(.table-tracker-layout) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -376,6 +515,55 @@ header h1 {
     overflow-x: auto;
 }
 
+.scores-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.scores-focus-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.82);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.scores-focus-control select {
+    min-width: 10rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(18, 22, 38, 0.9);
+    color: #fff;
+    border-radius: 10px;
+    padding: 0.55rem 0.7rem;
+    font: inherit;
+}
+
+.scores-top-scrollbar {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 16px;
+    margin-bottom: 0.75rem;
+}
+
+.scores-top-scrollbar-spacer {
+    height: 1px;
+}
+
+.scores-table-wrapper {
+    max-height: 68vh;
+    overflow: auto;
+}
+
+.scores-matrix-table {
+    min-width: max-content;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -423,6 +611,36 @@ th i {
 td {
     padding: 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.scores-matrix-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 8;
+}
+
+.scores-matrix-table .sticky-match-col,
+.scores-matrix-table .sticky-fixture-col {
+    position: sticky;
+    z-index: 6;
+    background: rgba(20, 24, 42, 0.96);
+}
+
+.scores-matrix-table thead .sticky-match-col,
+.scores-matrix-table thead .sticky-fixture-col {
+    z-index: 9;
+    background: linear-gradient(135deg, rgba(233, 69, 96, 0.92) 0%, rgba(72, 52, 212, 0.92) 100%);
+}
+
+.scores-matrix-table .sticky-match-col {
+    left: 0;
+    min-width: 5.5rem;
+}
+
+.scores-matrix-table .sticky-fixture-col {
+    left: 5.5rem;
+    min-width: 10rem;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.16);
 }
 
 td.rank-col,
@@ -757,85 +975,53 @@ tbody tr:nth-child(3) td:first-child {
     font-weight: 700;
 }
 
-/* Members Grid */
-.members-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
+.scores-matrix-table [data-score-column].is-focused-score-column {
+    background: rgba(76, 201, 240, 0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), inset 0 -1px 0 rgba(255,255,255,0.04);
 }
 
-.member-card {
-    background: linear-gradient(135deg, rgba(var(--team-color-rgb), 0.2) 0%, rgba(255, 255, 255, 0.06) 100%);
-    border-radius: 16px;
-    padding: 1.5rem;
-    border: 1px solid rgba(var(--team-color-rgb), 0.45);
-    border-top: 4px solid var(--team-color);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.scores-matrix-table thead [data-score-column].is-focused-score-column {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.82) 0%, rgba(67, 97, 238, 0.82) 100%);
+}
+
+/* League Members Table */
+.league-members-table {
+    min-width: 720px;
+}
+
+.member-row {
     cursor: pointer;
+    background: linear-gradient(90deg, rgba(var(--team-color-rgb), 0.24) 0, rgba(var(--team-color-rgb), 0.24) 0.45rem, rgba(var(--team-color-rgb), 0.1) 0.45rem, rgba(255,255,255,0.02) 100%);
+    transition: background 0.24s ease, box-shadow 0.24s ease;
 }
 
-.member-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(var(--team-color-rgb), 0.3);
-    border-color: var(--team-color);
+.member-row:hover {
+    background: linear-gradient(90deg, rgba(var(--team-color-rgb), 0.34) 0, rgba(var(--team-color-rgb), 0.34) 0.55rem, rgba(var(--team-color-rgb), 0.16) 0.55rem, rgba(255,255,255,0.05) 100%);
 }
 
-.member-card.is-selected {
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.2), 0 14px 32px rgba(var(--team-color-rgb), 0.3);
-    border-color: var(--team-color);
+.member-row.is-selected {
+    background: linear-gradient(90deg, rgba(var(--team-color-rgb), 0.46) 0, rgba(var(--team-color-rgb), 0.46) 0.65rem, rgba(var(--team-color-rgb), 0.22) 0.65rem, rgba(255,255,255,0.08) 100%);
+    box-shadow: inset 0 0 0 1px rgba(var(--team-color-rgb), 0.45);
 }
 
-.member-avatar {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--team-color) 0%, rgba(255,255,255,0.95) 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1a1a2e;
-    flex-shrink: 0;
+.member-row td {
+    vertical-align: middle;
 }
 
-.member-info {
-    flex: 1;
-}
-
-.member-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.member-team {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.7);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.member-team i {
-    color: var(--team-color);
-    font-size: 0.8rem;
-}
-
-.member-team-accent {
+.member-row-name {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.65rem;
-    padding: 0.35rem 0.7rem;
+    gap: 0.7rem;
+    font-weight: 700;
+}
+
+.member-row-dot {
+    width: 0.85rem;
+    height: 0.85rem;
     border-radius: 999px;
-    background: rgba(var(--team-color-rgb), 0.16);
-    color: var(--team-color);
-    font-size: 0.78rem;
-    font-weight: 600;
+    background: var(--team-color);
+    box-shadow: 0 0 0 3px rgba(var(--team-color-rgb), 0.18);
+    flex-shrink: 0;
 }
 
 .member-prize-summary {
@@ -1071,11 +1257,56 @@ footer i {
     .card {
         padding: 1.5rem;
     }
-    
-    .members-grid {
-        grid-template-columns: 1fr;
+
+    .table-tracker-layout {
+        flex-direction: column;
     }
 
+    .current-table-card,
+    .current-table-card.is-collapsed,
+    .prediction-grid-card.is-collapsed,
+    .prediction-grid-card {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .current-table-card.is-collapsed .section-toggle {
+        min-height: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .current-table-card.is-collapsed .section-toggle-label {
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+
+    .current-table-card.is-collapsed .section-toggle-text {
+        writing-mode: horizontal-tb;
+        transform: none;
+        letter-spacing: normal;
+        text-transform: none;
+        font-size: inherit;
+    }
+
+    .prediction-grid-card.is-collapsed .section-toggle {
+        min-height: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .prediction-grid-card.is-collapsed .section-toggle-label {
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+
+    .prediction-grid-card.is-collapsed .section-toggle-text {
+        writing-mode: horizontal-tb;
+        letter-spacing: normal;
+        text-transform: none;
+        font-size: inherit;
+    }
+    
     .prize-breakdown-header,
     .breakdown-section-header,
     .breakdown-item {

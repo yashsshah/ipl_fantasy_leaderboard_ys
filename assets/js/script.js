@@ -7,6 +7,36 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     });
 });
 
+document.addEventListener('click', event => {
+    const toggle = event.target.closest('.section-toggle');
+    if (!toggle) {
+        return;
+    }
+
+    const section = toggle.closest('.collapsible-section');
+    if (!section) {
+        return;
+    }
+
+    const isExpanded = toggle.getAttribute('aria-expanded') !== 'false';
+    toggle.setAttribute('aria-expanded', String(!isExpanded));
+    section.classList.toggle('is-collapsed', isExpanded);
+
+    if (section.classList.contains('collapsible-left-section')) {
+        const trackerLayout = section.closest('.table-tracker-layout');
+        if (trackerLayout) {
+            trackerLayout.classList.toggle('has-collapsed-left-rail', isExpanded);
+        }
+    }
+
+    if (section.classList.contains('collapsible-right-section')) {
+        const trackerLayout = section.closest('.table-tracker-layout');
+        if (trackerLayout) {
+            trackerLayout.classList.toggle('has-collapsed-right-rail', isExpanded);
+        }
+    }
+});
+
 const leaderboardBody = document.getElementById('leaderboard-body');
 const matchList = document.getElementById('match-list');
 const prizeList = document.getElementById('player-prizes-list');
@@ -23,11 +53,76 @@ const participantsBody = document.getElementById('participants-body');
 const scheduleBody = document.getElementById('schedule-body');
 const scoresHead = document.getElementById('scores-head');
 const scoresBody = document.getElementById('scores-body');
+const scoresTable = document.getElementById('scores-table');
+const scoresTableWrapper = document.getElementById('scores-table-wrapper');
+const scoresTopScrollbar = document.getElementById('scores-top-scrollbar');
+const scoresTopScrollbarSpacer = document.getElementById('scores-top-scrollbar-spacer');
+const scoresMemberFocus = document.getElementById('scores-member-focus');
 const tableRankingsBody = document.getElementById('table-rankings-body');
 const predictionsHead = document.getElementById('predictions-head');
 const predictionsBody = document.getElementById('predictions-body');
 const prizesBody = document.getElementById('prizes-body');
 let currentPrizeSummaryLookup = new Map();
+let syncingScoreScroll = false;
+
+function updateScoresTopScrollbar() {
+    if (!scoresTableWrapper || !scoresTopScrollbarSpacer) {
+        return;
+    }
+    scoresTopScrollbarSpacer.style.width = `${scoresTableWrapper.scrollWidth}px`;
+}
+
+function syncScoresScroll(source, target) {
+    if (!source || !target || syncingScoreScroll) {
+        return;
+    }
+    syncingScoreScroll = true;
+    target.scrollLeft = source.scrollLeft;
+    window.requestAnimationFrame(() => {
+        syncingScoreScroll = false;
+    });
+}
+
+function setFocusedScoreColumn(memberName) {
+    const normalizedTarget = normalizeName(memberName);
+    document.querySelectorAll('[data-score-column]').forEach(cell => {
+        const isFocused = normalizedTarget && normalizeName(cell.dataset.scoreColumn) === normalizedTarget;
+        cell.classList.toggle('is-focused-score-column', Boolean(isFocused));
+    });
+
+    if (!normalizedTarget || !scoresTableWrapper) {
+        return;
+    }
+
+    const targetHeader = scoresHead.querySelector(`th[data-score-column="${memberName}"]`)
+        || Array.from(scoresHead.querySelectorAll('[data-score-column]')).find(cell => normalizeName(cell.dataset.scoreColumn) === normalizedTarget);
+
+    if (!targetHeader) {
+        return;
+    }
+
+    const leftPadding = 24;
+    const targetLeft = targetHeader.offsetLeft - leftPadding;
+    scoresTableWrapper.scrollTo({ left: Math.max(targetLeft, 0), behavior: 'smooth' });
+    if (scoresTopScrollbar) {
+        scoresTopScrollbar.scrollTo({ left: Math.max(targetLeft, 0), behavior: 'smooth' });
+    }
+}
+
+function populateScoresMemberFocus(memberNames) {
+    if (!scoresMemberFocus) {
+        return;
+    }
+
+    const currentValue = scoresMemberFocus.value;
+    const options = ['<option value="">All members</option>']
+        .concat(memberNames.map(name => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`));
+    scoresMemberFocus.innerHTML = options.join('');
+
+    if (memberNames.includes(currentValue)) {
+        scoresMemberFocus.value = currentValue;
+    }
+}
 
 function normalizeName(value) {
     return (value || '').trim().toLowerCase();
@@ -191,13 +286,16 @@ function clearRenderedData() {
     memberStats.innerHTML = '';
     memberPrizeBreakdown.classList.add('is-hidden');
     prizeBreakdownName.textContent = 'Select a member';
-    prizeBreakdownSubtitle.textContent = 'Click a member card above to inspect the full breakdown.';
+    prizeBreakdownSubtitle.textContent = 'Click a member row above to inspect the full breakdown.';
     prizeBreakdownTotal.textContent = '-';
     prizeBreakdownBody.innerHTML = '';
     participantsBody.innerHTML = '';
     scheduleBody.innerHTML = '';
     scoresHead.innerHTML = '';
     scoresBody.innerHTML = '';
+    if (scoresMemberFocus) {
+        scoresMemberFocus.value = '';
+    }
     tableRankingsBody.innerHTML = '';
     predictionsHead.innerHTML = '';
     predictionsBody.innerHTML = '';
@@ -397,39 +495,46 @@ function renderMemberStats(data) {
 }
 
 function renderMembers(data, memberLookup, prizeSummaryLookup) {
-    (data.leagueMembers || []).forEach((member, index) => {
-        const card = document.createElement('div');
+    const sortedMembers = [...(data.leagueMembers || [])].sort((left, right) => {
+        const leftSummary = prizeSummaryLookup.get(normalizeName(left.name)) || null;
+        const rightSummary = prizeSummaryLookup.get(normalizeName(right.name)) || null;
+        const lockedDelta = (rightSummary?.lockedPrizeAmount ?? 0) - (leftSummary?.lockedPrizeAmount ?? 0);
+        if (lockedDelta !== 0) {
+            return lockedDelta;
+        }
+
+        const potentialDelta = (rightSummary?.potentialPrizeAmount ?? 0) - (leftSummary?.potentialPrizeAmount ?? 0);
+        if (potentialDelta !== 0) {
+            return potentialDelta;
+        }
+
+        return (left.name || '').localeCompare(right.name || '');
+    });
+
+    sortedMembers.forEach((member, index) => {
+        const row = document.createElement('tr');
         const teamColor = member.color || '#94a3b8';
         const teamName = member.teamName || 'No team set';
         const prizeSummary = prizeSummaryLookup.get(normalizeName(member.name)) || null;
         const lockedPrizeAmount = prizeSummary?.lockedPrizeAmount ?? 0;
         const potentialPrizeAmount = prizeSummary?.potentialPrizeAmount ?? 0;
-        card.className = 'member-card';
-        card.dataset.memberName = member.name;
-        card.style.setProperty('--team-color', teamColor);
-        card.style.setProperty('--team-color-rgb', hexToRgb(teamColor));
-        card.innerHTML = `
-            <div class="member-rank">${index + 1}</div>
-            <div class="member-avatar">${escapeHtml(member.name.charAt(0).toUpperCase())}</div>
-            <div class="member-info">
-                <div class="member-name">${escapeHtml(member.name)}</div>
-                <div class="member-team-accent">
-                    <span class="team-swatch"></span>
-                    <span class="team-label">${escapeHtml(teamName)}</span>
+        row.className = 'member-row';
+        row.dataset.memberName = member.name;
+        row.style.setProperty('--team-color', teamColor);
+        row.style.setProperty('--team-color-rgb', hexToRgb(teamColor));
+        row.innerHTML = `
+            <td class="rank-col">${index + 1}</td>
+            <td>
+                <div class="member-row-name">
+                    <span class="member-row-dot" aria-hidden="true"></span>
+                    <span>${escapeHtml(member.name)}</span>
                 </div>
-                <div class="member-prize-summary">
-                    <span class="member-prize-trigger" aria-hidden="true">
-                        <span class="stat-pill stat-pill-money member-prize-pill">Locked ${formatCurrency(lockedPrizeAmount)}</span>
-                        <i class="fas fa-lock member-prize-icon"></i>
-                    </span>
-                    <span class="member-prize-trigger" aria-hidden="true">
-                        <span class="stat-pill stat-pill-potential member-prize-pill">Potential ${formatCurrency(potentialPrizeAmount)}</span>
-                        <i class="fas fa-hourglass-half member-prize-icon"></i>
-                    </span>
-                </div>
-            </div>
+            </td>
+            <td>${escapeHtml(teamName)}</td>
+            <td><span class="stat-pill stat-pill-money member-prize-pill">${formatCurrency(lockedPrizeAmount)}</span></td>
+            <td><span class="stat-pill stat-pill-potential member-prize-pill">${formatCurrency(potentialPrizeAmount)}</span></td>
         `;
-        membersGrid.appendChild(card);
+        membersGrid.appendChild(row);
     });
 
     (data.participants || []).forEach(participant => {
@@ -447,19 +552,19 @@ function renderMembers(data, memberLookup, prizeSummaryLookup) {
 }
 
 membersGrid.addEventListener('click', event => {
-    const card = event.target.closest('.member-card');
-    if (!card) {
+    const row = event.target.closest('.member-row');
+    if (!row) {
         return;
     }
 
-    const memberName = card.dataset.memberName || '';
+    const memberName = row.dataset.memberName || '';
     const summary = currentPrizeSummaryLookup.get(normalizeName(memberName));
     if (!summary) {
         return;
     }
 
-    document.querySelectorAll('.member-card').forEach(memberCard => {
-        memberCard.classList.toggle('is-selected', memberCard.dataset.memberName === memberName);
+    document.querySelectorAll('.member-row').forEach(memberRow => {
+        memberRow.classList.toggle('is-selected', memberRow.dataset.memberName === memberName);
     });
 
     renderPrizeBreakdown(summary);
@@ -507,7 +612,8 @@ function renderSchedule(data, memberLookup) {
 function renderScoreMatrix(data) {
     const rows = data.matchDayScores || [];
     const memberNames = data.leagueMembers?.map(member => member.name) || [];
-    scoresHead.innerHTML = `<tr><th>Match</th><th>Fixture</th>${memberNames.map(name => `<th>${escapeHtml(name)}</th>`).join('')}</tr>`;
+    populateScoresMemberFocus(memberNames);
+    scoresHead.innerHTML = `<tr><th class="sticky-match-col">Match</th><th class="sticky-fixture-col">Fixture</th>${memberNames.map(name => `<th data-score-column="${escapeHtml(name)}">${escapeHtml(name)}</th>`).join('')}</tr>`;
 
     rows.forEach(match => {
         const scoreValues = memberNames
@@ -518,11 +624,15 @@ function renderScoreMatrix(data) {
         const cells = memberNames.map(name => {
             const value = match.scores?.[name];
             const isTop = maxScore !== null && value === maxScore;
-            return `<td class="${isTop ? 'score-cell is-top-score' : 'score-cell'}">${formatCompactPoints(value)}</td>`;
+            const baseClass = isTop ? 'score-cell is-top-score' : 'score-cell';
+            return `<td class="${baseClass}" data-score-column="${escapeHtml(name)}">${formatCompactPoints(value)}</td>`;
         }).join('');
-        row.innerHTML = `<td>${formatText(match.matchNum)}</td><td>${formatText(match.matchDetails)}</td>${cells}`;
+        row.innerHTML = `<td class="sticky-match-col">${formatText(match.matchNum)}</td><td class="sticky-fixture-col">${formatText(match.matchDetails)}</td>${cells}`;
         scoresBody.appendChild(row);
     });
+
+    updateScoresTopScrollbar();
+    setFocusedScoreColumn(scoresMemberFocus?.value || '');
 }
 
 function renderTableTracker(data) {
@@ -531,6 +641,16 @@ function renderTableTracker(data) {
         const isPlayoffRank = Number(rowData.rank) <= 4;
         row.innerHTML = `<td class="${isPlayoffRank ? 'playoff-rank-cell' : ''}">${formatText(rowData.rank)}</td><td>${formatText(rowData.iplTeamName)}</td>`;
         tableRankingsBody.appendChild(row);
+
+        if (Number(rowData.rank) === 4) {
+            const cutoffRow = document.createElement('tr');
+            cutoffRow.className = 'prediction-cutoff-row';
+            cutoffRow.innerHTML = `
+                <td class="prediction-cutoff-label">Playoff contention</td>
+                <td class="prediction-cutoff-line" colspan="1"><span></span></td>
+            `;
+            tableRankingsBody.appendChild(cutoffRow);
+        }
     });
 
     const memberNames = data.leagueMembers?.map(member => member.name) || [];
@@ -605,3 +725,15 @@ loadLeagueData().catch(err => console.error('Error loading data:', err));
 window.setInterval(() => {
     loadLeagueData().catch(err => console.error('Error loading data:', err));
 }, 30000);
+
+if (scoresTableWrapper && scoresTopScrollbar) {
+    scoresTableWrapper.addEventListener('scroll', () => syncScoresScroll(scoresTableWrapper, scoresTopScrollbar));
+    scoresTopScrollbar.addEventListener('scroll', () => syncScoresScroll(scoresTopScrollbar, scoresTableWrapper));
+    window.addEventListener('resize', updateScoresTopScrollbar);
+}
+
+if (scoresMemberFocus) {
+    scoresMemberFocus.addEventListener('change', event => {
+        setFocusedScoreColumn(event.target.value);
+    });
+}
