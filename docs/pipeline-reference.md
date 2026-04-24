@@ -14,7 +14,13 @@ The script now tries cookies in this order:
 4. browser-assisted login capture via Playwright
 5. hidden terminal prompt as a final fallback
 
-After it has a valid cookie, it scrapes the latest participant gameday data and then regenerates all derived CSV and JSON outputs.
+After it has a valid cookie, it scrapes the latest participant gameday data, refreshes `data/TableRankings.csv` from the live ESPNcricinfo standings page, and then regenerates all derived CSV and JSON outputs.
+
+If you want to skip the live standings refresh for a run, use:
+
+```bash
+/Users/yshah/Code_Yash/ipl_fantasy_leaderboard_ys/.venv/bin/python scripts/update_league_data.py --no-refresh-standings
+```
 
 ## Standings Refresh Command
 
@@ -44,9 +50,8 @@ On the first run without a valid saved cookie, the updater opens a browser windo
 - `data/Leaderboard.csv`
 - `data/MatchDayWinners.csv`
 - `data/BonusPrizes.csv`
+- `data/TableRankings.csv`
 - `data.json`
-
-When using `scripts/sync_csvs_to_data_json.py --refresh-standings`, the sync step also rewrites `data/TableRankings.csv`.
 
 ## Underlying Flow
 
@@ -55,7 +60,8 @@ When using `scripts/sync_csvs_to_data_json.py --refresh-standings`, the sync ste
 3. `scripts/sync_csvs_to_data_json.py` rebuilds `data/MatchDayScores.csv` from `ParticipantGamedayPointsWide.csv`.
 4. The sync step also regenerates `data/Leaderboard.csv` from the latest cumulative totals in `ParticipantGamedayPointsWide.csv`.
 5. `scripts/calculate_prizes.py` derives `data/MatchDayWinners.csv` and `data/BonusPrizes.csv` from `data/MatchDayScores.csv`.
-6. The sync step rebuilds `data.json` for the frontend.
+6. The sync step refreshes `data/TableRankings.csv` from ESPNcricinfo unless disabled.
+7. The sync step rebuilds `data.json` for the frontend.
 
 ## Derived Prize Logic
 

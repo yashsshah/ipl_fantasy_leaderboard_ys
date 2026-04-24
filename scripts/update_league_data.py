@@ -18,7 +18,7 @@ from scrape_participant_gameday_points import (
     build_team_detail_url,
     run_scrape_pipeline,
 )
-from sync_csvs_to_data_json import PROJECT_ROOT, run_sync_pipeline
+from sync_csvs_to_data_json import DEFAULT_STANDINGS_URL, PROJECT_ROOT, run_sync_pipeline
 
 
 def parse_args() -> argparse.Namespace:
@@ -104,6 +104,16 @@ def parse_args() -> argparse.Namespace:
         "--no-browser-login",
         action="store_true",
         help="Disable automatic browser fallback when no valid cookie is available.",
+    )
+    parser.add_argument(
+        "--no-refresh-standings",
+        action="store_true",
+        help="Skip the ESPNcricinfo standings refresh and only rebuild derived files from local CSV inputs.",
+    )
+    parser.add_argument(
+        "--standings-url",
+        default=DEFAULT_STANDINGS_URL,
+        help="Standings page URL used when refreshing TableRankings.csv during the sync step.",
     )
     return parser.parse_args()
 
@@ -216,7 +226,12 @@ def main() -> None:
     )
 
     print("\nRegenerating derived CSVs and data.json...")
-    run_sync_pipeline(data_root, data_json_path)
+    run_sync_pipeline(
+        data_root,
+        data_json_path,
+        refresh_standings=not args.no_refresh_standings,
+        standings_url=args.standings_url,
+    )
     print("\nUpdate complete.")
 
 
