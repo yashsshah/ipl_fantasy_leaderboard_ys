@@ -461,6 +461,115 @@ def build_table_prediction_scores(
     }
 
 
+def build_table_prediction_prize_rows(
+    participants_rows: list[dict[str, str]],
+    prediction_scores: dict[str, int],
+    prizes_rows: list[dict[str, str]],
+) -> list[dict[str, object]]:
+    team_name_by_member = {
+        row["LeagueMemberName"].strip(): clean(row.get("LeagueTeamName")) or ""
+        for row in participants_rows
+        if clean(row.get("LeagueMemberName"))
+    }
+
+    scored_rows = [
+        {
+            "leagueMemberName": member_name,
+            "leagueTeamName": team_name_by_member.get(member_name, ""),
+            "pointsScored": score,
+        }
+        for member_name, score in prediction_scores.items()
+        if member_name
+    ]
+    if not scored_rows:
+        return []
+
+    top_prizes: list[dict[str, object]] = []
+    bottom_prizes: list[dict[str, object]] = []
+    for prize_row in prizes_rows:
+        if clean(prize_row.get("PrizeCategory")) != "prediction":
+            continue
+        prize_name = clean(prize_row.get("PrizeName"))
+        prize_amount = parse_number(prize_row.get("PrizeAmount"))
+        if prize_name is None or prize_amount is None:
+            continue
+        prize = {
+            "prizeName": prize_name,
+            "prizeAmount": prize_amount,
+        }
+        if "anti" in prize_name.casefold() or "worst" in prize_name.casefold():
+            bottom_prizes.append(prize)
+        else:
+            top_prizes.append(prize)
+
+    def allocate_prizes(
+        ordered_rows: list[dict[str, object]],
+        prize_defs: list[dict[str, object]],
+        *,
+        is_bottom: bool,
+    ) -> list[dict[str, object]]:
+        results: list[dict[str, object]] = []
+        if not prize_defs:
+            return results
+
+        index = 0
+        virtual_position = 1
+        while index < len(ordered_rows) and virtual_position <= len(prize_defs):
+            current_score = ordered_rows[index]["pointsScored"]
+            tied_group = [ordered_rows[index]]
+            index += 1
+            while index < len(ordered_rows) and ordered_rows[index]["pointsScored"] == current_score:
+                tied_group.append(ordered_rows[index])
+                index += 1
+
+            start_position = virtual_position
+            end_position = virtual_position + len(tied_group) - 1
+            prize_pool = sum(
+                float(prize_def["prizeAmount"])
+                for prize_def in prize_defs[start_position - 1:end_position]
+            )
+
+            if prize_pool:
+                split_amount = normalize_amount(prize_pool / len(tied_group))
+                if is_bottom:
+                    if start_position == end_position == 1:
+                        label = "Current worst prediction"
+                    elif start_position == end_position:
+                        label = f"Current {format_position_label(start_position)} worst prediction"
+                    else:
+                        label = f"Current tie for {format_position_label(start_position)} to {format_position_label(end_position)} worst prediction"
+                else:
+                    if start_position == end_position:
+                        label = f"Current {format_position_label(start_position)} prediction"
+                    else:
+                        label = f"Current tie for {format_position_label(start_position)} to {format_position_label(end_position)} prediction"
+
+                for tied_row in tied_group:
+                    results.append(
+                        {
+                            "PrizeName": label,
+                            "LeagueMemberName": str(tied_row["leagueMemberName"]),
+                            "LeagueTeamName": str(tied_row["leagueTeamName"]),
+                            "PointsScored": str(tied_row["pointsScored"]),
+                            "PrizeAmount": str(split_amount),
+                        }
+                    )
+
+            virtual_position += len(tied_group)
+
+        return results
+
+    top_rows = sorted(
+        scored_rows,
+        key=lambda row: (-int(row["pointsScored"]), str(row["leagueMemberName"])),
+    )
+    bottom_rows = sorted(
+        scored_rows,
+        key=lambda row: (int(row["pointsScored"]), str(row["leagueMemberName"])),
+    )
+    return allocate_prizes(top_rows, top_prizes, is_bottom=False) + allocate_prizes(bottom_rows, bottom_prizes, is_bottom=True)
+
+
 def format_position_label(position: int) -> str:
     if 10 <= position % 100 <= 20:
         suffix = "th"
@@ -474,6 +583,7 @@ def build_participant_prize_summary(
     leaderboard_rows: list[dict[str, str]],
     match_day_winner_rows: list[dict[str, str]],
     player_prize_rows: list[dict[str, str]],
+    table_prediction_prize_rows: list[dict[str, object]],
     bonus_rows: list[dict[str, str]],
     prizes_rows: list[dict[str, str]],
 ) -> list[dict[str, object]]:
@@ -490,6 +600,7 @@ def build_participant_prize_summary(
                 "lockedDailyWinnerAmount": 0,
                 "potentialOverallPrizeAmount": 0,
                 "potentialBonusPrizeAmount": 0,
+                "potentialPredictionPrizeAmount": 0,
                 "lockedBreakdown": [],
                 "potentialBreakdown": [],
             }
@@ -630,6 +741,25 @@ def build_participant_prize_summary(
             }
         )
 
+    for prediction_prize_row in table_prediction_prize_rows:
+        prize_amount = parse_number(prediction_prize_row.get("PrizeAmount"))
+        member_name = clean(prediction_prize_row.get("LeagueMemberName"))
+        if prize_amount is None or member_name is None:
+            continue
+
+        entry = ensure_entry(member_name, clean(prediction_prize_row.get("LeagueTeamName")))
+        entry["potentialPrizeAmount"] = normalize_amount(entry["potentialPrizeAmount"] + prize_amount)
+        entry["potentialPredictionPrizeAmount"] = normalize_amount(entry["potentialPredictionPrizeAmount"] + prize_amount)
+        entry["potentialBreakdown"].append(
+            {
+                "prizeType": "table-prediction",
+                "label": clean(prediction_prize_row.get("PrizeName")) or "Table Prediction Prize",
+                "pointsScored": parse_number_or_text(prediction_prize_row.get("PointsScored")),
+                "amount": prize_amount,
+                "status": "potential",
+            }
+        )
+
     ordered_names = [clean(row.get("LeagueMemberName")) for row in participants_rows if clean(row.get("LeagueMemberName"))]
     ordered_entries = [summary_lookup[name] for name in ordered_names if name in summary_lookup]
 
@@ -686,6 +816,16 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
         if key != "Rank"
     ]
     prediction_input_rows = [row for row in table_predictions_rows if clean(row.get("Rank")) != "Total Points"]
+    prediction_scores = build_table_prediction_scores(
+        prediction_input_rows,
+        prediction_member_columns,
+        table_rankings_rows,
+    )
+    table_prediction_prize_rows = build_table_prediction_prize_rows(
+        participants_rows,
+        prediction_scores,
+        prizes_rows,
+    )
 
     return {
         "meta": {
@@ -735,6 +875,7 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
             leaderboard_rows,
             match_day_winner_rows,
             player_prize_rows,
+            table_prediction_prize_rows,
             bonus_rows,
             prizes_rows,
         ),
@@ -777,6 +918,16 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
             prediction_member_columns,
             table_rankings_rows,
         ),
+        "tablePredictionPrizes": [
+            {
+                "prizeName": clean(row.get("PrizeName")),
+                "leagueMemberName": clean(row.get("LeagueMemberName")),
+                "leagueTeamName": clean(row.get("LeagueTeamName")),
+                "pointsScored": parse_number(row.get("PointsScored")),
+                "prizeAmount": parse_number(row.get("PrizeAmount")),
+            }
+            for row in table_prediction_prize_rows
+        ],
         "tableRankings": [
             {
                 "rank": parse_number(row.get("Rank")),
