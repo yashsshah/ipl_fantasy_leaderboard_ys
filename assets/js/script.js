@@ -41,6 +41,7 @@ const leaderboardBody = document.getElementById('leaderboard-body');
 const matchList = document.getElementById('match-list');
 const prizeList = document.getElementById('player-prizes-list');
 const bonusPrizeList = document.getElementById('bonus-prizes-list');
+const tablePredictionPrizeList = document.getElementById('table-prediction-prizes-list');
 const lastSyncedValue = document.getElementById('last-synced-value');
 const membersGrid = document.getElementById('members-grid');
 const memberStats = document.getElementById('member-stats');
@@ -336,6 +337,7 @@ function clearRenderedData() {
     matchList.innerHTML = '';
     prizeList.innerHTML = '';
     bonusPrizeList.innerHTML = '';
+    tablePredictionPrizeList.innerHTML = '';
     membersGrid.innerHTML = '';
     memberStats.innerHTML = '';
     memberPrizeBreakdown.classList.add('is-hidden');
@@ -439,7 +441,7 @@ function renderLeaderboard(data, memberLookup, prizeSummaryLookup) {
         const prizeSummary = prizeSummaryLookup.get(normalizeName(player.leagueMemberName)) || null;
         const potentialPrizeAmount = prizeSummary?.potentialOverallPrizeAmount ?? 0;
         const prizeCellMarkup = index < 3 && potentialPrizeAmount
-            ? `<span class="leaderboard-prize-wrap"><span class="stat-pill stat-pill-money leaderboard-pill">${formatCurrency(overallLeaderboardPrizes[index])}</span><i class="fas fa-hourglass-half leaderboard-prize-icon"></i></span>`
+            ? `<span class="leaderboard-prize-wrap"><span class="stat-pill stat-pill-potential leaderboard-pill">${formatCurrency(overallLeaderboardPrizes[index])}</span><i class="fas fa-hourglass-half leaderboard-prize-icon"></i></span>`
             : '';
         row.innerHTML = `
             <td class="rank-col">${rankDisplay}</td>
@@ -490,16 +492,19 @@ function renderPlayerPrizes(data, memberLookup) {
     getPlayerPrizeRows(data).forEach(prize => {
         const item = document.createElement('li');
         item.className = 'result-item';
+        const ownerMarkup = prize.leagueMemberName
+            ? renderLeaderboardPerson(prize.leagueMemberName, prize.leagueTeamName, memberLookup)
+            : formatText(prize.leagueTeamName, 'Awaiting result');
         item.innerHTML = `
             <div class="result-content">
                 <div class="result-copy">
                     <div class="result-eyebrow">Player-based Prize</div>
                     <div class="result-title">${escapeHtml(prize.prizeName)}</div>
-                    <div class="result-subtitle">${formatText(prize.playerName, 'TBD')}</div>
+                    <div class="result-subtitle">${formatText(prize.playerName, 'TBD')} · ${ownerMarkup}</div>
                 </div>
                 <div class="result-metrics">
                     <span class="stat-pill">${formatPoints(prize.pointsScored)}</span>
-                    <span class="stat-pill stat-pill-money">${formatCurrency(prize.prizeAmount)}</span>
+                    <span class="leaderboard-prize-wrap"><span class="stat-pill stat-pill-potential">${formatCurrency(prize.prizeAmount)}</span><i class="fas fa-hourglass-half leaderboard-prize-icon"></i></span>
                 </div>
             </div>
         `;
@@ -520,11 +525,44 @@ function renderBonusPrizes(data, memberLookup) {
                 </div>
                 <div class="result-metrics">
                     <span class="stat-pill">${formatPoints(prize.score)}</span>
-                    <span class="stat-pill stat-pill-money">${formatCurrency(prize.prizeAmount)}</span>
+                    <span class="leaderboard-prize-wrap"><span class="stat-pill stat-pill-potential">${formatCurrency(prize.prizeAmount)}</span><i class="fas fa-hourglass-half leaderboard-prize-icon"></i></span>
                 </div>
             </div>
         `;
         bonusPrizeList.appendChild(item);
+    });
+}
+
+function renderTablePredictionPrizes(data, memberLookup) {
+    const prizes = data.tablePredictionPrizes || [];
+    if (!prizes.length) {
+        const item = document.createElement('li');
+        item.className = 'result-item';
+        item.innerHTML = '<i class="fas fa-hourglass-half"></i> <strong>No table prediction prizes yet.</strong> Prize positions will appear here as the standings evolve.';
+        tablePredictionPrizeList.appendChild(item);
+        return;
+    }
+
+    prizes.forEach(prize => {
+        const item = document.createElement('li');
+        item.className = 'result-item';
+        const ownerMarkup = prize.leagueMemberName
+            ? renderLeaderboardPerson(prize.leagueMemberName, prize.leagueTeamName, memberLookup)
+            : formatText(prize.leagueTeamName, 'Awaiting result');
+        item.innerHTML = `
+            <div class="result-content">
+                <div class="result-copy">
+                    <div class="result-eyebrow">Table Prediction Prize</div>
+                    <div class="result-title">${escapeHtml(prize.prizeName)}</div>
+                    <div class="result-subtitle">${ownerMarkup}</div>
+                </div>
+                <div class="result-metrics">
+                    <span class="stat-pill">${formatPoints(prize.pointsScored)}</span>
+                    <span class="leaderboard-prize-wrap"><span class="stat-pill stat-pill-potential">${formatCurrency(prize.prizeAmount)}</span><i class="fas fa-hourglass-half leaderboard-prize-icon"></i></span>
+                </div>
+            </div>
+        `;
+        tablePredictionPrizeList.appendChild(item);
     });
 }
 
@@ -767,6 +805,7 @@ function renderData(data) {
     renderSchedule(data, memberLookup);
     renderScoreMatrix(data);
     renderTableTracker(data);
+    renderTablePredictionPrizes(data, memberLookup);
     renderPrizePool(data);
 }
 
