@@ -231,6 +231,7 @@ def main() -> None:
         data_json_path,
         refresh_standings=not args.no_refresh_standings,
         standings_url=args.standings_url,
+        cookie=cookie,
     )
     print("\nUpdate complete.")
 

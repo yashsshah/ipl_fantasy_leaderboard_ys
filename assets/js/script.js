@@ -490,12 +490,15 @@ function renderPlayerPrizes(data, memberLookup) {
     getPlayerPrizeRows(data).forEach(prize => {
         const item = document.createElement('li');
         item.className = 'result-item';
+        const ownerMarkup = prize.leagueMemberName
+            ? renderLeaderboardPerson(prize.leagueMemberName, prize.leagueTeamName, memberLookup)
+            : formatText(prize.leagueTeamName, 'Awaiting result');
         item.innerHTML = `
             <div class="result-content">
                 <div class="result-copy">
                     <div class="result-eyebrow">Player-based Prize</div>
                     <div class="result-title">${escapeHtml(prize.prizeName)}</div>
-                    <div class="result-subtitle">${formatText(prize.playerName, 'TBD')}</div>
+                    <div class="result-subtitle">${formatText(prize.playerName, 'TBD')} · ${ownerMarkup}</div>
                 </div>
                 <div class="result-metrics">
                     <span class="stat-pill">${formatPoints(prize.pointsScored)}</span>

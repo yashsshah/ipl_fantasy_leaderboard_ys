@@ -407,6 +407,20 @@ def write_prize_csvs(root: Path) -> None:
         root / "PrizesList.csv",
         root / "MatchDayWinners.csv",
         root / "BonusPrizes.csv",
+        root / "PlayerBasedPrize.csv",
+    )
+
+
+def write_prize_csvs_with_cookie(root: Path, cookie: str | None = None) -> None:
+    calculate_outputs(
+        root / "MatchDayScores.csv",
+        root / "MatchSchedule.csv",
+        root / "Participants.csv",
+        root / "PrizesList.csv",
+        root / "MatchDayWinners.csv",
+        root / "BonusPrizes.csv",
+        root / "PlayerBasedPrize.csv",
+        cookie=cookie,
     )
 
 
@@ -459,6 +473,7 @@ def build_participant_prize_summary(
     participants_rows: list[dict[str, str]],
     leaderboard_rows: list[dict[str, str]],
     match_day_winner_rows: list[dict[str, str]],
+    player_prize_rows: list[dict[str, str]],
     bonus_rows: list[dict[str, str]],
     prizes_rows: list[dict[str, str]],
 ) -> list[dict[str, object]]:
@@ -594,6 +609,27 @@ def build_participant_prize_summary(
                 }
             )
 
+    for player_prize_row in player_prize_rows:
+        prize_amount = parse_number(player_prize_row.get("PrizeAmount"))
+        member_name = clean(player_prize_row.get("LeagueMemberName"))
+        if prize_amount is None or member_name is None:
+            continue
+
+        entry = ensure_entry(member_name, clean(player_prize_row.get("LeagueTeamName")))
+        entry["potentialPrizeAmount"] = normalize_amount(entry["potentialPrizeAmount"] + prize_amount)
+        entry["potentialBonusPrizeAmount"] = normalize_amount(entry["potentialBonusPrizeAmount"] + prize_amount)
+        entry["potentialBreakdown"].append(
+            {
+                "prizeType": "player-based",
+                "label": clean(player_prize_row.get("PrizeName")) or "Player-based Prize",
+                "matchNum": parse_number_or_text(player_prize_row.get("MatchNum")),
+                "matchDetails": clean(player_prize_row.get("MatchDetails")),
+                "playerName": clean(player_prize_row.get("PlayerName")),
+                "amount": prize_amount,
+                "status": "potential",
+            }
+        )
+
     ordered_names = [clean(row.get("LeagueMemberName")) for row in participants_rows if clean(row.get("LeagueMemberName"))]
     ordered_entries = [summary_lookup[name] for name in ordered_names if name in summary_lookup]
 
@@ -698,6 +734,7 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
             participants_rows,
             leaderboard_rows,
             match_day_winner_rows,
+            player_prize_rows,
             bonus_rows,
             prizes_rows,
         ),
@@ -760,6 +797,8 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
             {
                 "prizeName": row["PrizeName"].strip(),
                 "playerName": clean(row.get("PlayerName")),
+                "leagueMemberName": clean(row.get("LeagueMemberName")),
+                "leagueTeamName": clean(row.get("LeagueTeamName")),
                 "pointsScored": parse_number(row.get("PointsScored")),
                 "matchNum": parse_number(row.get("MatchNum")),
                 "matchDetails": clean(row.get("MatchDetails")),
@@ -809,13 +848,13 @@ def write_data(output_path: Path, data: dict[str, object]) -> None:
     output_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
 
-def sync_once(root: Path, output_path: Path, refresh_standings: bool = False, standings_url: str = DEFAULT_STANDINGS_URL) -> None:
+def sync_once(root: Path, output_path: Path, refresh_standings: bool = False, standings_url: str = DEFAULT_STANDINGS_URL, cookie: str | None = None) -> None:
     if refresh_standings:
         standings_rows = fetch_current_standings_from_espncricinfo(standings_url)
         write_table_rankings_csv(root, standings_rows)
     write_match_day_scores_csv(root)
     write_leaderboard_csv(root)
-    write_prize_csvs(root)
+    write_prize_csvs_with_cookie(root, cookie=cookie)
     data = build_synced_data(root, output_path)
     write_data(output_path, data)
 
@@ -824,20 +863,21 @@ def run_sync_pipeline(
     output_path: Path = PROJECT_ROOT / "data.json",
     refresh_standings: bool = False,
     standings_url: str = DEFAULT_STANDINGS_URL,
+    cookie: str | None = None,
 ) -> None:
-    sync_once(root, output_path, refresh_standings=refresh_standings, standings_url=standings_url)
+    sync_once(root, output_path, refresh_standings=refresh_standings, standings_url=standings_url, cookie=cookie)
 
 
 def get_mtimes(root: Path) -> tuple[int, ...]:
     return tuple((root / name).stat().st_mtime_ns for name in CSV_FILES)
 
 
-def watch(root: Path, output_path: Path, interval: float, refresh_standings: bool = False, standings_url: str = DEFAULT_STANDINGS_URL) -> None:
+def watch(root: Path, output_path: Path, interval: float, refresh_standings: bool = False, standings_url: str = DEFAULT_STANDINGS_URL, cookie: str | None = None) -> None:
     last_state: tuple[int, ...] | None = None
     while True:
         current_state = get_mtimes(root)
         if current_state != last_state:
-            sync_once(root, output_path, refresh_standings=refresh_standings, standings_url=standings_url)
+            sync_once(root, output_path, refresh_standings=refresh_standings, standings_url=standings_url, cookie=cookie)
             print(f"Synced CSV data into {output_path.name}")
             last_state = current_state
         time.sleep(interval)

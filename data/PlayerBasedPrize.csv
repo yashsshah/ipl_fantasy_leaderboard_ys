@@ -1,5 +1,6 @@
-PrizeName,PlayerName,PointsScored,MatchNum,MatchDetails,CaptainOrViceCaptain,Booster,PrizeAmount
-Highest Batter,Rohit Sharma,456,2,KKR vs MI,C,2X,40
-Highest Bowler,Praful Hinge,256,21,RR vs SRH,,Indian Warriors,40
-Highest WK,KL Rahul,636,35,DC vs PBKS,VC,Indian Warriors,40
-Highest Allrounder,Abhishek Sharma,621,31,SRH vs DC,C,Triple Captain,40
+PrizeName,PlayerName,LeagueMemberName,LeagueTeamName,PointsScored,MatchNum,MatchDetails,CaptainOrViceCaptain,Booster,PrizeAmount
+Highest Batter,Rohit Sharma,Rajesh,LazyBoys,456,2,KKR vs MI,C,Double Power,20
+Highest Batter,Shreyas Iyer,Kunj,Scarlet Challengers,456,35,PBKS vs DC,C,Indian Warriors,20
+Highest Bowler,Praful Hinge,Yash,BlAcKKaTs,256,21,RR vs SRH,,Indian Warriors,40
+Highest WK,KL Rahul,Kunj,Scarlet Challengers,636,35,PBKS vs DC,VC,Indian Warriors,40
+Highest Allrounder,Abhishek Sharma,Akshay,aksesa11,621,31,DC vs SRH,C,Triple Captain,40

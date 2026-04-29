@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-04-29T03:23:44.475991+00:00",
+    "lastSyncedAt": "2026-04-29T05:22:00.505048+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -897,10 +897,10 @@
       "leagueMemberName": "Akshay",
       "leagueTeamName": "aksesa11",
       "lockedPrizeAmount": 15,
-      "potentialPrizeAmount": 0,
+      "potentialPrizeAmount": 40,
       "lockedDailyWinnerAmount": 15,
       "potentialOverallPrizeAmount": 0,
-      "potentialBonusPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 40,
       "lockedBreakdown": [
         {
           "prizeType": "daily-winner",
@@ -927,7 +927,17 @@
           "status": "locked"
         }
       ],
-      "potentialBreakdown": []
+      "potentialBreakdown": [
+        {
+          "prizeType": "player-based",
+          "label": "Highest Allrounder",
+          "matchNum": 31,
+          "matchDetails": "DC vs SRH",
+          "playerName": "Abhishek Sharma",
+          "amount": 40,
+          "status": "potential"
+        }
+      ]
     },
     {
       "leagueMemberName": "Ashray",
@@ -1154,10 +1164,10 @@
       "leagueMemberName": "Kunj",
       "leagueTeamName": "Scarlet Challengers",
       "lockedPrizeAmount": 20,
-      "potentialPrizeAmount": 80,
+      "potentialPrizeAmount": 140,
       "lockedDailyWinnerAmount": 20,
       "potentialOverallPrizeAmount": 70,
-      "potentialBonusPrizeAmount": 10,
+      "potentialBonusPrizeAmount": 70,
       "lockedBreakdown": [
         {
           "prizeType": "daily-winner",
@@ -1206,6 +1216,24 @@
           "matchDetails": "PBKS vs DC",
           "amount": 10,
           "status": "potential"
+        },
+        {
+          "prizeType": "player-based",
+          "label": "Highest Batter",
+          "matchNum": 35,
+          "matchDetails": "PBKS vs DC",
+          "playerName": "Shreyas Iyer",
+          "amount": 20,
+          "status": "potential"
+        },
+        {
+          "prizeType": "player-based",
+          "label": "Highest WK",
+          "matchNum": 35,
+          "matchDetails": "PBKS vs DC",
+          "playerName": "KL Rahul",
+          "amount": 40,
+          "status": "potential"
         }
       ]
     },
@@ -1240,10 +1268,10 @@
       "leagueMemberName": "Rajesh",
       "leagueTeamName": "LazyBoys",
       "lockedPrizeAmount": 20,
-      "potentialPrizeAmount": 0,
+      "potentialPrizeAmount": 20,
       "lockedDailyWinnerAmount": 20,
       "potentialOverallPrizeAmount": 0,
-      "potentialBonusPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 20,
       "lockedBreakdown": [
         {
           "prizeType": "daily-winner",
@@ -1278,7 +1306,17 @@
           "status": "locked"
         }
       ],
-      "potentialBreakdown": []
+      "potentialBreakdown": [
+        {
+          "prizeType": "player-based",
+          "label": "Highest Batter",
+          "matchNum": 2,
+          "matchDetails": "KKR vs MI",
+          "playerName": "Rohit Sharma",
+          "amount": 20,
+          "status": "potential"
+        }
+      ]
     },
     {
       "leagueMemberName": "Ravtaj",
@@ -1353,10 +1391,10 @@
       "leagueMemberName": "Yash",
       "leagueTeamName": "BlAcKKaTs",
       "lockedPrizeAmount": 10,
-      "potentialPrizeAmount": 0,
+      "potentialPrizeAmount": 40,
       "lockedDailyWinnerAmount": 10,
       "potentialOverallPrizeAmount": 0,
-      "potentialBonusPrizeAmount": 0,
+      "potentialBonusPrizeAmount": 40,
       "lockedBreakdown": [
         {
           "prizeType": "daily-winner",
@@ -1375,7 +1413,17 @@
           "status": "locked"
         }
       ],
-      "potentialBreakdown": []
+      "potentialBreakdown": [
+        {
+          "prizeType": "player-based",
+          "label": "Highest Bowler",
+          "matchNum": 21,
+          "matchDetails": "RR vs SRH",
+          "playerName": "Praful Hinge",
+          "amount": 40,
+          "status": "potential"
+        }
+      ]
     }
   ],
   "prizesList": [
@@ -2442,16 +2490,32 @@
     {
       "prizeName": "Highest Batter",
       "playerName": "Rohit Sharma",
+      "leagueMemberName": "Rajesh",
+      "leagueTeamName": "LazyBoys",
       "pointsScored": 456,
       "matchNum": 2,
       "matchDetails": "KKR vs MI",
       "captainOrViceCaptain": "C",
-      "booster": "2X",
-      "prizeAmount": 40
+      "booster": "Double Power",
+      "prizeAmount": 20
+    },
+    {
+      "prizeName": "Highest Batter",
+      "playerName": "Shreyas Iyer",
+      "leagueMemberName": "Kunj",
+      "leagueTeamName": "Scarlet Challengers",
+      "pointsScored": 456,
+      "matchNum": 35,
+      "matchDetails": "PBKS vs DC",
+      "captainOrViceCaptain": "C",
+      "booster": "Indian Warriors",
+      "prizeAmount": 20
     },
     {
       "prizeName": "Highest Bowler",
       "playerName": "Praful Hinge",
+      "leagueMemberName": "Yash",
+      "leagueTeamName": "BlAcKKaTs",
       "pointsScored": 256,
       "matchNum": 21,
       "matchDetails": "RR vs SRH",
@@ -2462,9 +2526,11 @@
     {
       "prizeName": "Highest WK",
       "playerName": "KL Rahul",
+      "leagueMemberName": "Kunj",
+      "leagueTeamName": "Scarlet Challengers",
       "pointsScored": 636,
       "matchNum": 35,
-      "matchDetails": "DC vs PBKS",
+      "matchDetails": "PBKS vs DC",
       "captainOrViceCaptain": "VC",
       "booster": "Indian Warriors",
       "prizeAmount": 40
@@ -2472,9 +2538,11 @@
     {
       "prizeName": "Highest Allrounder",
       "playerName": "Abhishek Sharma",
+      "leagueMemberName": "Akshay",
+      "leagueTeamName": "aksesa11",
       "pointsScored": 621,
       "matchNum": 31,
-      "matchDetails": "SRH vs DC",
+      "matchDetails": "DC vs SRH",
       "captainOrViceCaptain": "C",
       "booster": "Triple Captain",
       "prizeAmount": 40
