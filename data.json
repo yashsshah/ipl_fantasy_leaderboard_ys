@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-04-29T05:50:18.259466+00:00",
+    "lastSyncedAt": "2026-04-29T23:27:17.066625+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -83,27 +83,27 @@
   "players": [
     {
       "name": "Kunj",
-      "totalPoints": 11832
+      "totalPoints": 11990.5
     },
     {
       "name": "Nikhil",
-      "totalPoints": 11488.5
+      "totalPoints": 11784.5
     },
     {
       "name": "Abhishek",
-      "totalPoints": 11039.5
+      "totalPoints": 11260
     },
     {
       "name": "Ashray",
-      "totalPoints": 10962.5
+      "totalPoints": 11092.5
     },
     {
       "name": "Atharva",
-      "totalPoints": 9985.5
+      "totalPoints": 10154.5
     },
     {
       "name": "Akshay",
-      "totalPoints": 9904
+      "totalPoints": 9981
     },
     {
       "name": "Ben",
@@ -115,7 +115,7 @@
     },
     {
       "name": "Bijil",
-      "totalPoints": 8297
+      "totalPoints": 8451
     },
     {
       "name": "Harpreet",
@@ -123,23 +123,23 @@
     },
     {
       "name": "Ravtaj",
-      "totalPoints": 7554.5
+      "totalPoints": 7631.5
     },
     {
       "name": "Yash",
-      "totalPoints": 6010.5
+      "totalPoints": 6554.5
     },
     {
       "name": "Rajesh",
-      "totalPoints": 5174.5
+      "totalPoints": 5662.5
     },
     {
       "name": "Rohit",
-      "totalPoints": 4320
+      "totalPoints": 4625
     },
     {
       "name": "Sidhu",
-      "totalPoints": 3857.5
+      "totalPoints": 3874.5
     }
   ],
   "matches": [
@@ -466,10 +466,10 @@
     {
       "match": 41,
       "matchDetails": "SRH vs MI",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Yash",
+      "winnerTeamName": "BlAcKKaTs",
+      "points": 544,
+      "amount": 5
     },
     {
       "match": 42,
@@ -1367,7 +1367,7 @@
         {
           "prizeType": "table-prediction",
           "label": "Current 1st prediction",
-          "pointsScored": 9,
+          "pointsScored": 7,
           "amount": 50,
           "status": "potential"
         }
@@ -1377,13 +1377,21 @@
       "leagueMemberName": "Rohit",
       "leagueTeamName": "RKDEleven",
       "lockedPrizeAmount": 0,
-      "potentialPrizeAmount": 0,
+      "potentialPrizeAmount": 30,
       "lockedDailyWinnerAmount": 0,
       "potentialOverallPrizeAmount": 0,
       "potentialBonusPrizeAmount": 0,
-      "potentialPredictionPrizeAmount": 0,
+      "potentialPredictionPrizeAmount": 30,
       "lockedBreakdown": [],
-      "potentialBreakdown": []
+      "potentialBreakdown": [
+        {
+          "prizeType": "table-prediction",
+          "label": "Current 2nd prediction",
+          "pointsScored": 6,
+          "amount": 30,
+          "status": "potential"
+        }
+      ]
     },
     {
       "leagueMemberName": "Sidhu",
@@ -1420,12 +1428,12 @@
     {
       "leagueMemberName": "Yash",
       "leagueTeamName": "BlAcKKaTs",
-      "lockedPrizeAmount": 10,
-      "potentialPrizeAmount": 70,
-      "lockedDailyWinnerAmount": 10,
+      "lockedPrizeAmount": 15,
+      "potentialPrizeAmount": 40,
+      "lockedDailyWinnerAmount": 15,
       "potentialOverallPrizeAmount": 0,
       "potentialBonusPrizeAmount": 40,
-      "potentialPredictionPrizeAmount": 30,
+      "potentialPredictionPrizeAmount": 0,
       "lockedBreakdown": [
         {
           "prizeType": "daily-winner",
@@ -1442,6 +1450,14 @@
           "matchDetails": "LSG vs RCB",
           "amount": 5,
           "status": "locked"
+        },
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 41 winner",
+          "matchNum": 41,
+          "matchDetails": "SRH vs MI",
+          "amount": 5,
+          "status": "locked"
         }
       ],
       "potentialBreakdown": [
@@ -1452,13 +1468,6 @@
           "matchDetails": "RR vs SRH",
           "playerName": "Praful Hinge",
           "amount": 40,
-          "status": "potential"
-        },
-        {
-          "prizeType": "table-prediction",
-          "label": "Current 2nd prediction",
-          "pointsScored": 6,
-          "amount": 30,
           "status": "potential"
         }
       ]
@@ -2379,29 +2388,29 @@
     "Ashray": 1,
     "Atharva": 4,
     "Ben": 3,
-    "Bijil": 4,
+    "Bijil": 3,
     "Harpreet": 3,
-    "Kunj": 3,
+    "Kunj": 4,
     "Nikhil": 4,
     "Rajesh": 4,
-    "Ravtaj": 9,
-    "Rohit": 5,
-    "Sidhu": 3,
+    "Ravtaj": 7,
+    "Rohit": 6,
+    "Sidhu": 4,
     "Saurabh": 0,
-    "Yash": 6
+    "Yash": 5
   },
   "tablePredictionPrizes": [
     {
       "prizeName": "Current 1st prediction",
       "leagueMemberName": "Ravtaj",
       "leagueTeamName": "Ravs XI",
-      "pointsScored": 9,
+      "pointsScored": 7,
       "prizeAmount": 50
     },
     {
       "prizeName": "Current 2nd prediction",
-      "leagueMemberName": "Yash",
-      "leagueTeamName": "BlAcKKaTs",
+      "leagueMemberName": "Rohit",
+      "leagueTeamName": "RKDEleven",
       "pointsScored": 6,
       "prizeAmount": 30
     },
@@ -2424,11 +2433,11 @@
     },
     {
       "rank": 3,
-      "iplTeamName": "RR"
+      "iplTeamName": "SRH"
     },
     {
       "rank": 4,
-      "iplTeamName": "SRH"
+      "iplTeamName": "RR"
     },
     {
       "rank": 5,
@@ -2460,37 +2469,37 @@
       "rank": 1,
       "leagueMemberName": "Kunj",
       "leagueTeamName": "Scarlet Challengers",
-      "totalPoints": 11832
+      "totalPoints": 11990.5
     },
     {
       "rank": 2,
       "leagueMemberName": "Nikhil",
       "leagueTeamName": "NSKNemesis",
-      "totalPoints": 11488.5
+      "totalPoints": 11784.5
     },
     {
       "rank": 3,
       "leagueMemberName": "Abhishek",
       "leagueTeamName": "Kinkartvyavimudh",
-      "totalPoints": 11039.5
+      "totalPoints": 11260
     },
     {
       "rank": 4,
       "leagueMemberName": "Ashray",
       "leagueTeamName": "Ashray Team",
-      "totalPoints": 10962.5
+      "totalPoints": 11092.5
     },
     {
       "rank": 5,
       "leagueMemberName": "Atharva",
       "leagueTeamName": "T20 Warriors XI",
-      "totalPoints": 9985.5
+      "totalPoints": 10154.5
     },
     {
       "rank": 6,
       "leagueMemberName": "Akshay",
       "leagueTeamName": "aksesa11",
-      "totalPoints": 9904
+      "totalPoints": 9981
     },
     {
       "rank": 7,
@@ -2508,7 +2517,7 @@
       "rank": 9,
       "leagueMemberName": "Bijil",
       "leagueTeamName": "SanjuPaglu",
-      "totalPoints": 8297
+      "totalPoints": 8451
     },
     {
       "rank": 10,
@@ -2520,31 +2529,31 @@
       "rank": 11,
       "leagueMemberName": "Ravtaj",
       "leagueTeamName": "Ravs XI",
-      "totalPoints": 7554.5
+      "totalPoints": 7631.5
     },
     {
       "rank": 12,
       "leagueMemberName": "Yash",
       "leagueTeamName": "BlAcKKaTs",
-      "totalPoints": 6010.5
+      "totalPoints": 6554.5
     },
     {
       "rank": 13,
       "leagueMemberName": "Rajesh",
       "leagueTeamName": "LazyBoys",
-      "totalPoints": 5174.5
+      "totalPoints": 5662.5
     },
     {
       "rank": 14,
       "leagueMemberName": "Rohit",
       "leagueTeamName": "RKDEleven",
-      "totalPoints": 4320
+      "totalPoints": 4625
     },
     {
       "rank": 15,
       "leagueMemberName": "Sidhu",
       "leagueTeamName": "Sidhsdevilseye",
-      "totalPoints": 3857.5
+      "totalPoints": 3874.5
     }
   ],
   "playerBasedPrizes": [
@@ -3454,21 +3463,21 @@
       "matchNum": 41,
       "matchDetails": "SRH vs MI",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 220.5,
+        "Akshay": 77,
+        "Ashray": 130,
+        "Atharva": 169,
+        "Ben": 0,
+        "Bijil": 154,
+        "Harpreet": 0,
+        "Kunj": 158.5,
+        "Nikhil": 296,
+        "Rajesh": 488,
+        "Ravtaj": 77,
+        "Rohit": 305,
+        "Sidhu": 17,
+        "Saurabh": 0,
+        "Yash": 544
       }
     },
     {
@@ -4405,10 +4414,10 @@
     {
       "matchNum": 41,
       "matchDetails": "SRH vs MI",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Yash",
+      "leagueTeamName": "BlAcKKaTs",
+      "score": 544,
+      "prizeAmount": 5
     },
     {
       "matchNum": 42,
