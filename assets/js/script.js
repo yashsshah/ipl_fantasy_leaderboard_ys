@@ -728,6 +728,9 @@ function renderScoreMatrix(data) {
 }
 
 function renderTableTracker(data) {
+    const actualOrder = (data.tableRankings || []).map(row => row.iplTeamName).filter(Boolean);
+    const actualTopFour = new Set(actualOrder.slice(0, 4));
+
     (data.tableRankings || []).forEach(rowData => {
         const row = document.createElement('tr');
         const isPlayoffRank = Number(rowData.rank) <= 4;
@@ -751,7 +754,25 @@ function renderTableTracker(data) {
 
     (data.tablePredictions || []).forEach(prediction => {
         const row = document.createElement('tr');
-        const cells = memberNames.map(name => `<td data-prediction-column="${escapeHtml(name)}">${formatText(prediction.predictions?.[name])}</td>`).join('');
+        const predictionRank = Number(prediction.rank);
+        const actualTeamAtRank = actualOrder[predictionRank - 1] || null;
+        const cells = memberNames.map(name => {
+            const predictedTeam = prediction.predictions?.[name] || null;
+            let cellPoints = 0;
+            if (predictedTeam && predictedTeam === actualTeamAtRank) {
+                cellPoints += 1;
+            }
+            if (predictionRank <= 4 && predictedTeam && actualTopFour.has(predictedTeam)) {
+                cellPoints += 1;
+            }
+            const pointClass = cellPoints === 2
+                ? 'prediction-cell-two-points'
+                : cellPoints === 1
+                    ? 'prediction-cell-one-point'
+                    : '';
+            const className = pointClass ? ` ${pointClass}` : '';
+            return `<td class="${className.trim()}" data-prediction-column="${escapeHtml(name)}">${formatText(predictedTeam)}</td>`;
+        }).join('');
         const isPlayoffRank = Number(prediction.rank) <= 4;
         row.innerHTML = `<td class="${isPlayoffRank ? 'playoff-rank-cell' : ''}">${formatText(prediction.rank)}</td>${cells}`;
         predictionsBody.appendChild(row);
