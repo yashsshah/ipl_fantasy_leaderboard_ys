@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-04-29T23:27:17.066625+00:00",
+    "lastSyncedAt": "2026-05-05T22:45:03.089732+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -82,64 +82,64 @@
   ],
   "players": [
     {
-      "name": "Kunj",
-      "totalPoints": 11990.5
+      "name": "Nikhil",
+      "totalPoints": 13617
     },
     {
-      "name": "Nikhil",
-      "totalPoints": 11784.5
+      "name": "Kunj",
+      "totalPoints": 13612.5
     },
     {
       "name": "Abhishek",
-      "totalPoints": 11260
+      "totalPoints": 13041
     },
     {
       "name": "Ashray",
-      "totalPoints": 11092.5
+      "totalPoints": 12645
     },
     {
       "name": "Atharva",
-      "totalPoints": 10154.5
+      "totalPoints": 12342.5
     },
     {
       "name": "Akshay",
-      "totalPoints": 9981
-    },
-    {
-      "name": "Ben",
-      "totalPoints": 9409
+      "totalPoints": 12059
     },
     {
       "name": "Saurabh",
-      "totalPoints": 9348
+      "totalPoints": 11471
+    },
+    {
+      "name": "Ben",
+      "totalPoints": 11162
     },
     {
       "name": "Bijil",
-      "totalPoints": 8451
+      "totalPoints": 10553
     },
     {
       "name": "Harpreet",
-      "totalPoints": 7998
+      "totalPoints": 10388.5
     },
     {
       "name": "Ravtaj",
-      "totalPoints": 7631.5
+      "totalPoints": 8275
     },
     {
       "name": "Yash",
-      "totalPoints": 6554.5
+      "totalPoints": 7137.5
     },
     {
       "name": "Rajesh",
-      "totalPoints": 5662.5
+      "totalPoints": 6581.5
     },
     {
       "name": "Rohit",
-      "totalPoints": 4625
+      "totalPoints": 5154
     },
     {
       "name": "Sidhu",
-      "totalPoints": 3874.5
+      "totalPoints": 4395
     }
   ],
   "matches": [
@@ -474,58 +474,58 @@
     {
       "match": 42,
       "matchDetails": "RCB vs GT",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Atharva",
+      "winnerTeamName": "T20 Warriors XI",
+      "points": 1047,
+      "amount": 5
     },
     {
       "match": 43,
       "matchDetails": "DC vs RR",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Bijil",
+      "winnerTeamName": "SanjuPaglu",
+      "points": 934,
+      "amount": 5
     },
     {
       "match": 44,
       "matchDetails": "MI vs CSK",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Harpreet",
+      "winnerTeamName": "Sunny super kings",
+      "points": 483.5,
+      "amount": 5
     },
     {
       "match": 45,
       "matchDetails": "KKR vs SRH",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Bijil",
+      "winnerTeamName": "SanjuPaglu",
+      "points": 550,
+      "amount": 5
     },
     {
       "match": 46,
       "matchDetails": "PBKS vs GT",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Ben",
+      "winnerTeamName": "Bens XI",
+      "points": 1074,
+      "amount": 5
     },
     {
       "match": 47,
       "matchDetails": "LSG vs MI",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Harpreet",
+      "winnerTeamName": "Sunny super kings",
+      "points": 552,
+      "amount": 5
     },
     {
       "match": 48,
       "matchDetails": "CSK vs DC",
-      "winner": "",
-      "winnerTeamName": null,
-      "points": null,
-      "amount": null
+      "winner": "Harpreet",
+      "winnerTeamName": "Sunny super kings",
+      "points": 477,
+      "amount": 5
     },
     {
       "match": 49,
@@ -989,9 +989,9 @@
     {
       "leagueMemberName": "Atharva",
       "leagueTeamName": "T20 Warriors XI",
-      "lockedPrizeAmount": 5,
+      "lockedPrizeAmount": 10,
       "potentialPrizeAmount": 0,
-      "lockedDailyWinnerAmount": 5,
+      "lockedDailyWinnerAmount": 10,
       "potentialOverallPrizeAmount": 0,
       "potentialBonusPrizeAmount": 0,
       "potentialPredictionPrizeAmount": 0,
@@ -1003,6 +1003,14 @@
           "matchDetails": "PBKS vs MI",
           "amount": 5,
           "status": "locked"
+        },
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 42 winner",
+          "matchNum": 42,
+          "matchDetails": "RCB vs GT",
+          "amount": 5,
+          "status": "locked"
         }
       ],
       "potentialBreakdown": []
@@ -1010,9 +1018,9 @@
     {
       "leagueMemberName": "Ben",
       "leagueTeamName": "Bens XI",
-      "lockedPrizeAmount": 20,
+      "lockedPrizeAmount": 25,
       "potentialPrizeAmount": 10,
-      "lockedDailyWinnerAmount": 20,
+      "lockedDailyWinnerAmount": 25,
       "potentialOverallPrizeAmount": 0,
       "potentialBonusPrizeAmount": 10,
       "potentialPredictionPrizeAmount": 0,
@@ -1048,6 +1056,14 @@
           "matchDetails": "RR vs LSG",
           "amount": 5,
           "status": "locked"
+        },
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 46 winner",
+          "matchNum": 46,
+          "matchDetails": "PBKS vs GT",
+          "amount": 5,
+          "status": "locked"
         }
       ],
       "potentialBreakdown": [
@@ -1064,9 +1080,9 @@
     {
       "leagueMemberName": "Bijil",
       "leagueTeamName": "SanjuPaglu",
-      "lockedPrizeAmount": 10,
+      "lockedPrizeAmount": 20,
       "potentialPrizeAmount": 0,
-      "lockedDailyWinnerAmount": 10,
+      "lockedDailyWinnerAmount": 20,
       "potentialOverallPrizeAmount": 0,
       "potentialBonusPrizeAmount": 0,
       "potentialPredictionPrizeAmount": 0,
@@ -1086,6 +1102,22 @@
           "matchDetails": "CSK vs SRH",
           "amount": 5,
           "status": "locked"
+        },
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 43 winner",
+          "matchNum": 43,
+          "matchDetails": "DC vs RR",
+          "amount": 5,
+          "status": "locked"
+        },
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 45 winner",
+          "matchNum": 45,
+          "matchDetails": "KKR vs SRH",
+          "amount": 5,
+          "status": "locked"
         }
       ],
       "potentialBreakdown": []
@@ -1093,9 +1125,9 @@
     {
       "leagueMemberName": "Harpreet",
       "leagueTeamName": "Sunny super kings",
-      "lockedPrizeAmount": 40,
+      "lockedPrizeAmount": 55,
       "potentialPrizeAmount": 0,
-      "lockedDailyWinnerAmount": 40,
+      "lockedDailyWinnerAmount": 55,
       "potentialOverallPrizeAmount": 0,
       "potentialBonusPrizeAmount": 0,
       "potentialPredictionPrizeAmount": 0,
@@ -1163,6 +1195,30 @@
           "matchDetails": "CSK vs GT",
           "amount": 5,
           "status": "locked"
+        },
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 44 winner",
+          "matchNum": 44,
+          "matchDetails": "MI vs CSK",
+          "amount": 5,
+          "status": "locked"
+        },
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 47 winner",
+          "matchNum": 47,
+          "matchDetails": "LSG vs MI",
+          "amount": 5,
+          "status": "locked"
+        },
+        {
+          "prizeType": "daily-winner",
+          "label": "Match 48 winner",
+          "matchNum": 48,
+          "matchDetails": "CSK vs DC",
+          "amount": 5,
+          "status": "locked"
         }
       ],
       "potentialBreakdown": []
@@ -1171,9 +1227,9 @@
       "leagueMemberName": "Kunj",
       "leagueTeamName": "Scarlet Challengers",
       "lockedPrizeAmount": 20,
-      "potentialPrizeAmount": 140,
+      "potentialPrizeAmount": 110,
       "lockedDailyWinnerAmount": 20,
-      "potentialOverallPrizeAmount": 70,
+      "potentialOverallPrizeAmount": 40,
       "potentialBonusPrizeAmount": 70,
       "potentialPredictionPrizeAmount": 0,
       "lockedBreakdown": [
@@ -1213,8 +1269,8 @@
       "potentialBreakdown": [
         {
           "prizeType": "overall-leaderboard",
-          "label": "Current 1st place",
-          "amount": 70,
+          "label": "Current 2nd place",
+          "amount": 40,
           "status": "potential"
         },
         {
@@ -1249,9 +1305,9 @@
       "leagueMemberName": "Nikhil",
       "leagueTeamName": "NSKNemesis",
       "lockedPrizeAmount": 5,
-      "potentialPrizeAmount": 40,
+      "potentialPrizeAmount": 70,
       "lockedDailyWinnerAmount": 5,
-      "potentialOverallPrizeAmount": 40,
+      "potentialOverallPrizeAmount": 70,
       "potentialBonusPrizeAmount": 0,
       "potentialPredictionPrizeAmount": 0,
       "lockedBreakdown": [
@@ -1267,8 +1323,8 @@
       "potentialBreakdown": [
         {
           "prizeType": "overall-leaderboard",
-          "label": "Current 2nd place",
-          "amount": 40,
+          "label": "Current 1st place",
+          "amount": 70,
           "status": "potential"
         }
       ]
@@ -2467,93 +2523,93 @@
   "leaderboard": [
     {
       "rank": 1,
-      "leagueMemberName": "Kunj",
-      "leagueTeamName": "Scarlet Challengers",
-      "totalPoints": 11990.5
+      "leagueMemberName": "Nikhil",
+      "leagueTeamName": "NSKNemesis",
+      "totalPoints": 13617
     },
     {
       "rank": 2,
-      "leagueMemberName": "Nikhil",
-      "leagueTeamName": "NSKNemesis",
-      "totalPoints": 11784.5
+      "leagueMemberName": "Kunj",
+      "leagueTeamName": "Scarlet Challengers",
+      "totalPoints": 13612.5
     },
     {
       "rank": 3,
       "leagueMemberName": "Abhishek",
       "leagueTeamName": "Kinkartvyavimudh",
-      "totalPoints": 11260
+      "totalPoints": 13041
     },
     {
       "rank": 4,
       "leagueMemberName": "Ashray",
       "leagueTeamName": "Ashray Team",
-      "totalPoints": 11092.5
+      "totalPoints": 12645
     },
     {
       "rank": 5,
       "leagueMemberName": "Atharva",
       "leagueTeamName": "T20 Warriors XI",
-      "totalPoints": 10154.5
+      "totalPoints": 12342.5
     },
     {
       "rank": 6,
       "leagueMemberName": "Akshay",
       "leagueTeamName": "aksesa11",
-      "totalPoints": 9981
+      "totalPoints": 12059
     },
     {
       "rank": 7,
-      "leagueMemberName": "Ben",
-      "leagueTeamName": "Bens XI",
-      "totalPoints": 9409
+      "leagueMemberName": "Saurabh",
+      "leagueTeamName": "Team Joshi",
+      "totalPoints": 11471
     },
     {
       "rank": 8,
-      "leagueMemberName": "Saurabh",
-      "leagueTeamName": "Team Joshi",
-      "totalPoints": 9348
+      "leagueMemberName": "Ben",
+      "leagueTeamName": "Bens XI",
+      "totalPoints": 11162
     },
     {
       "rank": 9,
       "leagueMemberName": "Bijil",
       "leagueTeamName": "SanjuPaglu",
-      "totalPoints": 8451
+      "totalPoints": 10553
     },
     {
       "rank": 10,
       "leagueMemberName": "Harpreet",
       "leagueTeamName": "Sunny super kings",
-      "totalPoints": 7998
+      "totalPoints": 10388.5
     },
     {
       "rank": 11,
       "leagueMemberName": "Ravtaj",
       "leagueTeamName": "Ravs XI",
-      "totalPoints": 7631.5
+      "totalPoints": 8275
     },
     {
       "rank": 12,
       "leagueMemberName": "Yash",
       "leagueTeamName": "BlAcKKaTs",
-      "totalPoints": 6554.5
+      "totalPoints": 7137.5
     },
     {
       "rank": 13,
       "leagueMemberName": "Rajesh",
       "leagueTeamName": "LazyBoys",
-      "totalPoints": 5662.5
+      "totalPoints": 6581.5
     },
     {
       "rank": 14,
       "leagueMemberName": "Rohit",
       "leagueTeamName": "RKDEleven",
-      "totalPoints": 4625
+      "totalPoints": 5154
     },
     {
       "rank": 15,
       "leagueMemberName": "Sidhu",
       "leagueTeamName": "Sidhsdevilseye",
-      "totalPoints": 3874.5
+      "totalPoints": 4395
     }
   ],
   "playerBasedPrizes": [
@@ -3484,147 +3540,147 @@
       "matchNum": 42,
       "matchDetails": "RCB vs GT",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 421.5,
+        "Akshay": 336.5,
+        "Ashray": 244.5,
+        "Atharva": 1047,
+        "Ben": 0,
+        "Bijil": 0,
+        "Harpreet": 592.5,
+        "Kunj": 249.5,
+        "Nikhil": 306.5,
+        "Rajesh": 0,
+        "Ravtaj": 406.5,
+        "Rohit": 242,
+        "Sidhu": 0,
+        "Saurabh": 498.5,
+        "Yash": 0
       }
     },
     {
       "matchNum": 43,
       "matchDetails": "DC vs RR",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 302.5,
+        "Akshay": 659,
+        "Ashray": 362,
+        "Atharva": 193.5,
+        "Ben": 580.5,
+        "Bijil": 934,
+        "Harpreet": 0,
+        "Kunj": 470.5,
+        "Nikhil": 226,
+        "Rajesh": 0,
+        "Ravtaj": 148,
+        "Rohit": 0,
+        "Sidhu": 76,
+        "Saurabh": 205,
+        "Yash": 0
       }
     },
     {
       "matchNum": 44,
       "matchDetails": "MI vs CSK",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 183.5,
+        "Akshay": 35,
+        "Ashray": 200.5,
+        "Atharva": 0,
+        "Ben": 0,
+        "Bijil": 245,
+        "Harpreet": 483.5,
+        "Kunj": 0,
+        "Nikhil": 249.5,
+        "Rajesh": 460.5,
+        "Ravtaj": 0,
+        "Rohit": 0,
+        "Sidhu": 90.5,
+        "Saurabh": 417.5,
+        "Yash": 44
       }
     },
     {
       "matchNum": 45,
       "matchDetails": "KKR vs SRH",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 230,
+        "Akshay": 26,
+        "Ashray": 264,
+        "Atharva": 193,
+        "Ben": 0,
+        "Bijil": 550,
+        "Harpreet": 0,
+        "Kunj": 192,
+        "Nikhil": 332,
+        "Rajesh": 0,
+        "Ravtaj": 26,
+        "Rohit": 287,
+        "Sidhu": 36,
+        "Saurabh": 0,
+        "Yash": 539
       }
     },
     {
       "matchNum": 46,
       "matchDetails": "PBKS vs GT",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 379,
+        "Akshay": 484,
+        "Ashray": 129,
+        "Atharva": 413,
+        "Ben": 1074,
+        "Bijil": 259.5,
+        "Harpreet": 285.5,
+        "Kunj": 18,
+        "Nikhil": 216,
+        "Rajesh": 0,
+        "Ravtaj": 0,
+        "Rohit": 0,
+        "Sidhu": 0,
+        "Saurabh": 310,
+        "Yash": 0
       }
     },
     {
       "matchNum": 47,
       "matchDetails": "LSG vs MI",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 50,
+        "Akshay": 428,
+        "Ashray": 77.5,
+        "Atharva": 110,
+        "Ben": 47,
+        "Bijil": 0,
+        "Harpreet": 552,
+        "Kunj": 428,
+        "Nikhil": 165.5,
+        "Rajesh": 162.5,
+        "Ravtaj": 0,
+        "Rohit": 0,
+        "Sidhu": 15,
+        "Saurabh": 314.5,
+        "Yash": 0
       }
     },
     {
       "matchNum": 48,
       "matchDetails": "CSK vs DC",
       "scores": {
-        "Abhishek": null,
-        "Akshay": null,
-        "Ashray": null,
-        "Atharva": null,
-        "Ben": null,
-        "Bijil": null,
-        "Harpreet": null,
-        "Kunj": null,
-        "Nikhil": null,
-        "Rajesh": null,
-        "Ravtaj": null,
-        "Rohit": null,
-        "Sidhu": null,
-        "Saurabh": null,
-        "Yash": null
+        "Abhishek": 214.5,
+        "Akshay": 109.5,
+        "Ashray": 275,
+        "Atharva": 231.5,
+        "Ben": 51.5,
+        "Bijil": 113.5,
+        "Harpreet": 477,
+        "Kunj": 264,
+        "Nikhil": 337,
+        "Rajesh": 296,
+        "Ravtaj": 63,
+        "Rohit": 0,
+        "Sidhu": 303,
+        "Saurabh": 377.5,
+        "Yash": 0
       }
     },
     {
@@ -4422,58 +4478,58 @@
     {
       "matchNum": 42,
       "matchDetails": "RCB vs GT",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Atharva",
+      "leagueTeamName": "T20 Warriors XI",
+      "score": 1047,
+      "prizeAmount": 5
     },
     {
       "matchNum": 43,
       "matchDetails": "DC vs RR",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Bijil",
+      "leagueTeamName": "SanjuPaglu",
+      "score": 934,
+      "prizeAmount": 5
     },
     {
       "matchNum": 44,
       "matchDetails": "MI vs CSK",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Harpreet",
+      "leagueTeamName": "Sunny super kings",
+      "score": 483.5,
+      "prizeAmount": 5
     },
     {
       "matchNum": 45,
       "matchDetails": "KKR vs SRH",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Bijil",
+      "leagueTeamName": "SanjuPaglu",
+      "score": 550,
+      "prizeAmount": 5
     },
     {
       "matchNum": 46,
       "matchDetails": "PBKS vs GT",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Ben",
+      "leagueTeamName": "Bens XI",
+      "score": 1074,
+      "prizeAmount": 5
     },
     {
       "matchNum": 47,
       "matchDetails": "LSG vs MI",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Harpreet",
+      "leagueTeamName": "Sunny super kings",
+      "score": 552,
+      "prizeAmount": 5
     },
     {
       "matchNum": 48,
       "matchDetails": "CSK vs DC",
-      "leagueMemberName": null,
-      "leagueTeamName": null,
-      "score": null,
-      "prizeAmount": null
+      "leagueMemberName": "Harpreet",
+      "leagueTeamName": "Sunny super kings",
+      "score": 477,
+      "prizeAmount": 5
     },
     {
       "matchNum": 49,
