@@ -2,3 +2,4 @@
 screengrabs/
 .DS_Store
 scripts/__pycache__/
+logs/
