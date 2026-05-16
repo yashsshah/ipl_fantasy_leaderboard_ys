@@ -172,10 +172,28 @@ def merge_rows(
     return list(merged.values())
 
 
+def format_request_target(url: str, max_length: int = 160) -> str:
+    return url if len(url) <= max_length else f"{url[: max_length - 3]}..."
+
+
 def fetch_json(session: requests.Session, url: str, timeout: float) -> dict:
-    response = session.get(url, timeout=timeout)
-    response.raise_for_status()
-    payload = response.json()
+    started_at = time.perf_counter()
+    target = format_request_target(url)
+    print(f"  GET {target}", flush=True)
+
+    try:
+        response = session.get(url, timeout=(10, timeout))
+        response.raise_for_status()
+        payload = response.json()
+    except requests.Timeout as exc:
+        elapsed = time.perf_counter() - started_at
+        raise RuntimeError(f"Timed out after {elapsed:.1f}s fetching {target}") from exc
+    except requests.RequestException as exc:
+        elapsed = time.perf_counter() - started_at
+        raise RuntimeError(f"Request failed after {elapsed:.1f}s for {target}: {exc}") from exc
+
+    elapsed = time.perf_counter() - started_at
+    print(f"    OK in {elapsed:.1f}s", flush=True)
 
     meta = payload.get("Meta") or {}
     if payload.get("Data") is None and meta.get("Success") is False:

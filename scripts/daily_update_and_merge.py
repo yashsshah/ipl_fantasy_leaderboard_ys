@@ -11,6 +11,7 @@ import sys
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_TARGET_BRANCH = "main"
 DEFAULT_GENERATED_PATHS = ("data", "data.json")
+DEFAULT_UPDATE_TIMEOUT_SECONDS = 1800
 
 
 def parse_args() -> argparse.Namespace:
@@ -45,6 +46,12 @@ def parse_args() -> argparse.Namespace:
         help="Allow the run to continue even if the repository has tracked changes before the update starts.",
     )
     parser.add_argument(
+        "--update-timeout-seconds",
+        type=int,
+        default=DEFAULT_UPDATE_TIMEOUT_SECONDS,
+        help="Maximum wall-clock time allowed for scripts/update_league_data.py. Use 0 to disable.",
+    )
+    parser.add_argument(
         "update_args",
         nargs=argparse.REMAINDER,
         help="Arguments forwarded to scripts/update_league_data.py. Prefix forwarded flags with '--'.",
@@ -52,13 +59,19 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def run_command(command: list[str], cwd: Path, capture_output: bool = False) -> subprocess.CompletedProcess[str]:
+def run_command(
+    command: list[str],
+    cwd: Path,
+    capture_output: bool = False,
+    timeout: float | None = None,
+) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         command,
         cwd=cwd,
         text=True,
         check=True,
         capture_output=capture_output,
+        timeout=timeout,
     )
 
 
@@ -134,6 +147,7 @@ def main() -> None:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
     update_args = normalize_update_args(args.update_args)
+    update_timeout = args.update_timeout_seconds if args.update_timeout_seconds > 0 else None
 
     if not args.allow_dirty and has_tracked_changes(repo_root):
         raise SystemExit(
@@ -143,7 +157,18 @@ def main() -> None:
     source_branch = get_current_branch(repo_root)
 
     update_command = [sys.executable, str(repo_root / "scripts" / "update_league_data.py"), *update_args]
-    run_command(update_command, cwd=repo_root)
+    if update_timeout is None:
+        print("Running updater without an outer wall-clock timeout.", flush=True)
+    else:
+        print(f"Running updater with a {update_timeout}s wall-clock timeout.", flush=True)
+
+    try:
+        run_command(update_command, cwd=repo_root, timeout=update_timeout)
+    except subprocess.TimeoutExpired as exc:
+        timeout_label = f"{update_timeout}s" if update_timeout is not None else "configured timeout"
+        raise SystemExit(
+            f"Updater exceeded the {timeout_label} wall-clock limit and was terminated."
+        ) from exc
 
     stage_generated_paths(repo_root)
     if not has_staged_changes(repo_root):
