@@ -11,6 +11,7 @@ What it does:
 - stages generated changes in `data/` and `data.json`
 - creates a git commit when generated data changed
 - fast-forward merges the current branch into `main`
+- can send optional success email and SMS notifications from a gitignored local env file
 
 It uses the repo `.venv`, so Playwright-based standings refresh works.
 
@@ -77,3 +78,29 @@ launchctl list | grep com.yash.ipl-updater
 ## Cookie requirement
 
 The updater still needs a valid IPL fantasy cookie in `.local/ipl_fantasy_cookie.txt`. Refresh that cookie manually whenever it expires.
+
+## Optional notifications
+
+If you want a success email and text after the updater finishes, create `.local/daily_updater.env` with the credentials you want to use. The `.local/` directory is gitignored.
+
+Email uses SMTP and sends only when all of these are present:
+
+```bash
+UPDATER_EMAIL_SMTP_HOST=smtp.gmail.com
+UPDATER_EMAIL_SMTP_PORT=587
+UPDATER_EMAIL_SMTP_USERNAME=your_email@gmail.com
+UPDATER_EMAIL_SMTP_PASSWORD=your_app_password
+UPDATER_EMAIL_FROM=your_email@gmail.com
+UPDATER_EMAIL_TO=ysshah04@gmail.com
+```
+
+SMS uses Twilio and sends only when all of these are present:
+
+```bash
+UPDATER_TWILIO_ACCOUNT_SID=AC...
+UPDATER_TWILIO_AUTH_TOKEN=...
+UPDATER_TWILIO_FROM=+1YOURTWILIONUMBER
+UPDATER_SMS_TO=+17326665493
+```
+
+The updater reads `.local/daily_updater.env` automatically at runtime. If email or SMS credentials are incomplete, that channel is skipped. If a notification call fails, the updater logs the notification failure but does not fail the league-data update itself.
