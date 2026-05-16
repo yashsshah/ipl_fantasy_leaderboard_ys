@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 from datetime import datetime
 from pathlib import Path
 import subprocess
@@ -88,9 +89,32 @@ def has_staged_changes(repo_root: Path) -> bool:
     return result.returncode == 1
 
 
-def build_commit_message() -> str:
+def get_latest_gameday(repo_root: Path) -> int | None:
+    scores_path = repo_root / "data" / "ParticipantGamedayPoints.csv"
+    if not scores_path.exists():
+        return None
+
+    latest_gameday: int | None = None
+    with scores_path.open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            gameday = (row.get("gameday") or "").strip()
+            if not gameday:
+                continue
+            try:
+                gameday_number = int(gameday)
+            except ValueError:
+                continue
+            if latest_gameday is None or gameday_number > latest_gameday:
+                latest_gameday = gameday_number
+    return latest_gameday
+
+
+def build_commit_message(repo_root: Path) -> str:
     timestamp = datetime.now().astimezone().strftime("%Y-%m-%d %I:%M %p %Z")
-    return f"Automated league data update {timestamp}"
+    latest_gameday = get_latest_gameday(repo_root)
+    if latest_gameday is None:
+        return f"Automated league data update {timestamp}"
+    return f"Automated league data update through GD{latest_gameday} {timestamp}"
 
 
 def normalize_update_args(raw_args: list[str]) -> list[str]:
@@ -126,7 +150,7 @@ def main() -> None:
         print("No generated data changes detected; nothing to commit.")
         return
 
-    commit_message = build_commit_message()
+    commit_message = build_commit_message(repo_root)
     run_command(["git", "commit", "-m", commit_message], cwd=repo_root)
 
     if not args.skip_merge:
