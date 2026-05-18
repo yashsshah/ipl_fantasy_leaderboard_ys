@@ -9,4 +9,4 @@ cd "$REPO_ROOT"
 
 mkdir -p "$REPO_ROOT/logs"
 
-"$REPO_ROOT/.venv/bin/python" -u "$REPO_ROOT/scripts/daily_update_and_merge.py" "$@"
+"$REPO_ROOT/.venv/bin/python" -u "$REPO_ROOT/scripts/daily_update_and_merge.py" --allow-dirty "$@"
