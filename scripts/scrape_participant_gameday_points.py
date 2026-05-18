@@ -18,6 +18,15 @@ DEFAULT_DELAY = 0.5
 DEFAULT_LEADERBOARD_GAMEDAY_PROBE = 100
 AUTO_GAMEDAY_EMPTY_STREAK = 3
 USER_AGENT = "ipl-fantasy-scraper/1.0"
+BOOSTER_NAMES = {
+    0: None,
+    1: "Wild Card",
+    3: "Double Power",
+    9: "Foreign Stars",
+    10: "Indian Warriors",
+    11: "Free Hit",
+    12: "Triple Captain",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -118,6 +127,10 @@ def build_session(cookie: str | None) -> requests.Session:
     return session
 
 
+def normalize_booster_name(booster_id: int) -> str | None:
+    return BOOSTER_NAMES.get(booster_id, f"Unknown ({booster_id})")
+
+
 def load_participant_lookup(participants_path: Path) -> dict[str, str]:
     lookup: dict[str, str] = {}
     if not participants_path.exists():
@@ -154,6 +167,7 @@ def load_existing_scores(scores_output_path: Path) -> list[dict[str, object]]:
                     "team_id": int(team_id),
                     "gameday": int(gameday),
                     "points": float(points),
+                    "booster": (row.get("booster") or "").strip() or None,
                 }
             )
 
@@ -255,6 +269,8 @@ def fetch_team_gameday_scores(
 
         value = ((data.get("Data") or {}).get("Value") or {})
         gdpts = value.get("gdpts") or []
+        team_entries = value.get("teams") or []
+        team_entry = team_entries[0] if team_entries else {}
         if not gdpts:
             if latest_gameday_id is None and rows:
                 empty_streak += 1
@@ -271,6 +287,7 @@ def fetch_team_gameday_scores(
                 "team_id": team["team_id"],
                 "gameday": int(gameday_row["gdid"]),
                 "points": float(gameday_row["gdpts"]),
+                "booster": normalize_booster_name(int(team_entry.get("boosterid") or 0)),
             }
         )
         gameday_id += 1

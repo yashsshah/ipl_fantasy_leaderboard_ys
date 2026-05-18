@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSyncedAt": "2026-05-16T08:24:13.326358+00:00",
+    "lastSyncedAt": "2026-05-16T09:11:03.079754+00:00",
     "source": "csv-sync"
   },
   "leagueMembers": [
@@ -2926,6 +2926,23 @@
         "Sidhu": 566,
         "Saurabh": 471,
         "Yash": 220.5
+      },
+      "boosters": {
+        "Abhishek": "Double Power",
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": "Double Power",
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -2947,6 +2964,23 @@
         "Sidhu": 339,
         "Saurabh": 494,
         "Yash": 441
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": "Double Power",
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -2968,6 +3002,23 @@
         "Sidhu": 50.5,
         "Saurabh": 72,
         "Yash": 147
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": "Indian Warriors",
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -2989,6 +3040,23 @@
         "Sidhu": 0,
         "Saurabh": 330,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": "Indian Warriors",
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3010,6 +3078,23 @@
         "Sidhu": 160,
         "Saurabh": 138,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": "Foreign Stars",
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3031,6 +3116,23 @@
         "Sidhu": 67,
         "Saurabh": 214.5,
         "Yash": 168
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": "Indian Warriors",
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3052,6 +3154,23 @@
         "Sidhu": 90,
         "Saurabh": 324,
         "Yash": 42
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3073,6 +3192,23 @@
         "Sidhu": 131,
         "Saurabh": 56,
         "Yash": 119
+      },
+      "boosters": {
+        "Abhishek": "Indian Warriors",
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": "Indian Warriors",
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3094,6 +3230,23 @@
         "Sidhu": 0,
         "Saurabh": 139,
         "Yash": 104
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3115,6 +3268,23 @@
         "Sidhu": 0,
         "Saurabh": 212.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": "Free Hit",
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3136,6 +3306,23 @@
         "Sidhu": 118.5,
         "Saurabh": 273.5,
         "Yash": 180
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": "Free Hit",
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3157,6 +3344,23 @@
         "Sidhu": 4,
         "Saurabh": 89.5,
         "Yash": 35.5
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3178,6 +3382,23 @@
         "Sidhu": 70,
         "Saurabh": 356,
         "Yash": 167
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3199,6 +3420,23 @@
         "Sidhu": 108,
         "Saurabh": 209.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": "Free Hit",
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3220,6 +3458,23 @@
         "Sidhu": 16,
         "Saurabh": 198,
         "Yash": 278
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3241,6 +3496,23 @@
         "Sidhu": 0,
         "Saurabh": 433,
         "Yash": 233
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": "Indian Warriors",
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3262,6 +3534,23 @@
         "Sidhu": 0,
         "Saurabh": 234,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": "Free Hit",
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3283,6 +3572,23 @@
         "Sidhu": 375,
         "Saurabh": 208,
         "Yash": 341
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3304,6 +3610,23 @@
         "Sidhu": 0,
         "Saurabh": 164,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": "Foreign Stars",
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3325,6 +3648,23 @@
         "Sidhu": 34,
         "Saurabh": 129,
         "Yash": 203.5
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": "Indian Warriors",
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3346,6 +3686,23 @@
         "Sidhu": 0,
         "Saurabh": 2,
         "Yash": 807
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": "Free Hit",
+        "Kunj": "Double Power",
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": "Indian Warriors"
       }
     },
     {
@@ -3367,6 +3724,23 @@
         "Sidhu": 246,
         "Saurabh": 303,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": "Free Hit",
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3388,6 +3762,23 @@
         "Sidhu": 0,
         "Saurabh": 291,
         "Yash": 608.5
+      },
+      "boosters": {
+        "Abhishek": "Foreign Stars",
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3409,6 +3800,23 @@
         "Sidhu": 37,
         "Saurabh": 106.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3430,6 +3838,23 @@
         "Sidhu": 13,
         "Saurabh": 68,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": "Wild Card",
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3451,6 +3876,23 @@
         "Sidhu": 289,
         "Saurabh": 52,
         "Yash": 441
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": "Triple Captain",
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": "Triple Captain",
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3472,6 +3914,23 @@
         "Sidhu": 78.5,
         "Saurabh": 210,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3493,6 +3952,23 @@
         "Sidhu": 78,
         "Saurabh": 19,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": "Indian Warriors",
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3514,6 +3990,23 @@
         "Sidhu": 0,
         "Saurabh": 325,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3535,6 +4028,23 @@
         "Sidhu": 149,
         "Saurabh": 0,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3556,6 +4066,23 @@
         "Sidhu": 55,
         "Saurabh": 548,
         "Yash": 604
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": "Triple Captain",
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3577,6 +4104,23 @@
         "Sidhu": 0,
         "Saurabh": 336,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": "Double Power",
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3598,6 +4142,23 @@
         "Sidhu": 396.5,
         "Saurabh": 422.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3619,6 +4180,23 @@
         "Sidhu": 0,
         "Saurabh": 115,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3640,6 +4218,23 @@
         "Sidhu": 123,
         "Saurabh": 4,
         "Yash": 463.5
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": "Free Hit",
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": "Indian Warriors",
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3661,6 +4256,23 @@
         "Sidhu": 0,
         "Saurabh": 842,
         "Yash": 383
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": "Indian Warriors",
+        "Atharva": "Free Hit",
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": "Indian Warriors",
+        "Yash": null
       }
     },
     {
@@ -3682,6 +4294,23 @@
         "Sidhu": 74.5,
         "Saurabh": 274.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": "Foreign Stars",
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3703,6 +4332,23 @@
         "Sidhu": 152,
         "Saurabh": 135,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3724,6 +4370,23 @@
         "Sidhu": 37,
         "Saurabh": 176.5,
         "Yash": 24
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": "Indian Warriors",
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3745,6 +4408,23 @@
         "Sidhu": 0,
         "Saurabh": 372.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": "Triple Captain",
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": "Indian Warriors",
+        "Nikhil": "Indian Warriors",
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3766,6 +4446,23 @@
         "Sidhu": 17,
         "Saurabh": 0,
         "Yash": 544
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3787,6 +4484,23 @@
         "Sidhu": 0,
         "Saurabh": 498.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": "Triple Captain",
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": "Double Power",
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3808,6 +4522,23 @@
         "Sidhu": 76,
         "Saurabh": 205,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": "Indian Warriors",
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": "Triple Captain",
+        "Bijil": "Indian Warriors",
+        "Harpreet": null,
+        "Kunj": "Triple Captain",
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3829,6 +4560,23 @@
         "Sidhu": 90.5,
         "Saurabh": 417.5,
         "Yash": 44
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": "Wild Card",
+        "Kunj": null,
+        "Nikhil": "Triple Captain",
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3850,6 +4598,23 @@
         "Sidhu": 36,
         "Saurabh": 0,
         "Yash": 539
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": "Foreign Stars",
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3871,6 +4636,23 @@
         "Sidhu": 0,
         "Saurabh": 310,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": "Double Power",
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3892,6 +4674,23 @@
         "Sidhu": 15,
         "Saurabh": 314.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3913,6 +4712,23 @@
         "Sidhu": 303,
         "Saurabh": 377.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": "Triple Captain",
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3934,6 +4750,23 @@
         "Sidhu": 0,
         "Saurabh": 783,
         "Yash": 603.5
+      },
+      "boosters": {
+        "Abhishek": "Double Power",
+        "Akshay": "Double Power",
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": "Foreign Stars",
+        "Bijil": null,
+        "Harpreet": "Double Power",
+        "Kunj": null,
+        "Nikhil": "Indian Warriors",
+        "Rajesh": null,
+        "Ravtaj": "Double Power",
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": "Indian Warriors",
+        "Yash": null
       }
     },
     {
@@ -3955,6 +4788,23 @@
         "Sidhu": 0,
         "Saurabh": 107,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": "Foreign Stars",
+        "Nikhil": "Wild Card",
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3976,6 +4826,23 @@
         "Sidhu": 94,
         "Saurabh": 163.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -3997,6 +4864,23 @@
         "Sidhu": 0,
         "Saurabh": 420.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": "Foreign Stars",
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -4018,6 +4902,23 @@
         "Sidhu": 119.5,
         "Saurabh": 4,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -4039,6 +4940,23 @@
         "Sidhu": 106,
         "Saurabh": 509.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -4060,6 +4978,23 @@
         "Sidhu": 276,
         "Saurabh": 395,
         "Yash": 358
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": "Free Hit",
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -4081,6 +5016,23 @@
         "Sidhu": 0,
         "Saurabh": 232,
         "Yash": 144
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": "Double Power",
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -4102,6 +5054,23 @@
         "Sidhu": 68,
         "Saurabh": 522.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": "Foreign Stars",
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": "Foreign Stars",
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -4123,6 +5092,23 @@
         "Sidhu": 239,
         "Saurabh": 149,
         "Yash": 202
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
@@ -4144,12 +5130,46 @@
         "Sidhu": 48.5,
         "Saurabh": 279.5,
         "Yash": 0
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
       "matchNum": 60,
       "matchDetails": "GT vs KKR",
       "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      },
+      "boosters": {
         "Abhishek": null,
         "Akshay": null,
         "Ashray": null,
@@ -4186,12 +5206,46 @@
         "Sidhu": null,
         "Saurabh": null,
         "Yash": null
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
       "matchNum": 62,
       "matchDetails": "RR vs DC",
       "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      },
+      "boosters": {
         "Abhishek": null,
         "Akshay": null,
         "Ashray": null,
@@ -4228,12 +5282,46 @@
         "Sidhu": null,
         "Saurabh": null,
         "Yash": null
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
       "matchNum": 64,
       "matchDetails": "LSG vs RR",
       "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      },
+      "boosters": {
         "Abhishek": null,
         "Akshay": null,
         "Ashray": null,
@@ -4270,12 +5358,46 @@
         "Sidhu": null,
         "Saurabh": null,
         "Yash": null
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
       "matchNum": 66,
       "matchDetails": "GT vs CSK",
       "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      },
+      "boosters": {
         "Abhishek": null,
         "Akshay": null,
         "Ashray": null,
@@ -4312,12 +5434,46 @@
         "Sidhu": null,
         "Saurabh": null,
         "Yash": null
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
       "matchNum": 68,
       "matchDetails": "PBKS vs LSG",
       "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      },
+      "boosters": {
         "Abhishek": null,
         "Akshay": null,
         "Ashray": null,
@@ -4354,12 +5510,46 @@
         "Sidhu": null,
         "Saurabh": null,
         "Yash": null
+      },
+      "boosters": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
       }
     },
     {
       "matchNum": 70,
       "matchDetails": "DC vs KKR",
       "scores": {
+        "Abhishek": null,
+        "Akshay": null,
+        "Ashray": null,
+        "Atharva": null,
+        "Ben": null,
+        "Bijil": null,
+        "Harpreet": null,
+        "Kunj": null,
+        "Nikhil": null,
+        "Rajesh": null,
+        "Ravtaj": null,
+        "Rohit": null,
+        "Sidhu": null,
+        "Saurabh": null,
+        "Yash": null
+      },
+      "boosters": {
         "Abhishek": null,
         "Akshay": null,
         "Ashray": null,

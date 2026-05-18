@@ -45,6 +45,15 @@ STANDINGS_DISPLAY_TO_ABBREVIATION = {
     for team_name, abbreviation in TEAM_ABBREVIATIONS.items()
 }
 
+SCORE_BOOSTER_NAMES = {
+    "Wild Card",
+    "Double Power",
+    "Foreign Stars",
+    "Indian Warriors",
+    "Free Hit",
+    "Triple Captain",
+}
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -114,6 +123,32 @@ def parse_number_or_text(value: str | None) -> int | float | str | None:
 def read_csv(root: Path, name: str) -> list[dict[str, str]]:
     with (root / name).open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def build_match_day_booster_lookup(
+    participants_rows: list[dict[str, str]],
+    participant_gameday_rows: list[dict[str, str]],
+) -> dict[int, dict[str, str | None]]:
+    display_name_lookup = build_display_name_lookup(participants_rows)
+    boosters_by_match: dict[int, dict[str, str | None]] = {}
+
+    for row in participant_gameday_rows:
+        display_name = clean(row.get("display_name"))
+        gameday = parse_number(row.get("gameday"))
+        if display_name is None or gameday is None:
+            continue
+
+        member_name = display_name_lookup.get(normalize_lookup_key(display_name) or "")
+        if member_name is None:
+            continue
+
+        booster_name = clean(row.get("booster"))
+        if booster_name not in SCORE_BOOSTER_NAMES:
+            booster_name = None
+
+        boosters_by_match.setdefault(int(gameday), {})[member_name] = booster_name
+
+    return boosters_by_match
 
 
 def fetch_current_standings_from_espncricinfo(standings_url: str) -> list[dict[str, str]]:
@@ -806,6 +841,7 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
     table_rankings_rows = read_csv(root, "TableRankings.csv")
     bonus_rows = read_csv(root, "BonusPrizes.csv")
     prizes_rows = read_csv(root, "PrizesList.csv")
+    participant_gameday_rows = read_csv(root, "ParticipantGamedayPoints.csv")
 
     score_member_columns = [
         key for key in (match_day_score_rows[0].keys() if match_day_score_rows else [])
@@ -825,6 +861,10 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
         participants_rows,
         prediction_scores,
         prizes_rows,
+    )
+    match_day_booster_lookup = build_match_day_booster_lookup(
+        participants_rows,
+        participant_gameday_rows,
     )
 
     return {
@@ -965,6 +1005,13 @@ def build_synced_data(root: Path, output_path: Path) -> dict[str, object]:
                 "matchDetails": clean(row.get("MatchDetails")),
                 "scores": {
                     member: parse_number(row.get(member)) for member in score_member_columns
+                },
+                "boosters": {
+                    member: match_day_booster_lookup.get(
+                        int(parse_number(row.get("MatchNum")) or 0),
+                        {},
+                    ).get(member)
+                    for member in score_member_columns
                 },
             }
             for row in match_day_score_rows

@@ -707,6 +707,15 @@ function renderScoreMatrix(data) {
     populateScoresMemberFocus(memberNames);
     scoresHead.innerHTML = `<tr><th class="sticky-match-col">Match</th><th class="sticky-fixture-col">Fixture</th>${memberNames.map(name => `<th data-score-column="${escapeHtml(name)}">${escapeHtml(name)}</th>`).join('')}</tr>`;
 
+    const boosterClassMap = {
+        'Wild Card': 'booster-border-wild-card',
+        'Double Power': 'booster-border-double-power',
+        'Foreign Stars': 'booster-border-foreign-stars',
+        'Indian Warriors': 'booster-border-indian-warriors',
+        'Free Hit': 'booster-border-free-hit',
+        'Triple Captain': 'booster-border-triple-captain',
+    };
+
     rows.forEach(match => {
         const scoreValues = memberNames
             .map(name => match.scores?.[name])
@@ -716,8 +725,23 @@ function renderScoreMatrix(data) {
         const cells = memberNames.map(name => {
             const value = match.scores?.[name];
             const isTop = maxScore !== null && value === maxScore;
-            const baseClass = isTop ? 'score-cell is-top-score' : 'score-cell';
-            return `<td class="${baseClass}" data-score-column="${escapeHtml(name)}">${formatCompactPoints(value)}</td>`;
+            const boosterName = match.boosters?.[name] || null;
+            const classNames = ['score-cell'];
+            if (isTop) {
+                classNames.push('is-top-score');
+            }
+            if (boosterName) {
+                classNames.push(boosterClassMap[boosterName] || 'booster-border-unknown');
+            }
+            const titleParts = [];
+            if (boosterName) {
+                titleParts.push(`Booster: ${boosterName}`);
+            }
+            if (value !== null && value !== undefined && value !== '') {
+                titleParts.push(`Score: ${formatCompactPoints(value)}`);
+            }
+            const titleAttr = titleParts.length ? ` title="${escapeHtml(titleParts.join(' | '))}"` : '';
+            return `<td class="${classNames.join(' ')}" data-score-column="${escapeHtml(name)}"${titleAttr}>${formatCompactPoints(value)}</td>`;
         }).join('');
         row.innerHTML = `<td class="sticky-match-col">${formatText(match.matchNum)}</td><td class="sticky-fixture-col">${formatText(match.matchDetails)}</td>${cells}`;
         scoresBody.appendChild(row);

@@ -585,6 +585,35 @@ header h1 {
     font: inherit;
 }
 
+.scores-booster-legend {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-bottom: 0.85rem;
+}
+
+.scores-booster-legend-title {
+    color: rgba(255,255,255,0.72);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.scores-booster-legend-item {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0.36rem 0.65rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 2px solid transparent;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
 .scores-top-scrollbar {
     overflow-x: auto;
     overflow-y: hidden;
@@ -1023,12 +1052,48 @@ tbody tr:nth-child(3) td:first-child {
 .score-cell {
     text-align: center;
     color: rgba(255,255,255,0.78);
+    border-left: 3px solid transparent;
 }
 
 .score-cell.is-top-score {
     background: rgba(255, 193, 7, 0.14);
     color: #ffc107;
     font-weight: 700;
+}
+
+.score-cell.booster-border-wild-card,
+.scores-booster-legend-item.booster-border-wild-card {
+    border-color: #f472b6;
+}
+
+.score-cell.booster-border-double-power,
+.scores-booster-legend-item.booster-border-double-power {
+    border-color: #f59e0b;
+}
+
+.score-cell.booster-border-foreign-stars,
+.scores-booster-legend-item.booster-border-foreign-stars {
+    border-color: #38bdf8;
+}
+
+.score-cell.booster-border-indian-warriors,
+.scores-booster-legend-item.booster-border-indian-warriors {
+    border-color: #34d399;
+}
+
+.score-cell.booster-border-free-hit,
+.scores-booster-legend-item.booster-border-free-hit {
+    border-color: #fb7185;
+}
+
+.score-cell.booster-border-triple-captain,
+.scores-booster-legend-item.booster-border-triple-captain {
+    border-color: #a78bfa;
+}
+
+.score-cell.booster-border-unknown,
+.scores-booster-legend-item.booster-border-unknown {
+    border-color: #94a3b8;
 }
 
 .scores-matrix-table [data-score-column].is-focused-score-column,
